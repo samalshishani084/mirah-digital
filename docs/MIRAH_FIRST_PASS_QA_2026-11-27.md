@@ -32,7 +32,13 @@ Status: main site — PARTIAL (source + static checks DONE; live mobile visual +
 - Precision Auto Care: FIXED 2026-11-27 (re-test pending on Preview). Mobile hamburger menu added (toggle + `aria-expanded` + Escape close + close on link click), same pattern as the main site. Form given the same honesty fix as the main site: the prepared request is always shown in a visible box with a "Copy request" button; copy is claimed only on real Clipboard API success.
 - Production: unchanged; no Production deployment authorized. Work is on `feature/mirah-immersive-studio-v1` only.
 
-Next: re-test M5 + Precision on the new Preview, then run desktop QA at 768 / 1366 / 1440.
+## Professional rework pass — 2026-11-27 (stack: static, confirmed by Sam 06:38)
+
+- Re-test 06:36–06:39 on Preview dpl_361DtxTaSjhA6Hd2szLFrJa1S4hq: **M5 PASS** — all 9 images load, 3 thumbnails are three different photos, photo credits shown in full. **Precision form PASS** — request shown in a visible box with Copy button, status honest. **Precision mobile menu DEFECT** — no hamburger at the test viewport; the header showed desktop links and overflowed, cutting off GET AN ESTIMATE. Root cause: Precision collapsed its nav only at ≤620px while the test viewport was wider; the main site already collapses at 900px. Same latent defect existed on the main site (651–900px: 5 links + CTA overflow) and on M5 (links simply vanished ≤620px, no menu at all).
+- Fixes applied (same commit): navigation collapses to a hamburger at **≤900px on all three pages**; hamburger + mobile nav added to M5; Precision header CTA hides ≤620px (the mobile menu carries the Enquire link); skip link added to Precision (main site and M5 already had one); Precision service icons marked `aria-hidden`; `touch-action:manipulation` on buttons on all pages; footer year falls back to 2026 without JS; `aria-controls` on all 8 main-site tab buttons plus Arrow/Home/End keyboard navigation for both tab groups.
+- Open: the Precision submit button did not respond to two synthetic mouse clicks in the probe (first "refused as covered", second unknown); the form submitted fine via Enter, so the handler works — re-test with a real finger tap before calling it a defect. Known gaps: no `og:image` (no owned brand image exists — do not fabricate one from stock); desktop widths 768/1366/1440 still untested (SSO wall blocks the cloud browser).
+
+Next: re-test Precision + M5 menus and the Precision form tap on the new Preview, then run desktop QA at 768 / 1366 / 1440.
 
 
 Review date: 2026-11-27

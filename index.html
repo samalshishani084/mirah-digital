@@ -38,6 +38,7 @@ img,svg{max-width:100%;display:block}
 a{color:inherit;text-decoration:none}
 button,input,select,textarea{font:inherit;color:inherit}
 button,a{-webkit-tap-highlight-color:transparent}
+button{touch-action:manipulation}
 h1,h2,h3,p{margin-top:0}
 :focus-visible{outline:3px solid #9b83f4;outline-offset:3px;border-radius:4px}
 .container{width:min(var(--max),calc(100% - 48px));margin-inline:auto}
@@ -229,6 +230,12 @@ footer{padding:34px 0 45px;color:#80889b;font-size:11px}
 
 /* ---------- Responsive ---------- */
 @media(max-width:900px){
+  .navlinks{display:none;position:absolute;top:72px;left:0;right:0;background:rgba(251,251,255,.97);padding:14px 22px 18px;border-bottom:1px solid var(--line);box-shadow:0 18px 28px rgba(17,21,47,.06);flex-direction:column;align-items:stretch;gap:0}
+  .navlinks.open{display:flex}
+  .navlinks a{padding:13px 0;border-bottom:1px solid #eef0f5}
+  .navlinks a.active::after{display:none}
+  .nav>.btn{display:none}
+  .menu{display:block}
   .hero{grid-template-columns:1fr;gap:28px;padding-top:52px}
   .hero-visual{max-width:620px}
   .services{grid-template-columns:repeat(2,1fr)}
@@ -241,12 +248,7 @@ footer{padding:34px 0 45px;color:#80889b;font-size:11px}
 @media(max-width:650px){
   .container{width:calc(100% - 32px)}
   .nav{min-height:68px}
-  .navlinks{display:none;position:absolute;top:68px;left:0;right:0;background:rgba(251,251,255,.97);padding:14px 22px 18px;border-bottom:1px solid var(--line);box-shadow:0 18px 28px rgba(17,21,47,.06);flex-direction:column;align-items:stretch;gap:0}
-  .navlinks.open{display:flex}
-  .navlinks a{padding:13px 0;border-bottom:1px solid #eef0f5}
-  .navlinks a.active::after{display:none}
-  .nav>.btn{display:none}
-  .menu{display:block}
+  .navlinks{top:68px}
   .hero{padding:40px 0 44px;gap:24px}
   h1{font-size:clamp(40px,11vw,54px)}
   .hero-copy{font-size:15px}
@@ -355,10 +357,10 @@ footer{padding:34px 0 45px;color:#80889b;font-size:11px}
       <h2>Not just a website.<br><span class="gradient">A better way forward.</span></h2>
       <p>Every strong digital experience has a purpose. Explore how MIRAH brings design, customer journeys, and practical technology together — without adding complexity for its own sake.</p>
       <div class="experience-tabs" role="tablist" aria-label="Explore MIRAH capabilities">
-        <button class="experience-tab active" data-exp="design" role="tab" aria-selected="true"><span class="num">01</span><span><strong>Design that earns trust</strong><small>Clear, polished, mobile-first experiences</small></span></button>
-        <button class="experience-tab" data-exp="growth" role="tab" aria-selected="false"><span class="num">02</span><span><strong>Journeys that convert</strong><small>Make the next step obvious</small></span></button>
-        <button class="experience-tab" data-exp="systems" role="tab" aria-selected="false"><span class="num">03</span><span><strong>Smarter business systems</strong><small>Practical AI and workflow support</small></span></button>
-        <button class="experience-tab" data-exp="care" role="tab" aria-selected="false"><span class="num">04</span><span><strong>Built to keep improving</strong><small>Support, review, and iteration</small></span></button>
+        <button class="experience-tab active" data-exp="design" role="tab" aria-selected="true" aria-controls="experiencePanel"><span class="num">01</span><span><strong>Design that earns trust</strong><small>Clear, polished, mobile-first experiences</small></span></button>
+        <button class="experience-tab" data-exp="growth" role="tab" aria-selected="false" aria-controls="experiencePanel"><span class="num">02</span><span><strong>Journeys that convert</strong><small>Make the next step obvious</small></span></button>
+        <button class="experience-tab" data-exp="systems" role="tab" aria-selected="false" aria-controls="experiencePanel"><span class="num">03</span><span><strong>Smarter business systems</strong><small>Practical AI and workflow support</small></span></button>
+        <button class="experience-tab" data-exp="care" role="tab" aria-selected="false" aria-controls="experiencePanel"><span class="num">04</span><span><strong>Built to keep improving</strong><small>Support, review, and iteration</small></span></button>
       </div>
     </div>
     <div class="experience-visual reveal" role="tabpanel" id="experiencePanel" aria-label="Capability preview">
@@ -404,10 +406,10 @@ footer{padding:34px 0 45px;color:#80889b;font-size:11px}
   <div class="section-head reveal"><span class="kicker">Made for real businesses</span><h2>Different industries.<br><span class="gradient">Different digital needs.</span></h2><p>Our design language adapts to the business — not every company should look like the same template.</p></div>
   <div class="industry-wrap reveal">
     <div class="industry-tabs" role="tablist" aria-label="Industry examples">
-      <button class="industry-tab active" data-industry="auto" role="tab" aria-selected="true"><strong>Automotive</strong><span>Bookings, calls &amp; service clarity</span></button>
-      <button class="industry-tab" data-industry="home" role="tab" aria-selected="false"><strong>Home services</strong><span>Quotes, service areas &amp; trust</span></button>
-      <button class="industry-tab" data-industry="build" role="tab" aria-selected="false"><strong>Contractors</strong><span>Projects, expertise &amp; estimates</span></button>
-      <button class="industry-tab" data-industry="pro" role="tab" aria-selected="false"><strong>Professional services</strong><span>Credibility &amp; consultation requests</span></button>
+      <button class="industry-tab active" data-industry="auto" role="tab" aria-selected="true" aria-controls="industryPreview"><strong>Automotive</strong><span>Bookings, calls &amp; service clarity</span></button>
+      <button class="industry-tab" data-industry="home" role="tab" aria-selected="false" aria-controls="industryPreview"><strong>Home services</strong><span>Quotes, service areas &amp; trust</span></button>
+      <button class="industry-tab" data-industry="build" role="tab" aria-selected="false" aria-controls="industryPreview"><strong>Contractors</strong><span>Projects, expertise &amp; estimates</span></button>
+      <button class="industry-tab" data-industry="pro" role="tab" aria-selected="false" aria-controls="industryPreview"><strong>Professional services</strong><span>Credibility &amp; consultation requests</span></button>
     </div>
     <div class="industry-preview" id="industryPreview" role="tabpanel">
       <div><span class="preview-label" id="previewLabel">AUTOMOTIVE · CONCEPT DIRECTION</span><h3 id="previewTitle">Make it easy to book the next service.</h3><p id="previewText">A confident, high-contrast experience that puts key services, trust signals, hours, and appointment requests where customers expect them.</p></div>
@@ -465,7 +467,7 @@ footer{padding:34px 0 45px;color:#80889b;font-size:11px}
     <div>Website design · Optimization · AI workflows · Local growth</div>
     <a href="#home">Back to top ↑</a>
   </div>
-  <p style="margin:18px 0 0">© <span id="year"></span> MIRAH Digital. Independent digital studio.</p>
+  <p style="margin:18px 0 0">© <span id="year">2026</span> MIRAH Digital. Independent digital studio.</p>
 </footer>
 
 <script>
@@ -520,6 +522,23 @@ footer{padding:34px 0 45px;color:#80889b;font-size:11px}
     },{rootMargin:'-28% 0px -58% 0px',threshold:0});
     navTargets.forEach(function(s){activeIo.observe(s);});
   }
+
+  /* Arrow-key navigation for both tab groups (Tab moves between groups as normal). */
+  function tabArrow(selector){
+    var tabs=Array.prototype.slice.call(document.querySelectorAll(selector));
+    tabs.forEach(function(tab,i){
+      tab.addEventListener('keydown',function(e){
+        var idx=null;
+        if(e.key==='ArrowRight'||e.key==='ArrowDown')idx=(i+1)%tabs.length;
+        else if(e.key==='ArrowLeft'||e.key==='ArrowUp')idx=(i-1+tabs.length)%tabs.length;
+        else if(e.key==='Home')idx=0;
+        else if(e.key==='End')idx=tabs.length-1;
+        if(idx!==null){e.preventDefault();tabs[idx].focus();tabs[idx].click();}
+      });
+    });
+  }
+  tabArrow('.experience-tab');
+  tabArrow('.industry-tab');
 
   /* Experience tabs. */
   var expPanels={

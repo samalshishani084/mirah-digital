@@ -52,7 +52,7 @@ US small-to-medium businesses, startups, and entrepreneurs who need a website th
 - **Buttons** — Primary: gradient background, white text, pill radius, soft violet shadow; hover lifts 2px with a deeper shadow; focus gets a visible 3px ring; disabled is greyed and non-clickable. Secondary: white background, ink text, 1px border. No button ever shows a loading spinner for an action that does nothing.
 - **Form fields** — White background, 11px radius, 1px `#E3E6F0` border; focus border `#9B86F4` + 3px soft ring; required fields use native validation ("Please fill out this field."); error state is the native message plus a visible status line, never a silent failure.
 - **Cards** — White / soft tint, 21–24px radius, soft shadow, numbered gradient accents (01 violet, 02 orange, 03 pink, 04 teal on the process cards).
-- **Navbar** — Sticky, translucent with blur; mobile hamburger with `aria-expanded`, closes on Escape and on link click.
+- **Navbar** — Sticky, translucent with blur; mobile hamburger with `aria-expanded`, closes on Escape and on link click. Navigation collapses to the hamburger at ≤900px on every page (standardized 2026-11-27 — the 620/650px breakpoints let tablet-width headers overflow).
 - **Ticker** — One duplicated track, `overflow:hidden`, pauses under `prefers-reduced-motion`.
 - **Tabs / industry selector** — Button-based, keyboard-focusable, panels swap content; no tab may promise a capability that does not exist.
 - **Footer** — Brand, service list, honest studio line, copyright.
