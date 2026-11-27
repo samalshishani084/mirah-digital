@@ -526,6 +526,53 @@ body.pointer-live #mirahCursorGlow{opacity:1}
 }
 .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
 
+
+/* MIRAH mobile repair — restore the missing intelligence scene and remove dead space */
+@media(max-width:900px){
+ .hero{grid-template-columns:minmax(0,1fr);align-items:start}
+ .hero-art.ai-hero{display:flex;flex-direction:column;justify-content:flex-start;align-items:stretch;gap:0;height:auto;min-height:0}
+}
+@media(max-width:650px){
+ .hero{display:grid;grid-template-columns:minmax(0,1fr);align-content:start;gap:14px;padding-top:30px;padding-bottom:32px;min-height:0;height:auto}
+ .hero>div:first-child{grid-row:1}
+ .hero-art.ai-hero{grid-row:2;display:flex!important;width:100%;height:auto!important;min-height:0!important;max-height:none;overflow:visible!important;padding:4px 0 0;margin:0;gap:0}
+ .ai-stage{position:relative!important;display:block!important;flex:0 0 238px!important;width:100%!important;height:238px!important;min-height:238px!important;max-height:238px!important;opacity:1!important;visibility:visible!important;overflow:hidden!important;background:radial-gradient(ellipse at 50% 46%,#40356e 0%,#211d43 43%,#11182f 100%)!important;border:1px solid #a99bff70!important;border-radius:22px!important;box-shadow:0 18px 48px #2520442b,inset 0 0 50px #8b65ff22!important}
+ .ai-stage:before{inset:-35%;opacity:.85}
+ .ai-grid{opacity:.32!important}
+ .ai-particles{position:absolute!important;inset:0!important;display:block!important;width:100%!important;height:100%!important;z-index:1!important}
+ .ai-orbit-one{width:205px!important;height:92px!important}
+ .ai-orbit-two{width:145px!important;height:192px!important}
+ .ai-core{display:flex!important;left:50%!important;top:51%!important;width:91px!important;height:91px!important;opacity:1!important;visibility:visible!important;border-radius:31px!important}
+ .ai-core-mark{font-size:43px!important}
+ .ai-node{display:flex!important;opacity:1!important;visibility:visible!important;font-size:7px!important;padding:6px 8px!important}
+ .ai-node-one{left:5%!important;top:27%!important}
+ .ai-node-two{right:5%!important;top:30%!important}
+ .ai-node-three{left:9%!important;bottom:13%!important}
+ .ai-stage-tag{left:12px!important;top:12px!important;color:#d2c9ff!important;font-size:7px!important}
+ .ai-stage-caption{right:10px!important;bottom:10px!important;color:#d2c9ff!important;font-size:8px!important}
+ .ai-stage-caption b{color:#fff!important}
+ .ai-signal{display:block!important}
+ .ai-console{position:relative!important;z-index:5!important;display:block!important;width:calc(100% - 16px)!important;max-width:calc(100% - 16px)!important;margin:-20px auto 0!important;padding:13px!important;border-radius:17px!important;background:rgba(255,255,255,.97)!important;box-shadow:0 17px 42px #25204420!important}
+ .ai-console-head{gap:8px}
+ .ai-console-prompt{margin:10px 0 7px;font-size:12px}
+ .ai-prompt-list{display:grid!important;grid-template-columns:1fr!important;gap:6px}
+ .ai-prompt{padding:8px 10px!important;text-align:left;font-size:9px}
+ .ai-response{margin-top:8px;padding:9px 10px;min-height:0}
+ .ai-response b{font-size:10px}
+ .ai-response>span:last-child{font-size:8px}
+ .ai-chat-form{margin-top:8px}
+ .ai-chat-note{font-size:6px}
+ .ai-console-foot{gap:8px;justify-content:center;font-size:7px}
+ .proofline{margin-bottom:0}
+}
+@media(max-width:380px){
+ .hero{gap:11px;padding-top:24px}
+ .ai-stage{height:218px!important;min-height:218px!important;max-height:218px!important;flex-basis:218px!important}
+ .ai-core{width:82px!important;height:82px!important}
+ .ai-node-three{left:5%!important}
+ .ai-console{padding:11px!important}
+}
+
 </style>
 </head>
 <body>
