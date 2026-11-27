@@ -235,6 +235,136 @@ img,svg,video,canvas{max-width:100%}
  .portfolio-grid{grid-template-columns:minmax(0,1fr)}
  .contact{overflow:hidden}
 }
+
+/* MIRAH HYBRID v2 — cohesive visual language and phone-first layout */
+:root{--hybrid-glow:linear-gradient(120deg,rgba(37,142,234,.13),rgba(112,70,237,.12) 42%,rgba(223,57,167,.10) 76%,rgba(255,138,50,.10))}
+body{background:radial-gradient(ellipse at 12% 12%,rgba(225,235,255,.42),transparent 34%),radial-gradient(ellipse at 88% 46%,rgba(251,226,243,.34),transparent 31%),var(--paper)}
+.hero{grid-template-columns:minmax(0,1.02fr) minmax(0,.98fr);gap:clamp(22px,4vw,48px)}
+.hero>div,.hero-art,.device,.demo-site,.demo-main,.experience-shell,.experience-copy,.experience-visual{min-width:0}
+.hero-art{isolation:isolate}
+.device{box-shadow:0 34px 90px rgba(48,45,104,.17),0 4px 18px rgba(48,45,104,.06)}
+.studio-strip{isolation:isolate}
+.strip-point{transition:transform .24s ease,border-color .24s ease,box-shadow .24s ease}
+.strip-point:hover{transform:translateY(-4px);border-color:#d6c9ff;box-shadow:0 14px 30px rgba(67,54,128,.08)}
+.motion-ticker{position:relative}
+.motion-ticker:before,.motion-ticker:after{content:"";position:absolute;z-index:2;top:0;bottom:0;width:8vw;pointer-events:none}
+.motion-ticker:before{left:0;background:linear-gradient(90deg,#fff,transparent)}
+.motion-ticker:after{right:0;background:linear-gradient(270deg,#fff,transparent)}
+.experience-visual{box-shadow:inset 0 1px 0 #fff,0 20px 60px rgba(62,55,112,.07)}
+.experience-window{transform:rotate(-.6deg)}
+.experience-tab:focus-visible,.industry-tab:focus-visible,.btn:focus-visible,.menu:focus-visible{outline:3px solid #9b83f4;outline-offset:3px}
+@media(max-width:900px){
+ .hero{grid-template-columns:minmax(0,1fr);width:min(100% - 40px,680px);margin-inline:auto;gap:18px}
+ .hero-art{width:100%;max-width:620px;margin-inline:auto}
+ .device{max-width:100%}
+}
+@media(max-width:650px){
+ html,body{width:100%;max-width:100%;overflow-x:clip}
+ body{position:relative}
+ main,header,footer{width:100%;max-width:100%;min-width:0}
+ .container,.section.container{width:calc(100% - 32px)!important;max-width:560px!important;margin-left:auto!important;margin-right:auto!important;padding-left:0;padding-right:0}
+ header .container.nav{width:calc(100% - 32px)!important;max-width:560px!important}
+ .nav{height:70px;gap:10px}
+ .brand{gap:8px;min-width:0}
+ .brand svg{width:40px;height:32px;flex:0 0 auto}
+ .brandname{font-size:15px;white-space:nowrap}
+ .menu{flex:0 0 44px}
+ .navlinks{top:70px;left:0;right:0;width:100%;padding:12px 22px 18px}
+ .hero{display:grid;grid-template-columns:minmax(0,1fr);width:calc(100% - 32px)!important;max-width:560px!important;min-height:0;padding:40px 0 36px;gap:22px;overflow:clip}
+ .hero>div:first-child{width:100%;min-width:0}
+ .eyebrow{max-width:100%;white-space:normal;font-size:9px;letter-spacing:.12em}
+ .hero h1{font-size:clamp(40px,10.7vw,54px);line-height:1.02;letter-spacing:-.065em;max-width:100%;overflow-wrap:break-word}
+ .hero-copy{font-size:14px;line-height:1.72;max-width:100%;margin-top:16px}
+ .hero-actions{display:grid;grid-template-columns:minmax(0,1fr);gap:10px;margin-top:22px}
+ .hero-actions .btn{width:100%;min-height:48px;padding:13px 16px;font-size:12px}
+ .proofline{display:flex;flex-wrap:wrap;gap:9px 14px;margin-top:18px;font-size:10px;line-height:1.45}
+ .hero-art{width:100%;max-width:100%;min-width:0;min-height:0;padding:8px 0 18px;margin:0;overflow:visible}
+ .glow{width:min(76vw,290px);height:min(76vw,290px);right:0;left:auto}
+ .device{width:100%;max-width:100%;min-width:0;transform:none;border-radius:18px}
+ .devicebar{height:32px;padding:0 10px}
+ .deviceurl{max-width:48%;padding:4px 10px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+ .demo-site{width:100%;min-width:0;padding:12px}
+ .demo-nav{gap:8px;min-width:0}
+ .demo-nav span:last-child{font-size:7px;letter-spacing:.06em;white-space:nowrap}
+ .demo-main{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.78fr);gap:8px;padding:19px 0 13px;min-width:0}
+ .demo-main>div{min-width:0}
+ .demo-main h3{font-size:clamp(17px,5.2vw,22px);overflow-wrap:break-word}
+ .demo-main p{font-size:8px;line-height:1.5}
+ .abstract-art{width:100%;height:132px;min-width:0;overflow:hidden}
+ .art-ribbon{width:160px;height:68px;border-width:10px;top:36px}
+ .art-tile{min-width:0;max-width:calc(100% - 12px);padding:7px 8px}
+ .art-tile b{font-size:8px}.art-tile small{font-size:6px}
+ .tile-one{right:6px;top:8px}.tile-two{left:6px;bottom:6px}
+ .art-cursor{right:10px;bottom:12px;width:25px;height:25px}
+ .demo-foot{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:5px}
+ .demo-foot div{min-width:0;padding:8px 5px;font-size:7px;overflow-wrap:anywhere}
+ .demo-foot b{font-size:8px}
+ .float-card{font-size:8px;padding:8px 10px;max-width:44%;overflow-wrap:anywhere}
+ .float-card b{font-size:10px}
+ .fc1{right:2px;top:-7px}.fc2{left:2px;bottom:0}
+ .studio-strip{width:calc(100% - 32px)!important;max-width:560px!important;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px;padding:24px 0 42px;overflow:clip}
+ .strip-intro{grid-column:1/-1}
+ .strip-intro h2{font-size:25px}
+ .strip-point{min-width:0;min-height:108px;padding:12px;border-radius:15px}
+ .strip-point b{font-size:11px}
+ .strip-point small{font-size:9px;line-height:1.45}
+ .motion-ticker{width:100%;max-width:100%;padding:12px 0}
+ .motion-track{gap:18px;animation-duration:30s}
+ .motion-track span{font-size:8px}
+ .experience{padding-top:52px;padding-bottom:54px}
+ .experience-shell{grid-template-columns:minmax(0,1fr);gap:17px}
+ .experience-copy{padding:0;min-width:0}
+ .experience-copy h2{font-size:clamp(32px,8.5vw,39px);line-height:1.04}
+ .experience-copy>p{font-size:13px;line-height:1.7}
+ .experience-tabs{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin-top:18px}
+ .experience-tab{min-width:0;padding:11px 9px;gap:7px;transform:none!important}
+ .experience-tab>span:last-child{min-width:0}
+ .experience-tab strong{font-size:10px;line-height:1.3}
+ .experience-tab small{font-size:9px;line-height:1.35}
+ .experience-visual{width:100%;min-width:0;min-height:310px;padding:12px;border-radius:18px;overflow:hidden}
+ .experience-window{width:100%;min-width:0;transform:none}
+ .exp-content{padding:14px}
+ .exp-content h3{font-size:21px}
+ .exp-url{max-width:55%;padding:5px 12px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+ .exp-orbit{width:86px;height:86px;border-width:11px;right:8px;top:14px}
+ .exp-bubble{right:5px;bottom:17px;max-width:48%;padding:8px 9px}
+ .exp-bubble b{font-size:10px}
+ .experience-caption{left:12px;bottom:9px;font-size:7px}
+ .section{padding-top:54px;padding-bottom:54px}
+ .section-head h2{font-size:clamp(30px,8.2vw,36px);line-height:1.08}
+ .services{grid-template-columns:minmax(0,1fr);gap:10px}
+ .service{width:100%;min-width:0;padding:20px}
+ .focus{width:100%;min-width:0;padding:23px 17px}
+ .focus-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+ .industry-wrap{grid-template-columns:minmax(0,1fr);min-width:0;gap:10px}
+ .industry-tabs{grid-template-columns:repeat(2,minmax(0,1fr));gap:7px}
+ .industry-tab{min-width:0;padding:11px 9px}
+ .industry-tab strong{font-size:11px}
+ .industry-tab span{font-size:9px;line-height:1.35}
+ .industry-preview{min-width:0;min-height:0;padding:19px}
+ .industry-preview h3{font-size:23px}
+ .process{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+ .step{min-width:0;padding:14px 10px}
+ .contact{grid-template-columns:minmax(0,1fr);width:100%;min-width:0;padding:22px 15px;gap:16px}
+ .contact h2{font-size:clamp(30px,8vw,36px)}
+ .brief-form{width:100%;min-width:0;padding:13px}
+ .field input,.field select,.field textarea{min-width:0;width:100%}
+ .portfolio-grid{grid-template-columns:minmax(0,1fr);gap:13px}
+ .portfolio-card,.portfolio-visual,.portfolio-copy{min-width:0;width:100%}
+ .footer-row{gap:14px;align-items:flex-start}
+}
+@media(max-width:380px){
+ .container,.section.container,.hero,.studio-strip{width:calc(100% - 24px)!important}
+ .hero h1{font-size:39px}
+ .hero-actions .btn{font-size:11px}
+ .experience-tabs,.industry-tabs,.process{grid-template-columns:minmax(0,1fr)}
+ .demo-main{grid-template-columns:minmax(0,1fr) minmax(0,.72fr)}
+ .float-card{max-width:46%}
+}
+@media(prefers-reduced-motion:reduce){
+ .motion-track,.art-ribbon,.art-cursor{animation:none!important}
+ .strip-point,.experience-window{transition:none!important}
+}
 </style>
 </head>
 <body>
@@ -281,10 +411,10 @@ img,svg,video,canvas{max-width:100%}
 </section>
 
 <section class="studio-strip container reveal" aria-label="MIRAH design principles">
- <div class="strip-intro"><span class="kicker">The details matter</span><h2>Less noise.<br><span class="gradient">More meaning.</span></h2></div>
- <div class="strip-point"><span class="strip-icon">✳</span><b>Clear by design</b><small>Every section has a job to do.</small></div>
- <div class="strip-point"><span class="strip-icon">↗</span><b>Made to move</b><small>Small interactions guide the journey.</small></div>
- <div class="strip-point"><span class="strip-icon">◎</span><b>Built for people</b><small>Useful on a phone, not just a screen.</small></div>
+ <div class="strip-intro"><span class="kicker">The MIRAH signature</span><h2>Human insight.<br><span class="gradient">Intelligent craft.</span></h2></div>
+ <div class="strip-point"><span class="strip-icon">✳</span><b>Human direction</b><small>Every decision starts with a real need.</small></div>
+ <div class="strip-point"><span class="strip-icon">↗</span><b>Intelligent tools</b><small>Technology supports the idea, not the other way around.</small></div>
+ <div class="strip-point"><span class="strip-icon">◎</span><b>Meaningful motion</b><small>Details guide people toward useful action.</small></div>
 </section>
 
 
