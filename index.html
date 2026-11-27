@@ -5,8 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#f7f8fc">
 <meta name="color-scheme" content="light">
-<meta name="description" content="MIRAH Digital designs, improves and supports high-performing websites and practical AI-powered digital systems for local businesses in New Jersey.">
-<title>MIRAH Digital — Digital that moves business forward | v3</title>
+<meta name="description" content="MIRAH Digital is an independent digital studio serving businesses across the United States with website design, website improvement, SEO foundations, brand identity, and practical AI workflow solutions.">
+<title>MIRAH Digital — Websites, Digital Experiences & AI Workflows</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -592,6 +592,7 @@ header.scrolled{box-shadow:0 8px 30px rgba(35,42,83,.07);border-bottom-color:#e6
 @media(prefers-reduced-motion:reduce){.navlinks a:after{transition:none}.portfolio-card img,.portfolio-card .portfolio-image,.portfolio-card .portfolio-visual{transition:none}}
 
 
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
 /* MIRAH — refined static visual direction */
 :root{--paper:#f8f9fd;--ink:#171d35;--muted:#687188;--line:#e9ebf3;--shadow:0 16px 42px rgba(35,42,83,.075)}
 .glow,.art-ribbon,.art-cursor,.pulse{animation:none!important}
@@ -633,13 +634,13 @@ header{background:rgba(248,249,253,.94)}
 <main id="home">
 <section class="container hero">
  <div>
-  <div class="eyebrow"><span class="pulse"></span> New Jersey · Digital design & growth</div>
+  <div class="eyebrow"><span class="pulse"></span> Independent digital studio · United States</div>
   <h1>Make your next<br>digital move<br><span class="gradient">count.</span></h1>
-  <p class="hero-copy">We design, improve, and support websites that help local businesses earn trust, turn visits into enquiries, and make their next stage of growth easier.</p>
+  <p class="hero-copy">We design, improve, and support digital experiences that help businesses across the United States earn trust, turn visits into enquiries, and make their next stage of growth easier.</p>
   <div class="hero-actions"><a class="btn" href="#contact">Tell us about your project <span>↗</span></a><a class="btn secondary" href="#services">Explore services <span>↓</span></a></div>
   <div class="proofline"><span>Human-led, AI-assisted</span><span>Built for real customers</span><span>Mobile-first</span></div>
  </div>
->
+
 </section>
 
 <section class="studio-strip container reveal" aria-label="MIRAH design principles">
@@ -698,7 +699,7 @@ header{background:rgba(248,249,253,.94)}
 </section>
 
 <section class="section container" id="industries">
- <div class="section-head reveal"><span class="kicker">Made for local business</span><h2>Different industries.<br><span class="gradient">Different digital needs.</span></h2><p>Our design language adapts to the business—not every company should look like the same template.</p></div>
+ <div class="section-head reveal"><span class="kicker">Made for real businesses</span><h2>Different industries.<br><span class="gradient">Different digital needs.</span></h2><p>Our design language adapts to the business—not every company should look like the same template.</p></div>
  <div class="industry-wrap reveal">
   <div class="industry-tabs" role="tablist" aria-label="Industry examples">
    <button class="industry-tab active" data-industry="auto" role="tab" aria-selected="true"><strong>Automotive</strong><span>Bookings, calls & service clarity</span></button>
@@ -759,20 +760,21 @@ header{background:rgba(248,249,253,.94)}
 
 <section class="container section" id="contact">
  <div class="contact reveal">
-  <div><span class="kicker">Start with a conversation</span><h2>What should your<br><span class="gradient">website do better?</span></h2><p>Tell us what your business does and what you need. This short project brief helps us understand the right next step—without pressure or a complicated sales process.</p><p style="font-size:12px">MIRAH DIGITAL · Serving local businesses in New Jersey</p></div>
+  <div><span class="kicker">Start with a conversation</span><h2>What should your<br><span class="gradient">website do better?</span></h2><p>Tell us what your business does and what you need. This short project brief helps us understand the right next step—without pressure or a complicated sales process.</p><p style="font-size:12px">MIRAH DIGITAL · Serving businesses across the United States</p></div>
   <form class="brief-form" id="briefForm">
    <div class="field"><label for="name">Your name</label><input id="name" name="name" autocomplete="name" placeholder="Name" required></div>
    <div class="field"><label for="business">Business name</label><input id="business" name="business" placeholder="Your company" required></div>
    <div class="field"><label for="need">What do you need?</label><select id="need" name="need"><option>New website</option><option>Improve an existing website</option><option>Local SEO</option><option>AI / workflow solution</option><option>Website care and support</option><option>Not sure yet</option></select></div>
    <div class="field"><label for="details">A little about your project</label><textarea id="details" name="details" placeholder="What would you like to improve?"></textarea></div>
    <button class="btn" type="submit" style="width:100%">Create my project brief ↗</button>
-   <div class="form-status" id="formStatus" role="status">Your project brief is ready and copied. You can paste it into an email or message to MIRAH.</div>
-   <p class="form-note">Demo contact form: it prepares and copies your enquiry locally. No information is sent to a server in this prototype.</p>
+   <div class="form-status" id="formStatus" role="status" aria-live="polite"></div>
+   <div class="field" id="briefFallback" hidden><label for="briefOutput">Your project brief — copy it below</label><textarea id="briefOutput" readonly rows="7"></textarea></div>
+   <p class="form-note">Prototype form: your brief is prepared in this browser and copied only when clipboard access is available. It is not submitted to MIRAH. Do not enter sensitive or confidential information.</p>
   </form>
  </div>
 </section>
 </main>
-<footer class="container"><div class="footer-row"><div><div class="footer-brand">MIRAH DIGITAL<span>INTELLIGENCE WITH A HUMAN TOUCH</span></div></div><div>Website design · Optimization · AI workflows · Local growth</div><a href="#home">Back to top ↑</a></div><p style="margin:18px 0 0">© <span id="year"></span> MIRAH Digital. Brand and website concept.</p></footer>
+<footer class="container"><div class="footer-row"><div><div class="footer-brand">MIRAH DIGITAL<span>INTELLIGENCE WITH A HUMAN TOUCH</span></div></div><div>Website design · Optimization · AI workflows · Local growth</div><a href="#home">Back to top ↑</a></div><p style="margin:18px 0 0">© <span id="year"></span> MIRAH Digital. Independent digital studio.</p></footer>
 <script>
 const menu=document.getElementById('menu'),nav=document.getElementById('navlinks');
 menu.addEventListener('click',()=>{const open=nav.classList.toggle('open');menu.setAttribute('aria-expanded',String(open));menu.textContent=open?'×':'☰'});
@@ -787,7 +789,7 @@ const content={
  pro:{label:'PROFESSIONAL SERVICES · CONCEPT DIRECTION',title:'Make expertise easier to trust.',text:'A calm, credible experience explains your services, introduces your approach, answers common questions, and makes consultation requests straightforward.',chips:['Service overview','About & expertise','Consultation']}
 };
 document.querySelectorAll('.industry-tab').forEach(btn=>btn.addEventListener('click',()=>{document.querySelectorAll('.industry-tab').forEach(b=>{b.classList.remove('active');b.setAttribute('aria-selected','false')});btn.classList.add('active');btn.setAttribute('aria-selected','true');const d=content[btn.dataset.industry];document.getElementById('previewLabel').textContent=d.label;document.getElementById('previewTitle').textContent=d.title;document.getElementById('previewText').textContent=d.text;document.getElementById('previewChips').innerHTML=d.chips.map(x=>'<span>'+x+'</span>').join('')}));
-document.getElementById('briefForm').addEventListener('submit',async e=>{e.preventDefault();const f=new FormData(e.currentTarget);const brief=['MIRAH DIGITAL — PROJECT BRIEF','Name: '+f.get('name'),'Business: '+f.get('business'),'Need: '+f.get('need'),'Details: '+(f.get('details')||'Not provided')].join('\n');let copied=false;try{await navigator.clipboard.writeText(brief);copied=true}catch(err){const t=document.createElement('textarea');t.value=brief;document.body.appendChild(t);t.select();try{copied=document.execCommand('copy')}catch(e){}t.remove()}const status=document.getElementById('formStatus');status.style.display='block';status.textContent=copied?'Your project brief is ready and copied. You can paste it into an email or message to MIRAH.':'Your project brief is ready. Please copy the details from the fields before leaving this page.'});
+document.getElementById('briefForm').addEventListener('submit',async e=>{e.preventDefault();const f=new FormData(e.currentTarget);const brief=['MIRAH DIGITAL — PROJECT BRIEF','Name: '+f.get('name'),'Business: '+f.get('business'),'Need: '+f.get('need'),'Details: '+(f.get('details')||'Not provided')].join('\n');const status=document.getElementById('formStatus'),fallback=document.getElementById('briefFallback'),output=document.getElementById('briefOutput');let copied=false;try{if(navigator.clipboard&&window.isSecureContext){await navigator.clipboard.writeText(brief);copied=true}}catch(err){}status.style.display='block';if(copied){status.textContent='Your project brief was copied to your clipboard. It has not been sent to MIRAH.';fallback.hidden=true}else{status.textContent='Clipboard access is unavailable. Your brief is shown below so you can select and copy it manually. It has not been sent.';output.value=brief;fallback.hidden=false;output.focus();output.select()}});
 </script>
 
 <script>
