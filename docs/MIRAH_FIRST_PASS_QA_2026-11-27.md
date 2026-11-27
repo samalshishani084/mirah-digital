@@ -6,7 +6,7 @@ What was done: `index.html` was rebuilt as a clean foundation (575 lines, 48 KB,
 
 Diagnosis confirmed from source:
 - Old file had 7+ layered CSS blocks with `!important` overrides, conflicting `.reveal` definitions (opacity 0 + blur 4px, later overridden to opacity 1), conflicting hero heights (740px, then 0), and ~300 lines of dead AI-hero / device-mockup / particles / cursor-glow CSS and JS for elements that do not exist in the HTML (`ai-stage`, `ai-console`, `aiChatForm`, `mirahCursorGlow`). All removed.
-- No black floating controls exist in the site source. The only fixed element is the 3px gradient progress line (`.topline`); the header is sticky, not floating. The black controls in the Android screenshot are Android system / accessibility UI, not website elements — NOT DONE as a site fix because there is nothing in the source to remove.
+- No black floating controls exist in the site source. The only fixed element is the 3px gradient progress line (`.topline`); the header is sticky, not floating. CORRECTION (live check 2026-11-27 06:20): the small black floating button on the Preview is Vercel's preview Toolbar — a preview-only tool, not site content and absent on Production. The earlier "Android system / accessibility UI" explanation was wrong.
 - Ticker: old track duplicated content but sat inside conflicting overflow rules. Foundation ticker uses one duplicated track, `overflow:hidden`, `width:max-content`, and stops under reduced motion.
 - Excess vertical space: old hero padding 86px + 100px, plus stacked section padding (90px) and strip padding. Foundation uses one rhythm: hero 64px/56px desktop, 40px/44px mobile; sections 64px desktop, 48px mobile.
 
@@ -17,7 +17,17 @@ Foundation v1 guarantees:
 - Contact form unchanged in behaviour: local brief only, clipboard with manual fallback, explicit "has not been sent" status.
 - Brand, copy, six services, four experience tabs, four industry tabs, two portfolio cards, process, and footer preserved. Hero visual is now a truthful CSS-only concept preview, not a fake device or fake AI chat.
 
-Status: main site — PARTIAL (source + static checks DONE; live browser/device visual QA still to run on the Preview deployment).
+## Live Preview QA — Vercel Preview dpl_J4Wc8CcLAwHgu4uTFBTayyBzQQLz (2026-11-27 06:20–06:23, device browser, phone screen)
+
+- Deployment: GitHub commit ad8c16a auto-deployed by Vercel; state READY. URL https://mirah-digital-mplt760vo-samalshishani084.vercel.app (SSO Deployment Protection on — viewer must be signed in to Vercel).
+- Visual: PASS at phone width. Hero "Make your next digital move count.", six services, ticker, process, contact form, footer — all render, no blank/hidden sections, no broken or overlapping content.
+- Mobile menu: PASS. Hamburger opens (Services, Industries, Portfolio, Our process, Contact); tapping Services closes the menu and jumps to #services.
+- Experience tabs: PASS. Four tabs — 01 Design that earns trust, 02 Journeys that convert, 03 Smarter business systems, 04 Built to keep improving — all switch panels. (Note: no tab is labelled "Growth"; that was a wrong label in the test instruction, not a site defect.)
+- Industry selector: PASS. Automotive / Home services / Contractors / Professional services; selecting Home services shows its panel with the honest "illustrative directions, not completed client work" disclaimer.
+- Brief form: DEFECT FOUND + FIXED (same day). Empty submit correctly triggered native validation ("Please fill out this field."). But a filled submit showed "Your project brief was copied to your clipboard" while the brief box stayed empty and nothing was in the clipboard. Root cause, two compounding bugs: (1) `.field{display:grid}` overrode the `hidden` attribute, so the fallback box was always visible and empty; (2) `navigator.clipboard.writeText` resolves without throwing in in-app WebViews even when the write silently fails, so the code claimed a copy that never happened. Fix: global `[hidden]{display:none!important}`; the brief is now ALWAYS rendered visibly in the box on submit; the status only claims a copy when the Clipboard API call really succeeded; a visible "Copy brief" button retries the copy and reports the real result. Re-test pending on the next Preview deployment.
+- Minor: tight letter spacing on gradient words in some headings (e.g. "to a" in the process heading) — readable. Fix: `.gradient` letter-spacing set to -.015em in the same commit.
+
+Status: main site — PARTIAL (source + static checks DONE; live mobile visual + interaction QA DONE at one phone width; desktop widths 768/1366/1440 and form re-test still to run).
 - M5 sample: NOT READY — unchanged in this pass. Confirmed duplicates: front image used twice (main photo + thumb 1), rear image used twice (thumb 2 + thumb 3, with mismatched alt text), gallery mixes Wikimedia / bmwcoop / cstatic / ibsrv / encontracarros sources. Needs a verified, rights-cleared F10 set before portfolio approval.
 - Precision Auto Care: PARTIAL — unchanged in this pass. Single clean stylesheet and reduced-motion support are present; mobile nav links are hidden at ≤620px with no hamburger/menu alternative — needs a mobile menu before approval.
 - Production: unchanged; no Production deployment authorized. Work is on `feature/mirah-immersive-studio-v1` only.

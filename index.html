@@ -72,7 +72,8 @@ header.scrolled{box-shadow:0 8px 30px rgba(35,42,83,.07)}
 .eyebrow{display:inline-flex;align-items:center;gap:9px;padding:8px 12px;border:1px solid #e4e5f4;background:rgba(255,255,255,.72);border-radius:99px;color:#6b58b7;text-transform:uppercase;letter-spacing:.14em;font-size:10px;font-weight:800}
 .pulse{width:7px;height:7px;border-radius:50%;background:var(--mint);box-shadow:0 0 0 5px rgba(73,185,154,.13)}
 h1{font:800 clamp(44px,5.6vw,72px)/1.03 Manrope,sans-serif;letter-spacing:-.06em;margin:22px 0 18px}
-.gradient{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.gradient{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;letter-spacing:-.015em}
+[hidden]{display:none!important}
 .hero-copy{font-size:17px;line-height:1.75;color:var(--muted);max-width:540px}
 .hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin:28px 0 22px}
 .proofline{display:flex;gap:18px;flex-wrap:wrap;color:#737c91;font-size:12px}
@@ -451,8 +452,8 @@ footer{padding:34px 0 45px;color:#80889b;font-size:11px}
       <div class="field"><label for="details">A little about your project</label><textarea id="details" name="details" placeholder="What would you like to improve?"></textarea></div>
       <button class="btn" type="submit" style="width:100%">Create my project brief ↗</button>
       <div class="form-status" id="formStatus" role="status" aria-live="polite"></div>
-      <div class="field" id="briefFallback" hidden><label for="briefOutput">Your project brief — copy it below</label><textarea id="briefOutput" readonly rows="7"></textarea></div>
-      <p class="form-note">Prototype form: your brief is prepared in this browser and copied only when clipboard access is available. It is not submitted to MIRAH. Do not enter sensitive or confidential information.</p>
+      <div class="field" id="briefFallback" hidden><label for="briefOutput">Your project brief — copy it below</label><textarea id="briefOutput" readonly rows="7"></textarea><button class="btn secondary" type="button" id="copyBriefBtn" style="width:100%">Copy brief</button></div>
+      <p class="form-note">Prototype form: your brief is prepared in this browser and shown below. It is not submitted to MIRAH. Do not enter sensitive or confidential information.</p>
     </form>
   </div>
 </section>
@@ -556,17 +557,33 @@ footer{padding:34px 0 45px;color:#80889b;font-size:11px}
     });
   });
 
-  /* Project brief form: local only. Never claims submission. */
+  /* Project brief form: local only. Never claims submission.
+     The brief is ALWAYS shown in the box below, because some browsers
+     (notably in-app WebViews) report a clipboard write as successful
+     without actually copying. The status message only claims a copy
+     when the Clipboard API call really succeeded. */
+  async function tryCopy(text){
+    if(!navigator.clipboard||!window.isSecureContext) return false;
+    try{await navigator.clipboard.writeText(text);return true;}catch(err){return false;}
+  }
   document.getElementById('briefForm').addEventListener('submit',async function(e){
     e.preventDefault();
     var f=new FormData(e.currentTarget);
     var brief=['MIRAH DIGITAL — PROJECT BRIEF','Name: '+f.get('name'),'Business: '+f.get('business'),'Need: '+f.get('need'),'Details: '+(f.get('details')||'Not provided')].join('\n');
     var status=document.getElementById('formStatus'), fallback=document.getElementById('briefFallback'), output=document.getElementById('briefOutput');
-    var copied=false;
-    try{if(navigator.clipboard&&window.isSecureContext){await navigator.clipboard.writeText(brief);copied=true;}}catch(err){}
+    output.value=brief;
+    fallback.hidden=false;
+    var copied=await tryCopy(brief);
     status.style.display='block';
-    if(copied){status.textContent='Your project brief was copied to your clipboard. It has not been sent to MIRAH.';fallback.hidden=true;}
-    else{status.textContent='Clipboard access is unavailable. Your brief is shown below so you can select and copy it manually. It has not been sent.';output.value=brief;fallback.hidden=false;output.focus();output.select();}
+    if(copied){status.textContent='Your project brief is shown below and was copied to your clipboard. It has not been sent to MIRAH.';}
+    else{status.textContent='Your brief is shown below. Copy it manually — automatic copy did not work in this browser. It has not been sent to MIRAH.';}
+  });
+  document.getElementById('copyBriefBtn').addEventListener('click',async function(){
+    var output=document.getElementById('briefOutput'), status=document.getElementById('formStatus');
+    var copied=await tryCopy(output.value);
+    status.style.display='block';
+    if(copied){status.textContent='Copied to your clipboard. It has not been sent to MIRAH.';}
+    else{status.textContent='Copy did not work in this browser. Select the text in the box and copy it manually. It has not been sent to MIRAH.';output.focus();output.select();}
   });
 })();
 </script>
