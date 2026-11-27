@@ -608,6 +608,13 @@ header.scrolled{box-shadow:0 8px 30px rgba(35,42,83,.07);border-bottom-color:#e6
 header{background:rgba(248,249,253,.94)}
 .section{scroll-margin-top:88px}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+
+/* Hero without the oversized intelligence illustration */
+.hero{grid-template-columns:minmax(0,1fr);min-height:0;padding-top:86px;padding-bottom:86px}
+.hero>div:first-child{max-width:760px}
+.hero h1{max-width:720px}
+.hero-copy{max-width:650px}
+@media(max-width:650px){.hero{padding-top:52px;padding-bottom:54px}.hero>div:first-child{max-width:100%}}
 </style>
 </head>
 <body>
@@ -632,31 +639,7 @@ header{background:rgba(248,249,253,.94)}
   <div class="hero-actions"><a class="btn" href="#contact">Tell us about your project <span>↗</span></a><a class="btn secondary" href="#services">Explore services <span>↓</span></a></div>
   <div class="proofline"><span>Human-led, AI-assisted</span><span>Built for real customers</span><span>Mobile-first</span></div>
  </div>
- <div class="hero-art ai-hero" aria-label="MIRAH interactive intelligence concept">
-  <div class="ai-stage">
-   <canvas class="ai-particles" aria-hidden="true"></canvas>
-   <div class="ai-grid"></div>
-   <div class="ai-orbit ai-orbit-one"></div><div class="ai-orbit ai-orbit-two"></div>
-   <div class="ai-core"><span class="ai-core-mark">M</span><span class="ai-core-label">MIRAH</span></div>
-   <div class="ai-node ai-node-one"><i>✳</i><span>IDEAS</span></div>
-   <div class="ai-node ai-node-two"><i>⌘</i><span>DESIGN</span></div>
-   <div class="ai-node ai-node-three"><i>↗</i><span>GROWTH</span></div>
-   <div class="ai-signal ai-signal-one"></div><div class="ai-signal ai-signal-two"></div>
-   <div class="ai-stage-tag"><span class="ai-live-dot"></span> INTELLIGENCE IN MOTION</div>
-   <div class="ai-stage-caption"><b>Human insight.</b><br>Intelligent possibilities.</div>
-  </div>
-  <div class="ai-console">
-   <div class="ai-console-head"><span class="ai-avatar">M</span><span><b>MIRAH INTELLIGENCE</b><small>Your idea starts here</small></span><span class="ai-console-status">CONCEPT</span></div>
-   <p class="ai-console-prompt">What would you like to create?</p>
-   <div class="ai-prompt-list">
-    <button type="button" class="ai-prompt active" data-ai="premium">✦ A premium digital experience</button>
-    <button type="button" class="ai-prompt" data-ai="assistant">◈ An intelligent business assistant</button>
-    <button type="button" class="ai-prompt" data-ai="growth">↗ A smarter way to grow</button>
-   </div>
-   <div class="ai-response" aria-live="polite"><span class="ai-response-label">A DIRECTION TO EXPLORE</span><b id="aiResponseTitle">Make your brand feel unmistakable.</b><span id="aiResponseText">A distinctive digital world, shaped around your audience and the experience you want them to remember.</span></div>
-   <form class="ai-chat-form" id="aiChatForm"><label class="sr-only" for="aiChatInput">Describe what you want to create</label><input id="aiChatInput" type="text" maxlength="180" placeholder="Tell MIRAH what you have in mind…" autocomplete="off"><button type="submit" aria-label="Send idea">↗</button></form><div class="ai-chat-note">INTERACTIVE CONCEPT PREVIEW · SAMPLE RESPONSES</div><div class="ai-console-foot"><span>Human-guided</span><span>AI-assisted</span><span>Built around you</span></div>
-  </div>
- </div>
+>
 </section>
 
 <section class="studio-strip container reveal" aria-label="MIRAH design principles">
