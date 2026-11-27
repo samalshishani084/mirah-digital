@@ -365,6 +365,70 @@ body{background:radial-gradient(ellipse at 12% 12%,rgba(225,235,255,.42),transpa
  .motion-track,.art-ribbon,.art-cursor{animation:none!important}
  .strip-point,.experience-window{transition:none!important}
 }
+
+/* MIRAH Intelligence — a living, interactive AI-first first impression */
+.ai-hero{display:flex;flex-direction:column;justify-content:center;gap:15px;min-height:0;padding:12px 0;isolation:isolate}
+.ai-stage{height:310px;position:relative;overflow:hidden;border:1px solid #ffffffd9;border-radius:28px;background:radial-gradient(circle at 50% 46%,#fff 0,#f4f0ff 26%,#e9efff 60%,#fcecf4 100%);box-shadow:0 28px 75px rgba(64,54,126,.13),inset 0 1px 0 #fff}
+.ai-grid{position:absolute;inset:0;opacity:.32;background-image:linear-gradient(#8f8ac31a 1px,transparent 1px),linear-gradient(90deg,#8f8ac31a 1px,transparent 1px);background-size:28px 28px;mask-image:radial-gradient(ellipse at center,#000 10%,transparent 78%)}
+.ai-orbit{position:absolute;left:50%;top:48%;border:1px solid #9a85ef65;border-radius:50%;transform:translate(-50%,-50%) rotate(-24deg)}
+.ai-orbit-one{width:250px;height:115px;box-shadow:0 0 24px #8c70ed18;animation:aiOrbit 13s linear infinite}
+.ai-orbit-two{width:185px;height:250px;border-color:#df73bd66;transform:translate(-50%,-50%) rotate(48deg);animation:aiOrbit 17s linear infinite reverse}
+@keyframes aiOrbit{to{transform:translate(-50%,-50%) rotate(336deg)}}
+.ai-core{position:absolute;left:50%;top:48%;width:106px;height:106px;transform:translate(-50%,-50%);border-radius:34px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;background:linear-gradient(145deg,#ffffffed,#e9e4ffed 56%,#ffe6f0);border:1px solid #fff;box-shadow:0 0 0 9px #ffffff70,0 18px 48px #6d5acb30,inset 0 1px 0 #fff;animation:aiCoreFloat 5s ease-in-out infinite}
+@keyframes aiCoreFloat{0%,100%{margin-top:0}50%{margin-top:-7px}}
+.ai-core-mark{font:900 48px/1 Manrope;background:linear-gradient(120deg,#258eea,#7046ed 45%,#df39a7 78%,#ff8a32);color:transparent;background-clip:text}
+.ai-core-label{font:800 8px Manrope;letter-spacing:.34em;color:#717b96}
+.ai-node{position:absolute;z-index:2;display:flex;align-items:center;gap:7px;padding:8px 11px;border-radius:13px;background:#ffffffdf;border:1px solid #fff;box-shadow:0 10px 24px #45406b17;backdrop-filter:blur(10px);font:800 8px Manrope;letter-spacing:.13em;color:#66708a}
+.ai-node i{font-style:normal;font-size:14px;color:#805ce2}
+.ai-node-one{left:9%;top:22%}.ai-node-two{right:8%;top:29%}.ai-node-three{left:18%;bottom:17%}
+.ai-signal{position:absolute;width:7px;height:7px;border-radius:50%;background:#a77be9;box-shadow:0 0 0 6px #a77be91a,0 0 18px #a77be9;animation:aiSignal 3s ease-in-out infinite}
+.ai-signal-one{top:23%;right:28%}.ai-signal-two{bottom:22%;right:22%;background:#e58abf;animation-delay:1.2s}
+@keyframes aiSignal{50%{opacity:.3;transform:scale(.7)}}
+.ai-stage-tag{position:absolute;left:18px;top:17px;display:flex;align-items:center;gap:7px;font:800 8px Manrope;letter-spacing:.16em;color:#7b6bb1}
+.ai-live-dot{width:6px;height:6px;border-radius:50%;background:#50b99a;box-shadow:0 0 0 4px #50b99a20}
+.ai-stage-caption{position:absolute;right:17px;bottom:15px;text-align:right;font-size:9px;line-height:1.6;color:#7c8498}
+.ai-stage-caption b{font:800 11px Manrope;color:#202743}
+.ai-console{position:relative;z-index:3;margin:-3px 13px 0;padding:15px;border:1px solid #ffffff;background:#ffffffed;backdrop-filter:blur(18px);border-radius:19px;box-shadow:0 17px 48px rgba(55,48,104,.12)}
+.ai-console-head{display:flex;align-items:center;gap:9px}
+.ai-avatar{width:31px;height:31px;display:grid;place-items:center;border-radius:11px;background:var(--grad);color:white;font:900 16px Manrope;box-shadow:0 5px 14px #7046ed35}
+.ai-console-head b{display:block;font:850 9px Manrope;letter-spacing:.13em;color:#222943}
+.ai-console-head small{display:block;margin-top:3px;font-size:9px;color:#8a91a3}
+.ai-console-status{margin-left:auto;padding:5px 8px;border-radius:20px;background:#f1edff;color:#8067d0;font:800 7px Manrope;letter-spacing:.12em}
+.ai-console-prompt{margin:13px 0 8px;font:800 13px Manrope;letter-spacing:-.02em;color:#202743}
+.ai-prompt-list{display:flex;flex-wrap:wrap;gap:6px}
+.ai-prompt{border:1px solid #e8e8f2;background:#fff;border-radius:30px;padding:8px 10px;color:#646d83;font-size:9px;font-weight:700;cursor:pointer;transition:.2s}
+.ai-prompt:hover,.ai-prompt.active{border-color:#bba9ff;background:#f5f1ff;color:#654ac7}
+.ai-response{margin-top:10px;padding:11px 12px;border-radius:13px;background:linear-gradient(110deg,#f1f5ff,#f8f1ff 62%,#fff1f5);display:grid;gap:4px}
+.ai-response-label{font:850 7px Manrope;letter-spacing:.16em;color:#8a75cc}
+.ai-response b{font:800 11px Manrope;color:#202743}
+.ai-response>span:last-child{font-size:9px;line-height:1.5;color:#727c91}
+.ai-console-foot{display:flex;gap:12px;flex-wrap:wrap;margin-top:10px;color:#8b93a4;font-size:8px}
+.ai-console-foot span:before{content:"✓";color:#4cb69a;margin-right:4px;font-weight:900}
+@media(max-width:900px){.ai-hero{width:100%;max-width:620px;margin-inline:auto}}
+@media(max-width:650px){
+ .ai-hero{width:100%;max-width:100%;padding:6px 0 12px;gap:12px;overflow:visible}
+ .ai-stage{height:260px;border-radius:21px}
+ .ai-orbit-one{width:210px;height:96px}.ai-orbit-two{width:155px;height:205px}
+ .ai-core{width:88px;height:88px;border-radius:28px}.ai-core-mark{font-size:40px}
+ .ai-node{padding:7px 9px;font-size:7px;gap:5px}.ai-node-one{left:5%;top:23%}.ai-node-two{right:4%;top:30%}.ai-node-three{left:9%;bottom:15%}
+ .ai-stage-tag{left:12px;top:13px;font-size:7px}
+ .ai-stage-caption{right:11px;bottom:11px;font-size:8px}
+ .ai-console{margin:-2px 5px 0;padding:13px;border-radius:16px}
+ .ai-prompt-list{display:grid;grid-template-columns:1fr;gap:6px}
+ .ai-prompt{text-align:left;padding:9px 11px;font-size:9px}
+ .ai-console-prompt{font-size:12px}
+}
+@media(max-width:380px){.ai-stage{height:235px}.ai-node-three{left:5%}.ai-stage-caption{max-width:120px}}
+@media(prefers-reduced-motion:reduce){.ai-orbit,.ai-core,.ai-signal{animation:none!important}}
+/* Hard viewport containment: no section may push the phone canvas sideways */
+html,body{max-width:100%;overflow-x:clip}
+body,main,header,footer{min-width:0}
+main>*{max-width:100vw}
+@media(max-width:650px){
+ .hero,.hero-art,.ai-hero{min-width:0;max-width:calc(100vw - 32px)}
+ .hero-art{overflow:visible}
+ .ai-stage,.ai-console{max-width:100%;min-width:0}
+}
 </style>
 </head>
 <body>
@@ -389,24 +453,29 @@ body{background:radial-gradient(ellipse at 12% 12%,rgba(225,235,255,.42),transpa
   <div class="hero-actions"><a class="btn" href="#contact">Tell us about your project <span>↗</span></a><a class="btn secondary" href="#services">Explore services <span>↓</span></a></div>
   <div class="proofline"><span>Human-led, AI-assisted</span><span>Built for real customers</span><span>Mobile-first</span></div>
  </div>
- <div class="hero-art" aria-label="Illustrative website design preview">
-  <div class="glow"></div>
-  <div class="device">
-   <div class="devicebar"><i></i><i></i><i></i><span class="deviceurl">yourbusiness.com</span></div>
-   <div class="demo-site">
-    <div class="demo-nav"><span class="demo-brand">YOUR BUSINESS</span><span>HOME　 SERVICES　 CONTACT</span></div>
-    <div class="demo-main"><div><small>MADE FOR YOUR NEXT MOVE</small><h3>Good work.<br><span class="gradient">Found faster.</span></h3><p>A clear, confident website built around the people you want to reach.</p><span class="demo-link">REQUEST A QUOTE ↗</span></div><div class="abstract-art">
-      <div class="art-sun"></div>
-      <div class="art-ribbon"></div>
-      <div class="art-tile tile-one"><span>01</span><b>Discover</b><small>What makes you different</small></div>
-      <div class="art-tile tile-two"><span>02</span><b>Connect</b><small>Turn interest into action</small></div>
-      <div class="art-cursor">↖</div>
-     </div></div>
-    <div class="demo-foot"><div><b>01 / Clarity</b>Know what you offer</div><div><b>02 / Trust</b>Show why it matters</div><div><b>03 / Action</b>Make next steps easy</div></div>
-   </div>
+ <div class="hero-art ai-hero" aria-label="MIRAH interactive intelligence concept">
+  <div class="ai-stage">
+   <div class="ai-grid"></div>
+   <div class="ai-orbit ai-orbit-one"></div><div class="ai-orbit ai-orbit-two"></div>
+   <div class="ai-core"><span class="ai-core-mark">M</span><span class="ai-core-label">MIRAH</span></div>
+   <div class="ai-node ai-node-one"><i>✳</i><span>IDEAS</span></div>
+   <div class="ai-node ai-node-two"><i>⌘</i><span>DESIGN</span></div>
+   <div class="ai-node ai-node-three"><i>↗</i><span>GROWTH</span></div>
+   <div class="ai-signal ai-signal-one"></div><div class="ai-signal ai-signal-two"></div>
+   <div class="ai-stage-tag"><span class="ai-live-dot"></span> INTELLIGENCE IN MOTION</div>
+   <div class="ai-stage-caption"><b>Human insight.</b><br>Intelligent possibilities.</div>
   </div>
-  <div class="float-card fc1"><b>Strategy first ✦</b>Design with a clear purpose</div>
-  <div class="float-card fc2"><b>Human-led</b>AI-assisted, carefully reviewed</div>
+  <div class="ai-console">
+   <div class="ai-console-head"><span class="ai-avatar">M</span><span><b>MIRAH INTELLIGENCE</b><small>Your idea starts here</small></span><span class="ai-console-status">CONCEPT</span></div>
+   <p class="ai-console-prompt">What would you like to create?</p>
+   <div class="ai-prompt-list">
+    <button type="button" class="ai-prompt active" data-ai="premium">✦ A premium digital experience</button>
+    <button type="button" class="ai-prompt" data-ai="assistant">◈ An intelligent business assistant</button>
+    <button type="button" class="ai-prompt" data-ai="growth">↗ A smarter way to grow</button>
+   </div>
+   <div class="ai-response" aria-live="polite"><span class="ai-response-label">A DIRECTION TO EXPLORE</span><b id="aiResponseTitle">Make your brand feel unmistakable.</b><span id="aiResponseText">A distinctive digital world, shaped around your audience and the experience you want them to remember.</span></div>
+   <div class="ai-console-foot"><span>Human-guided</span><span>AI-assisted</span><span>Built around you</span></div>
+  </div>
  </div>
 </section>
 
@@ -570,6 +639,22 @@ document.getElementById('briefForm').addEventListener('submit',async e=>{e.preve
   document.querySelectorAll(".experience-tab").forEach(b=>{b.classList.toggle("active",b===btn);b.setAttribute("aria-selected",String(b===btn))});
   const d=panels[btn.dataset.exp];if(!d)return;
   for(const [id,key] of [["expKicker","kicker"],["expTitle","title"],["expText","text"],["expAction","action"],["expCardOne","one"],["expSubOne","subOne"],["expCardTwo","two"],["expSubTwo","subTwo"],["expBubble","bubble"],["expBubbleText","bubbleText"]]){const el=document.getElementById(id);if(el)el.textContent=d[key]}
+ }));
+})();
+</script>
+
+<script>
+(()=> {
+ const directions={
+  premium:{title:"Make your brand feel unmistakable.",text:"A distinctive digital world, shaped around your audience and the experience you want them to remember."},
+  assistant:{title:"Give your business a smarter first response.",text:"Imagine an assistant that can welcome enquiries, understand intent, and guide customers to the right next step—with your team in control."},
+  growth:{title:"Turn every digital touchpoint into momentum.",text:"Connect clear messaging, useful customer journeys, and practical automation around the goals that matter to your business."}
+ };
+ document.querySelectorAll(".ai-prompt").forEach(button=>button.addEventListener("click",()=>{
+  document.querySelectorAll(".ai-prompt").forEach(item=>item.classList.toggle("active",item===button));
+  const d=directions[button.dataset.ai];if(!d)return;
+  const title=document.getElementById("aiResponseTitle"),body=document.getElementById("aiResponseText");
+  if(title&&body){title.textContent=d.title;body.textContent=d.text}
  }));
 })();
 </script>
