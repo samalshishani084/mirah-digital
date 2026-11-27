@@ -22,3 +22,13 @@ The project remains a simple static HTML site. Vercel serves the root `index.htm
 - Forms only prepare/copy request text locally; they do not transmit or store customer information.
 - Replace remote demo photography with licensed or client-owned images before commercial deployment.
 - M5 Unleashed is an independent concept and is not affiliated with BMW.
+
+## Phase 03 — M5 implementation and static QA (2026-11-27)
+- Rebuilt the M5 sample as an independent 2014 BMW M5 F10 concept page.
+- Added keyboard skip navigation, visible keyboard focus, a named main landmark, responsive mobile section navigation, a caption for the technical table, and social-sharing metadata.
+- Static source checks passed: document structure, language and viewport metadata, page title and description, skip link and main landmark, mobile navigation, all section anchor targets, no broken in-page anchor targets, image alt text on all five gallery images, reduced-motion support, technical-table caption, BMW independence disclaimer, and illustrative-image disclaimer.
+- Vercel Preview build completed successfully for commit `1dfd1f5be62fc58b9e433b826f619781694a7a0d`.
+- CI status: Vercel success. No separate automated test suite is configured for this static HTML project.
+- Manual visual testing across real mobile/desktop browsers, screen-reader testing, Core Web Vitals measurement, and live remote-image availability checks have not been performed in this environment; do not represent them as passed.
+- Gallery and hero photography remain illustrative stock images and are not verified photographs of a 2014 BMW M5 F10. Replace with model-verified, appropriately licensed images before presenting the sample as an accurate vehicle gallery or commercial vehicle listing.
+- The sample remains a concept, not an official BMW property. No Production deployment was made.
