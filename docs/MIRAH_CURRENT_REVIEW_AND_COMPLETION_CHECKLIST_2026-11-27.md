@@ -104,3 +104,52 @@ Remaining:
 - Do not claim a browser test, accessibility pass, Lighthouse score or form delivery unless the test was actually performed.
 - Keep changes on the existing feature branch and preserve the current static architecture unless an approved scope requires otherwise.
 - The project is **PARTIAL** until the P0 checks have evidence and the owner accepts the remaining limitations.
+
+
+## 7. Implementation completed after this review
+
+The following changes were committed to the existing feature branch:
+
+- Homepage: added social-sharing metadata and browser theme color.
+- Homepage: made the capability ticker static and wrapping on narrow screens to prevent a moving clipped strip on mobile; duplicate decorative ticker content is hidden from assistive technology.
+- Homepage: added tab IDs, roving tab stops, tabpanel relationships, and orientation-aware arrow-key navigation.
+- Homepage: added an optional email field to the local project brief and included it in the generated brief.
+- Homepage: mobile navigation now announces open/close state with an updated accessible label.
+- M5 concept: removed an unverified `mailto` destination and routed the CTA to the MIRAH contact section.
+- M5 and Precision concepts: Escape closes the mobile menu and returns keyboard focus to its trigger.
+
+Commits:
+- `992c5ddaffac37a10e347068e718c3e2ea9cc1c4` — homepage accessibility, mobile ticker and project brief.
+- `4593237cc03f18a6b380f32d3c4c4064a7f75788` — M5 contact path and mobile-menu focus.
+- `61491e6298c0482ddf7291ace3df1fad7f46af2f` — Precision mobile-menu focus.
+- `9f6725ce476e03b24c0b7127c5bd9a78c6177299` — ARIA orientation-aware tab keyboard behavior.
+
+## 8. Post-change source checks
+
+A second source-level check was run after the changes:
+- Homepage: 46 IDs; no duplicate IDs; no broken in-page anchor targets; 8 tabs with exactly 2 initially selected and all inactive tabs at `tabindex="-1"`.
+- M5: 7 IDs; no duplicate IDs; no broken in-page anchor targets.
+- Precision Auto Care: 15 IDs; no duplicate IDs; no broken in-page anchor targets.
+- All three pages still include viewport metadata, skip links and reduced-motion styles.
+
+These checks are source inspections, not browser interaction or visual QA.
+
+## 9. Latest Preview deployment
+
+- Status: READY
+- Target: Preview only
+- Branch: `feature/mirah-immersive-studio-v1`
+- Commit: `9f6725ce476e03b24c0b7127c5bd9a78c6177299`
+- Preview: https://mirah-digital-pvazjaexq-samalshishani084.vercel.app
+
+Production was not changed.
+
+## 10. Remaining release blockers
+
+- Real browser visual and interaction QA across desktop and mobile.
+- Keyboard and screen-reader testing with actual assistive technology.
+- Performance measurement using Lighthouse / Core Web Vitals.
+- Confirmation of the actual business contact email and a secure, privacy-reviewed lead-delivery method. The current homepage brief remains local-only and is not delivered to MIRAH.
+- Confirmed legal/privacy copy before collecting or transmitting customer data.
+
+**Current release status: improved preview deployed; not yet approved for production or represented as a fully operational lead-generation site.**
