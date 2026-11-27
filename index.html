@@ -4,8 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#f7f8fc">
+<meta name="color-scheme" content="light">
 <meta name="description" content="MIRAH Digital designs, improves and supports high-performing websites and practical AI-powered digital systems for local businesses in New Jersey.">
-<title>MIRAH Digital — Digital that moves business forward</title>
+<title>MIRAH Digital — Digital that moves business forward | v3</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -52,6 +53,92 @@ footer{padding:34px 0 45px;color:#80889b;font-size:11px}.footer-row{display:flex
 @media(max-width:650px){.container{width:calc(100% - 34px)}.nav{height:68px}.brand{min-width:0}.brand svg{width:42px}.brandname{font-size:16px}.navlinks{display:none;position:absolute;top:68px;left:0;right:0;background:#fbfbfff5;padding:18px 22px 22px;border-bottom:1px solid var(--line);box-shadow:0 18px 28px #11152f10;flex-direction:column;align-items:stretch;gap:0}.navlinks.open{display:flex}.navlinks a{padding:13px 0;border-bottom:1px solid #eef0f5}.nav>.btn{display:none}.menu{display:block}.hero{padding:42px 0 52px;min-height:0}.hero h1{font-size:clamp(43px,12vw,58px);line-height:1.02}.hero-copy{font-size:15px}.hero-art{min-height:350px}.glow{width:280px;height:280px}.device{transform:none}.demo-site{padding:15px}.demo-main{padding:25px 0 18px;grid-template-columns:1fr .78fr}.demo-main h3{font-size:21px}.abstract-art{height:135px}.demo-foot div{padding:9px 7px}.demo-foot b{font-size:9px}.float-card{padding:10px 12px}.fc1{right:0;top:8px}.fc2{left:0;bottom:4px}.section{padding:66px 0}.section-head{margin-bottom:30px}.section-head h2{font-size:35px}.section-head p{font-size:14px}.services{grid-template-columns:1fr;gap:12px}.service{min-height:0;padding:22px}.focus{padding:27px 22px;border-radius:22px}.focus-grid div{padding:13px}.focus-grid b{font-size:19px}.industry-tabs{grid-template-columns:1fr 1fr}.industry-tab{padding:13px}.industry-preview{min-height:330px;padding:23px}.process{grid-template-columns:1fr 1fr}.step{padding:17px 12px}.contact{padding:27px 19px;gap:20px}.brief-form{padding:15px}.footer-row{flex-direction:column;align-items:flex-start}.proofline{gap:10px 16px}}
 @media(max-width:380px){.hero h1{font-size:41px}.hero-art{min-height:315px}.float-card{font-size:9px}.float-card b{font-size:12px}.industry-tabs{grid-template-columns:1fr}.process{grid-template-columns:1fr}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
+
+/* MIRAH v3 refinement: fuller mobile canvas + expressive, purposeful motion */
+:root{--shadow:0 26px 75px rgba(35,42,83,.13)}
+body{overflow-x:clip}
+.container{min-width:0}
+.hero>div:first-child,.hero-art,.device,.demo-site,.demo-main,.abstract-art{min-width:0;max-width:100%}
+.hero{isolation:isolate}
+.hero-art{padding:12px 8px}
+.device{width:100%;max-width:520px}
+.abstract-art{height:190px;border-radius:18px;background:linear-gradient(135deg,#d9eaff 0%,#e7dcff 42%,#ffe0ee 72%,#ffe8d3 100%);overflow:hidden;position:relative;isolation:isolate}
+.art-sun{position:absolute;width:125px;height:125px;border-radius:50%;background:linear-gradient(135deg,#fff8,#fff1);left:22px;top:25px;filter:blur(1px)}
+.art-ribbon{position:absolute;width:230px;height:95px;left:0;top:48px;border:15px solid transparent;border-top-color:#fff;border-bottom-color:#fff;border-radius:50%;transform:rotate(-34deg);filter:drop-shadow(0 9px 15px #7759d833);animation:ribbonFloat 7s ease-in-out infinite}
+@keyframes ribbonFloat{0%,100%{transform:translateY(0) rotate(-34deg)}50%{transform:translateY(-8px) rotate(-28deg)}}
+.art-tile{position:absolute;z-index:2;background:#ffffffdf;backdrop-filter:blur(10px);border:1px solid #ffffff;border-radius:12px;padding:10px 12px;box-shadow:0 10px 28px #5b4d8c20;display:grid;gap:3px;min-width:116px}
+.art-tile span{font-size:8px;font-weight:800;color:#8c76dd;letter-spacing:.12em}
+.art-tile b{font:800 11px Manrope;color:#18203b}
+.art-tile small{font-size:7px;color:#7d8498}
+.tile-one{right:13px;top:16px;transform:rotate(3deg)}
+.tile-two{left:12px;bottom:12px;transform:rotate(-3deg)}
+.art-cursor{position:absolute;right:28px;bottom:27px;z-index:3;width:29px;height:29px;display:grid;place-items:center;border-radius:50%;background:var(--grad);color:white;font-size:16px;box-shadow:0 7px 18px #7046ed55;animation:cursorDrift 4s ease-in-out infinite}
+@keyframes cursorDrift{0%,100%{transform:translate(0,0)}50%{transform:translate(-8px,-7px)}}
+.studio-strip{display:grid;grid-template-columns:1.25fr repeat(3,1fr);gap:12px;align-items:center;padding:22px 0 68px}
+.strip-intro h2{font:800 25px/1.05 Manrope;letter-spacing:-.06em;margin:8px 0 0}
+.strip-point{min-height:100px;border:1px solid var(--line);background:#ffffffb8;border-radius:17px;padding:15px;display:flex;flex-direction:column;justify-content:center;gap:5px}
+.strip-icon{font-size:19px;color:var(--violet)}
+.strip-point b{font:750 12px Manrope}
+.strip-point small{font-size:10px;line-height:1.45;color:var(--muted)}
+.service,.industry-tab,.btn{touch-action:manipulation}
+@media(max-width:650px){
+ .container{width:calc(100% - 28px);max-width:100%}
+ .nav{width:calc(100% - 28px)}
+ .hero{width:calc(100% - 28px);padding:38px 0 42px;gap:4px}
+ .hero>div:first-child{width:100%}
+ .hero h1{font-size:clamp(42px,11.6vw,56px);max-width:100%;overflow-wrap:normal}
+ .hero-copy{max-width:100%;font-size:14px;line-height:1.7}
+ .hero-actions{gap:9px}
+ .hero-actions .btn{padding:13px 15px;font-size:11px}
+ .proofline{font-size:10px;gap:9px 13px}
+ .hero-art{width:100%;padding:10px 0 4px;min-height:0;margin:0 auto}
+ .glow{width:min(78vw,290px);height:min(78vw,290px);right:4%;left:auto}
+ .device{width:100%;max-width:100%;border-radius:19px;transform:none}
+ .devicebar{height:34px;padding:0 11px}
+ .deviceurl{padding:4px 28px}
+ .demo-site{padding:13px}
+ .demo-main{grid-template-columns:1fr .78fr;gap:8px;padding:22px 0 15px}
+ .demo-main h3{font-size:clamp(18px,5.4vw,23px)}
+ .demo-main p{font-size:8px}
+ .abstract-art{height:142px;width:100%}
+ .art-ribbon{width:170px;height:72px;border-width:11px;top:39px}
+ .art-tile{min-width:94px;padding:8px}
+ .art-tile b{font-size:9px}
+ .art-tile small{font-size:6px}
+ .tile-one{right:6px;top:9px}
+ .tile-two{left:6px;bottom:7px}
+ .art-cursor{right:13px;bottom:18px}
+ .demo-foot{gap:5px}
+ .demo-foot div{font-size:7px;padding:8px 6px}
+ .demo-foot b{font-size:8px}
+ .float-card{font-size:8px;padding:8px 10px}
+ .float-card b{font-size:10px}
+ .fc1{right:3px;top:-4px}
+ .fc2{left:3px;bottom:-5px}
+ .studio-strip{width:calc(100% - 28px);grid-template-columns:1fr 1fr;padding:24px 0 48px;gap:9px}
+ .strip-intro{grid-column:1/-1;margin-bottom:4px}
+ .strip-intro h2{font-size:24px}
+ .strip-point{min-height:104px;padding:12px}
+ .section{width:calc(100% - 28px);padding:58px 0}
+ .section-head{width:100%;max-width:100%}
+ .section-head h2{font-size:clamp(31px,8.4vw,36px)}
+ .service{width:100%;min-width:0}
+ .focus{width:100%;padding:24px 18px}
+ .industry-wrap{width:100%;min-width:0}
+ .industry-preview{width:100%;min-width:0}
+ .contact{width:100%;padding:23px 15px}
+ .brief-form{width:100%;min-width:0}
+}
+@media(max-width:360px){
+ .container,.nav,.hero,.studio-strip,.section{width:calc(100% - 22px)}
+ .hero h1{font-size:40px}
+ .hero-actions .btn{font-size:10px;padding:12px}
+ .demo-main{grid-template-columns:1fr .7fr}
+ .abstract-art{height:128px}
+ .float-card{max-width:132px}
+}
+@media(prefers-reduced-motion:reduce){.art-ribbon,.art-cursor{animation:none}}
+
 </style>
 </head>
 <body>
@@ -82,13 +169,26 @@ footer{padding:34px 0 45px;color:#80889b;font-size:11px}.footer-row{display:flex
    <div class="devicebar"><i></i><i></i><i></i><span class="deviceurl">yourbusiness.com</span></div>
    <div class="demo-site">
     <div class="demo-nav"><span class="demo-brand">YOUR BUSINESS</span><span>HOME　 SERVICES　 CONTACT</span></div>
-    <div class="demo-main"><div><small>MADE FOR YOUR NEXT MOVE</small><h3>Good work.<br><span class="gradient">Found faster.</span></h3><p>A clear, confident website built around the people you want to reach.</p><span class="demo-link">REQUEST A QUOTE ↗</span></div><div class="abstract-art"><div class="art-orbit"></div></div></div>
+    <div class="demo-main"><div><small>MADE FOR YOUR NEXT MOVE</small><h3>Good work.<br><span class="gradient">Found faster.</span></h3><p>A clear, confident website built around the people you want to reach.</p><span class="demo-link">REQUEST A QUOTE ↗</span></div><div class="abstract-art">
+      <div class="art-sun"></div>
+      <div class="art-ribbon"></div>
+      <div class="art-tile tile-one"><span>01</span><b>Discover</b><small>What makes you different</small></div>
+      <div class="art-tile tile-two"><span>02</span><b>Connect</b><small>Turn interest into action</small></div>
+      <div class="art-cursor">↖</div>
+     </div></div>
     <div class="demo-foot"><div><b>01 / Clarity</b>Know what you offer</div><div><b>02 / Trust</b>Show why it matters</div><div><b>03 / Action</b>Make next steps easy</div></div>
    </div>
   </div>
   <div class="float-card fc1"><b>Strategy first ✦</b>Design with a clear purpose</div>
   <div class="float-card fc2"><b>Human-led</b>AI-assisted, carefully reviewed</div>
  </div>
+</section>
+
+<section class="studio-strip container reveal" aria-label="MIRAH design principles">
+ <div class="strip-intro"><span class="kicker">The details matter</span><h2>Less noise.<br><span class="gradient">More meaning.</span></h2></div>
+ <div class="strip-point"><span class="strip-icon">✳</span><b>Clear by design</b><small>Every section has a job to do.</small></div>
+ <div class="strip-point"><span class="strip-icon">↗</span><b>Made to move</b><small>Small interactions guide the journey.</small></div>
+ <div class="strip-point"><span class="strip-icon">◎</span><b>Built for people</b><small>Useful on a phone, not just a screen.</small></div>
 </section>
 
 <section class="section container" id="services">
