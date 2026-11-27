@@ -273,7 +273,7 @@ footer{padding:34px 0 45px;color:#80889b;font-size:11px}
   .exp-content{padding:16px}
   .exp-content h3{font-size:22px}
   .exp-bubble{right:8px;bottom:16px}
-  .experience-tabs{grid-template-columns:1fr 1fr;gap:7px}
+  .experience-tabs{grid-template-columns:1fr;gap:7px}
   .experience-tab{padding:11px 9px;gap:7px}
   .focus{padding:26px 20px;border-radius:22px}
   .focus-grid{grid-template-columns:1fr 1fr;gap:8px}
@@ -536,8 +536,9 @@ footer{padding:34px 0 45px;color:#80889b;font-size:11px}
     tabs.forEach(function(tab,i){
       tab.addEventListener('keydown',function(e){
         var idx=null;
-        if(e.key==='ArrowRight'||e.key==='ArrowDown')idx=(i+1)%tabs.length;
-        else if(e.key==='ArrowLeft'||e.key==='ArrowUp')idx=(i-1+tabs.length)%tabs.length;
+        var vertical=tab.parentElement.getAttribute('aria-orientation')==='vertical';
+        if((vertical&&e.key==='ArrowDown')||(!vertical&&e.key==='ArrowRight'))idx=(i+1)%tabs.length;
+        else if((vertical&&e.key==='ArrowUp')||(!vertical&&e.key==='ArrowLeft'))idx=(i-1+tabs.length)%tabs.length;
         else if(e.key==='Home')idx=0;
         else if(e.key==='End')idx=tabs.length-1;
         if(idx!==null){e.preventDefault();tabs[idx].focus();tabs[idx].click();}
