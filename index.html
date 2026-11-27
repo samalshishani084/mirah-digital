@@ -252,7 +252,7 @@ body{background:radial-gradient(ellipse at 12% 12%,rgba(225,235,255,.42),transpa
 .motion-ticker:after{right:0;background:linear-gradient(270deg,#fff,transparent)}
 .experience-visual{box-shadow:inset 0 1px 0 #fff,0 20px 60px rgba(62,55,112,.07)}
 .experience-window{transform:rotate(-.6deg)}
-.experience-tab:focus-visible,.industry-tab:focus-visible,.btn:focus-visible,.menu:focus-visible{outline:3px solid #9b83f4;outline-offset:3px}
+.navlinks a:focus-visible,.experience-tab:focus-visible,.industry-tab:focus-visible,.btn:focus-visible,.menu:focus-visible{outline:3px solid #9b83f4;outline-offset:3px}
 @media(max-width:900px){
  .hero{grid-template-columns:minmax(0,1fr);width:min(100% - 40px,680px);margin-inline:auto;gap:18px}
  .hero-art{width:100%;max-width:620px;margin-inline:auto}
@@ -628,7 +628,7 @@ header{background:rgba(248,249,253,.94)}
   </a>
   <nav class="navlinks" id="navlinks" aria-label="Main navigation"><a href="#services">Services</a><a href="#industries">Industries</a><a href="#portfolio">Portfolio</a><a href="#approach">Our process</a><a href="#contact">Contact</a></nav>
   <a class="btn small" href="#contact">Start a project <span>↗</span></a>
-  <button class="menu" id="menu" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+  <button class="menu" id="menu" type="button" aria-label="Toggle navigation" aria-controls="navlinks" aria-expanded="false">☰</button>
  </div>
 </header>
 <main id="home">
@@ -778,7 +778,7 @@ header{background:rgba(248,249,253,.94)}
 <script>
 const menu=document.getElementById('menu'),nav=document.getElementById('navlinks');
 menu.addEventListener('click',()=>{const open=nav.classList.toggle('open');menu.setAttribute('aria-expanded',String(open));menu.textContent=open?'×':'☰'});
-nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('open');menu.setAttribute('aria-expanded','false');menu.textContent='☰'}));
+nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('open');menu.setAttribute('aria-expanded','false');menu.textContent='☰'}));\ndocument.addEventListener('keydown',e=>{if(e.key==='Escape'&&nav.classList.contains('open')){nav.classList.remove('open');menu.setAttribute('aria-expanded','false');menu.textContent='☰';menu.focus()}});
 document.getElementById('year').textContent=new Date().getFullYear();
 const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target)}}),{threshold:.1});
 document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
