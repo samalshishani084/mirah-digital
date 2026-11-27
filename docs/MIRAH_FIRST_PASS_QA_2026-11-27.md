@@ -48,6 +48,8 @@ Sam: the old photos did not fit the page, and he wants the cars to look like the
 
 - **Publishing constraint found 07:05:** the GitHub `push-files` connector refuses binary files ("snapshot file … is not UTF-8"), and the local `git push` has no credentials, so the four JPGs cannot be pushed into the repo through any route available here. Solution: the four renders were downscaled to 1400px and embedded in the pages as WebP data URIs (M5 page ~450 KB total, home page +124 KB) — the pages are fully self-contained and deploy through the normal text push. The source JPGs stay in the local workspace only (`samples/automotive/m5-unleashed/images/`, untracked). If a binary-capable push becomes available, the images should move back to files and the `src` attributes back to `images/m5-*.jpg`.
 
+- **Visual check PASSED 07:08** on Preview dpl_Ffz7k8uwN5xZMMx2WyDQQjZnsHco: all four AI images load, one same dark-grey M5, consistent dark dramatic high-motion style, no broken images; gallery heading, AI disclosure and legal text all correct; home Sample 01 card shows the same hero image.
+
 Next: desktop QA at 768 / 1366 / 1440 (blocked — SSO Deployment Protection keeps the cloud browser out; needs the protection off or a signed-in desktop browser).
 
 
