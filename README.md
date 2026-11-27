@@ -17,6 +17,9 @@ The project remains a simple static HTML site. Vercel serves the root `index.htm
 - Do not publish privacy, security, performance, client, or service-delivery claims until they have been verified and approved.
 - Production deployment requires a separate explicit approval. Work on the feature branch does not authorize a production release.
 
+## Internal delivery standard
+- The mandatory project workflow, approval gates, asset integrity rules, visual quality criteria, QA evidence requirements, and definition of done are documented in [MIRAH Delivery Standard](docs/MIRAH_DELIVERY_STANDARD.md).
+
 ## Notes
 - Sample businesses are fictional demonstrations.
 - Forms only prepare/copy request text locally; they do not transmit or store customer information.
