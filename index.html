@@ -591,6 +591,23 @@ header.scrolled{box-shadow:0 8px 30px rgba(35,42,83,.07);border-bottom-color:#e6
 @keyframes mirahSettle{from{opacity:.65;letter-spacing:-.035em;transform:translateY(7px)}to{opacity:1;transform:translateY(0)}}
 @media(prefers-reduced-motion:reduce){.navlinks a:after{transition:none}.portfolio-card img,.portfolio-card .portfolio-image,.portfolio-card .portfolio-visual{transition:none}}
 
+
+/* MIRAH — refined static visual direction */
+:root{--paper:#f8f9fd;--ink:#171d35;--muted:#687188;--line:#e9ebf3;--shadow:0 16px 42px rgba(35,42,83,.075)}
+.glow,.art-ribbon,.art-cursor,.pulse{animation:none!important}
+.glow{filter:blur(30px);opacity:.42}
+.device{transform:none;box-shadow:0 22px 60px rgba(38,44,91,.10)}
+.float-card{box-shadow:0 12px 30px rgba(35,42,83,.08)}
+.service,.portfolio-card,.industry-tab,.btn,.navlinks a{transition:background-color .2s ease,border-color .2s ease,color .2s ease,box-shadow .2s ease!important}
+.service:hover{transform:none;box-shadow:0 14px 34px rgba(35,42,83,.08)}
+.service:after{display:none}
+.reveal{opacity:1;transform:none;transition:none}
+.portfolio-visual img{transition:filter .25s ease}
+.portfolio-card:hover .portfolio-visual img{transform:none;filter:saturate(1.04)}
+.btn:hover{transform:none}
+header{background:rgba(248,249,253,.94)}
+.section{scroll-margin-top:88px}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
 </style>
 </head>
 <body>
@@ -804,22 +821,6 @@ document.getElementById('briefForm').addEventListener('submit',async e=>{e.preve
   for(const [id,key] of [["expKicker","kicker"],["expTitle","title"],["expText","text"],["expAction","action"],["expCardOne","one"],["expSubOne","subOne"],["expCardTwo","two"],["expSubTwo","subTwo"],["expBubble","bubble"],["expBubbleText","bubbleText"]]){const el=document.getElementById(id);if(el)el.textContent=d[key]}
  }));
 
- // Subtle magnetic response: restrained movement, disabled on touch and reduced-motion devices.
- if(!reduce&&matchMedia('(hover:hover) and (pointer:fine)').matches){
-  document.querySelectorAll('.btn').forEach(btn=>{
-   btn.addEventListener('pointermove',e=>{
-    const r=btn.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;
-    btn.style.transform='translate('+x*5+'px,'+y*4+'px)';
-   });
-   btn.addEventListener('pointerleave',()=>{btn.style.transform=''});
-  });
-  const heroArt=document.querySelector('.hero-art');
-  if(heroArt){
-   let target=0,current=0,raf=0;
-   const update=()=>{current+=(target-current)*.08;heroArt.style.translate='0 '+current+'px';if(Math.abs(target-current)>.1)raf=requestAnimationFrame(update);else raf=0};
-   window.addEventListener('scroll',()=>{const r=heroArt.getBoundingClientRect();target=Math.max(-9,Math.min(9,(r.top-innerHeight*.35)*-.018));if(!raf)raf=requestAnimationFrame(update)},{passive:true});
-  }
- }
  // Keep the active navigation item in sync with the section currently in view.
  const navLinks=[...document.querySelectorAll('.navlinks a[href^="#"]')];
  const navTargets=navLinks.map(a=>document.querySelector(a.getAttribute('href'))).filter(Boolean);
@@ -854,17 +855,6 @@ document.getElementById('briefForm').addEventListener('submit',async e=>{e.preve
 <script>
 (()=> {
  const reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
- const canvas=document.querySelector('.ai-particles');
- const stage=document.querySelector('.ai-stage');
- if(canvas&&stage&&!reduce){
-  const ctx=canvas.getContext('2d');let w=0,h=0,dpr=1,pts=[],raf=0,pointer={x:-999,y:-999};
-  const resize=()=>{const r=stage.getBoundingClientRect();w=r.width;h=r.height;dpr=Math.min(window.devicePixelRatio||1,1.8);canvas.width=w*dpr;canvas.height=h*dpr;canvas.style.width=w+'px';canvas.style.height=h+'px';ctx.setTransform(dpr,0,0,dpr,0,0);const n=Math.min(72,Math.max(28,Math.floor(w*h/4300)));pts=Array.from({length:n},()=>({x:Math.random()*w,y:Math.random()*h,vx:(Math.random()-.5)*.32,vy:(Math.random()-.5)*.32,r:Math.random()*1.6+.6,p:Math.random()*6.28}))};
-  const draw=()=>{ctx.clearRect(0,0,w,h);for(let i=0;i<pts.length;i++){const a=pts[i];a.p+=.018;a.x+=a.vx;a.y+=a.vy;if(a.x<0||a.x>w)a.vx*=-1;if(a.y<0||a.y>h)a.vy*=-1;const dx=pointer.x-a.x,dy=pointer.y-a.y,dist=Math.hypot(dx,dy);if(dist<100){a.x-=dx*.0018;a.y-=dy*.0018}for(let j=i+1;j<pts.length;j++){const b=pts[j],dd=Math.hypot(a.x-b.x,a.y-b.y);if(dd<105){ctx.strokeStyle='rgba(178,158,255,'+(1-dd/105)*.19+')';ctx.lineWidth=.7;ctx.beginPath();ctx.moveTo(a.x,a.y);ctx.lineTo(b.x,b.y);ctx.stroke()}}ctx.fillStyle='rgba(220,211,255,'+(0.35+Math.sin(a.p)*.25)+')';ctx.beginPath();ctx.arc(a.x,a.y,a.r,0,Math.PI*2);ctx.fill()}raf=requestAnimationFrame(draw)};
-  resize();draw();window.addEventListener('resize',resize,{passive:true});stage.addEventListener('pointermove',e=>{const r=stage.getBoundingClientRect();pointer={x:e.clientX-r.left,y:e.clientY-r.top}},{passive:true});stage.addEventListener('pointerleave',()=>{pointer={x:-999,y:-999}},{passive:true});
-  document.addEventListener('visibilitychange',()=>{if(document.hidden)cancelAnimationFrame(raf);else if(!reduce)draw()});
- }
- const glow=document.createElement('div');glow.id='mirahCursorGlow';document.body.appendChild(glow);
- if(matchMedia('(hover:hover) and (pointer:fine)').matches&&!reduce){document.body.classList.add('pointer-live');let gx=innerWidth/2,gy=innerHeight/2,tx=gx,ty=gy;window.addEventListener('pointermove',e=>{tx=e.clientX;ty=e.clientY},{passive:true});const move=()=>{gx+=(tx-gx)*.12;gy+=(ty-gy)*.12;glow.style.left=gx+'px';glow.style.top=gy+'px';requestAnimationFrame(move)};move()}
  const progress=document.querySelector('.topline'),header=document.querySelector('header');
  const onScroll=()=>{const max=document.documentElement.scrollHeight-innerHeight; if(progress)progress.style.transform='scaleX('+(max>0?scrollY/max:0)+')';if(header)header.classList.toggle('scrolled',scrollY>18)};
  window.addEventListener('scroll',onScroll,{passive:true});onScroll();
@@ -876,10 +866,13 @@ document.getElementById('briefForm').addEventListener('submit',async e=>{e.preve
   {keys:['website','site','web','design','portfolio'],title:'Create a digital presence with a point of view.',text:'We can define the audience, visual direction, essential pages, and interactions before shaping a polished responsive website.'}
  ];
  if(form&&input&&title&&body)form.addEventListener('submit',e=>{e.preventDefault();const q=input.value.trim();if(!q){input.focus();return}const words=q.toLowerCase();const hit=replies.find(r=>r.keys.some(k=>words.includes(k)))||{title:'Let’s turn that idea into a clear direction.',text:'The next step is to understand who it is for, what you want people to feel, and what action the experience should make effortless. This is a concept response; MIRAH’s live AI connection comes in a later build.'};response.classList.add('thinking');title.textContent='Exploring your idea…';body.textContent='Finding a useful direction for your brief.';setTimeout(()=>{title.textContent=hit.title;body.textContent=hit.text;response.classList.remove('thinking')},650);input.value=''});
- const cards=document.querySelectorAll('.service,.portfolio-card');
- if(matchMedia('(hover:hover) and (pointer:fine)').matches&&!reduce)cards.forEach(card=>{card.addEventListener('pointermove',e=>{const r=card.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;card.style.transform='perspective(850px) rotateX('+(-y*4)+'deg) rotateY('+(x*5)+'deg) translateY(-5px)'});card.addEventListener('pointerleave',()=>{card.style.transform=''})});
- if(stage&&matchMedia('(hover:hover) and (pointer:fine)').matches&&!reduce)stage.addEventListener('pointermove',e=>{const r=stage.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;stage.style.transform='rotateY('+(x*3)+'deg) rotateX('+(-y*3)+'deg)'});
- if(stage)stage.addEventListener('pointerleave',()=>stage.style.transform='');
+ 
 })();
+</script>
+<script>
+/* Keep the interface still: no cursor-following graphics or animated canvas. */
+document.querySelectorAll('.ai-particles').forEach(el=>{el.getContext?.('2d')?.clearRect(0,0,el.width,el.height)});
+document.getElementById('mirahCursorGlow')?.remove();
+document.body.classList.remove('pointer-live');
 </script>
 </body></html>
