@@ -40,7 +40,9 @@ Status: main site — PARTIAL (source + static checks DONE; live mobile visual +
 
 - **ROOT CAUSE FOUND 06:49 (Precision menu):** a literal `\n` (backslash + `n`, two characters) sat in the Precision stylesheet between the reduced-motion block and the 900px block. In CSS, `\n` outside a string is an escape that produces the identifier `n`, so the parser swallowed the entire 900px media block as the body of a bogus rule — the 900px rules never applied, while the 620px block after it parsed normally. The same stray sequence predated the rework and had silently killed the original 620px block too. Fix: removed the two stray characters. Verified after the fix: no stray backslash-n remains in any stylesheet (the only ones left are legitimate JS `'\n'` string escapes), all @media blocks start at brace-depth 0, braces balanced 96/96. Lesson recorded: static QA now includes a stray-backslash check on every stylesheet.
 
-Next: re-test the Precision menu on the new Preview, then run desktop QA at 768 / 1366 / 1440.
+- **Re-test PASSED 06:52** on Preview dpl_FCi7c48PMNTB5ceRrCsSAekqt4FU (https://mirah-digital-p4my7ctdp-samalshishani084.vercel.app): hamburger visible, desktop links hidden, menu opens with all 4 items, tapping Services closes it and jumps to #services showing all 6 services. **Mobile QA is now complete at phone width** — main site, M5, and Precision all PASS.
+
+Next: desktop QA at 768 / 1366 / 1440 (blocked — SSO Deployment Protection keeps the cloud browser out; needs the protection off or a signed-in desktop browser).
 
 
 Review date: 2026-11-27
