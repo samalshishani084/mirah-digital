@@ -50,6 +50,10 @@ Sam: the old photos did not fit the page, and he wants the cars to look like the
 
 - **Visual check PASSED 07:08** on Preview dpl_Ffz7k8uwN5xZMMx2WyDQQjZnsHco: all four AI images load, one same dark-grey M5, consistent dark dramatic high-motion style, no broken images; gallery heading, AI disclosure and legal text all correct; home Sample 01 card shows the same hero image.
 
+## Published to Production (2026-11-27, ~07:11)
+
+Sam approved publishing ("انشر"). PR #2 (`feature/mirah-immersive-studio-v1` → `main`) merged, commit `098151c` — clean fast-forward, no conflicts (main was already the merge-base). Vercel Production deployment `dpl_HD6mVSrR7e5N9JJ2TSC65xMWiQLs` READY. Production URL is **https://mirah-digital.vercel.app** — not `ishani084.vercel.app`: that domain is not attached to any project in the Vercel account (only one project exists, `mirah-digital`). Anonymous fetch of the production URL returns the full new site, so Production is publicly readable — the SSO Deployment Protection gates Preview deployments only. Device visual check of Production PASSED 07:11 — home loads publicly (hero, 6 services, M5 + Precision portfolio), M5 page loads with the AI hero image, no login wall on either page.
+
 Next: desktop QA at 768 / 1366 / 1440 (blocked — SSO Deployment Protection keeps the cloud browser out; needs the protection off or a signed-in desktop browser).
 
 
