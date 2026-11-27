@@ -139,6 +139,77 @@ body{overflow-x:clip}
 }
 @media(prefers-reduced-motion:reduce){.art-ribbon,.art-cursor{animation:none}}
 
+
+/* MIRAH experience upgrade — richer canvas, responsive guardrails, interactive studio */
+html,body{width:100%;max-width:100%;overflow-x:hidden}
+img,svg,video,canvas{max-width:100%}
+.hero{width:100%;max-width:1160px;min-width:0;overflow:visible}
+.hero-art{min-width:0}
+.hero h1{overflow-wrap:normal;word-break:normal}
+.studio-strip{position:relative}
+.studio-strip:before{content:"";position:absolute;inset:0 -5vw;background:linear-gradient(90deg,#eef3ff 0%,#f6edff 48%,#fff0f5 100%);border-block:1px solid #e9e9f5;z-index:-1}
+.motion-ticker{overflow:hidden;border-block:1px solid #e8eaf3;background:#fff;padding:14px 0;white-space:nowrap}
+.motion-track{display:flex;width:max-content;gap:30px;align-items:center;animation:mirahMarquee 34s linear infinite}
+.motion-track span{font:800 10px Manrope;letter-spacing:.2em;color:#7c849a;text-transform:uppercase}
+.motion-track b{color:#9b7af0;font-size:15px}
+@keyframes mirahMarquee{to{transform:translateX(-50%)}}
+.experience{padding-top:78px;padding-bottom:82px}
+.experience-shell{display:grid;grid-template-columns:.86fr 1.14fr;gap:28px;align-items:stretch}
+.experience-copy{padding:32px 0}
+.experience-copy h2{font:800 clamp(34px,4.3vw,50px)/1.05 Manrope;letter-spacing:-.065em;margin:14px 0}
+.experience-copy>p{font-size:14px;line-height:1.8;color:var(--muted);max-width:430px}
+.experience-tabs{display:grid;gap:9px;margin-top:25px}
+.experience-tab{display:flex;gap:13px;align-items:center;text-align:left;border:1px solid var(--line);border-radius:15px;padding:13px 15px;background:#ffffffb8;cursor:pointer;transition:.2s}
+.experience-tab:hover,.experience-tab.active{border-color:#b7a5ff;background:#fff;box-shadow:0 10px 25px #5c47a817;transform:translateX(3px)}
+.experience-tab .num{font:800 11px Manrope;color:#8d74e9}
+.experience-tab strong{display:block;font:750 13px Manrope;color:var(--ink);margin-bottom:3px}
+.experience-tab small{font-size:10px;color:var(--muted)}
+.experience-visual{min-height:440px;border-radius:25px;padding:22px;background:radial-gradient(circle at 85% 12%,#edddff 0,transparent 36%),linear-gradient(145deg,#e8f1ff,#f5efff 55%,#ffeaf0);position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center}
+.experience-visual:before{content:"";position:absolute;width:390px;height:390px;border-radius:50%;border:1px solid #ffffffc9;box-shadow:0 0 0 25px #ffffff3d,0 0 0 55px #ffffff26;right:-120px;bottom:-180px}
+.experience-window{position:relative;z-index:1;width:100%;max-width:490px;border:1px solid #ffffff;background:#ffffffd9;backdrop-filter:blur(15px);border-radius:18px;box-shadow:0 25px 70px #3c397b24;overflow:hidden;transform:rotate(-1deg);transition:transform .35s}
+.experience-window:hover{transform:rotate(0) translateY(-4px)}
+.exp-bar{height:37px;display:flex;align-items:center;gap:5px;padding:0 13px;border-bottom:1px solid #eceef5}
+.exp-bar i{width:7px;height:7px;border-radius:50%;background:#d9dce8}
+.exp-url{margin:auto;border-radius:20px;background:#f0f1f7;color:#9aa1b2;padding:5px 42px;font-size:8px}
+.exp-content{padding:22px}
+.exp-kicker{font-size:8px;font-weight:900;letter-spacing:.18em;color:#7c65cb}
+.exp-content h3{font:800 26px/1.06 Manrope;letter-spacing:-.055em;margin:10px 0}
+.exp-content p{font-size:10px;line-height:1.6;color:#727c91;max-width:280px}
+.exp-action{display:inline-block;margin-top:6px;padding:9px 13px;border-radius:30px;color:#fff;background:var(--grad);font-size:8px;font-weight:800}
+.exp-cards{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:17px}
+.exp-card{min-height:96px;border-radius:13px;padding:13px;background:linear-gradient(140deg,#e7edff,#f6eaff);display:flex;flex-direction:column;justify-content:space-between}
+.exp-card:nth-child(2){background:linear-gradient(140deg,#ffe8ed,#fff0dc)}
+.exp-card b{font:800 12px Manrope;color:#232945}
+.exp-card span{font-size:8px;color:#727b91}
+.exp-orbit{position:absolute;width:130px;height:130px;border:18px solid #ffffff9c;border-radius:44% 56% 61% 39%;right:14px;top:23px;transform:rotate(35deg);pointer-events:none}
+.exp-bubble{position:absolute;z-index:2;right:7px;bottom:34px;padding:12px 15px;border:1px solid #fff;border-radius:14px;background:#ffffffed;box-shadow:0 12px 30px #37335a1a;font-size:9px;color:#737d91}
+.exp-bubble b{display:block;font:800 12px Manrope;color:#202743;margin-bottom:3px}
+.experience-caption{position:absolute;left:22px;bottom:18px;font-size:9px;letter-spacing:.15em;font-weight:800;color:#7c70a7}
+@media(max-width:900px){.experience-shell{grid-template-columns:1fr}.experience-copy{padding:0}.experience-visual{min-height:390px}}
+@media(max-width:650px){
+ .motion-ticker{padding:12px 0}
+ .motion-track{gap:19px;animation-duration:26s}
+ .motion-track span{font-size:8px}
+ .experience{padding-top:55px;padding-bottom:58px}
+ .experience-shell{gap:18px}
+ .experience-copy h2{font-size:35px}
+ .experience-copy>p{font-size:13px}
+ .experience-tabs{grid-template-columns:1fr 1fr;gap:7px}
+ .experience-tab{padding:11px 9px;gap:7px;min-width:0}
+ .experience-tab strong{font-size:11px}
+ .experience-tab small{font-size:9px;line-height:1.35}
+ .experience-tab .num{font-size:9px}
+ .experience-visual{min-height:330px;padding:13px;border-radius:19px}
+ .experience-window{border-radius:14px}
+ .exp-content{padding:16px}
+ .exp-content h3{font-size:22px}
+ .exp-orbit{width:95px;height:95px;border-width:13px;right:8px;top:17px}
+ .exp-bubble{right:3px;bottom:19px;padding:9px 11px}
+ .experience-caption{left:14px;bottom:11px;font-size:7px}
+}
+@media(max-width:370px){.experience-tabs{grid-template-columns:1fr}.experience-tab{padding:10px 12px}.experience-visual{min-height:310px}}
+@media(prefers-reduced-motion:reduce){.motion-track{animation:none}}
+
 </style>
 </head>
 <body>
@@ -189,6 +260,35 @@ body{overflow-x:clip}
  <div class="strip-point"><span class="strip-icon">✳</span><b>Clear by design</b><small>Every section has a job to do.</small></div>
  <div class="strip-point"><span class="strip-icon">↗</span><b>Made to move</b><small>Small interactions guide the journey.</small></div>
  <div class="strip-point"><span class="strip-icon">◎</span><b>Built for people</b><small>Useful on a phone, not just a screen.</small></div>
+</section>
+
+
+<div class="motion-ticker" aria-label="MIRAH capabilities">
+ <div class="motion-track"><span>Digital strategy</span><b>✳</b><span>Website experiences</span><b>✳</b><span>Local visibility</span><b>✳</b><span>AI workflows</span><b>✳</b><span>Brand identity</span><b>✳</b><span>Ongoing improvement</span><b>✳</b><span>Digital strategy</span><b>✳</b><span>Website experiences</span><b>✳</b><span>Local visibility</span><b>✳</b><span>AI workflows</span><b>✳</b><span>Brand identity</span><b>✳</b><span>Ongoing improvement</span><b>✳</b></div>
+</div>
+<section class="container section experience" id="studio">
+ <div class="experience-shell">
+  <div class="experience-copy reveal">
+   <span class="kicker">A studio built around outcomes</span>
+   <h2>Not just a website.<br><span class="gradient">A better way forward.</span></h2>
+   <p>Every strong digital experience has a purpose. Explore how MIRAH brings design, customer journeys, and practical technology together—without adding complexity for its own sake.</p>
+   <div class="experience-tabs" role="tablist" aria-label="Explore MIRAH capabilities">
+    <button class="experience-tab active" data-exp="design" role="tab" aria-selected="true"><span class="num">01</span><span><strong>Design that earns trust</strong><small>Clear, polished, mobile-first experiences</small></span></button>
+    <button class="experience-tab" data-exp="growth" role="tab" aria-selected="false"><span class="num">02</span><span><strong>Journeys that convert</strong><small>Make the next step obvious</small></span></button>
+    <button class="experience-tab" data-exp="systems" role="tab" aria-selected="false"><span class="num">03</span><span><strong>Smarter business systems</strong><small>Practical AI and workflow support</small></span></button>
+    <button class="experience-tab" data-exp="care" role="tab" aria-selected="false"><span class="num">04</span><span><strong>Built to keep improving</strong><small>Support, review, and iteration</small></span></button>
+   </div>
+  </div>
+  <div class="experience-visual reveal" role="tabpanel" id="experiencePanel">
+   <div class="exp-orbit"></div>
+   <div class="experience-window">
+    <div class="exp-bar"><i></i><i></i><i></i><span class="exp-url">yourbusiness.com</span></div>
+    <div class="exp-content"><span class="exp-kicker" id="expKicker">THE FIRST IMPRESSION</span><h3 id="expTitle">Make every visit feel effortless.</h3><p id="expText">A confident visual system, thoughtful spacing, and clear content help customers understand your business from the first scroll.</p><span class="exp-action" id="expAction">Explore the experience ↗</span><div class="exp-cards"><div class="exp-card"><b id="expCardOne">A clear message</b><span id="expSubOne">Know what you offer</span></div><div class="exp-card"><b id="expCardTwo">A confident look</b><span id="expSubTwo">Feel the difference</span></div></div></div>
+   </div>
+   <div class="exp-bubble"><b id="expBubble">Made for people ✦</b><span id="expBubbleText">Beautiful and useful on every screen</span></div>
+   <div class="experience-caption">MIRAH DIGITAL / INTERACTIVE STUDIO</div>
+  </div>
+ </div>
 </section>
 
 <section class="section container" id="services">
@@ -301,5 +401,21 @@ const content={
 };
 document.querySelectorAll('.industry-tab').forEach(btn=>btn.addEventListener('click',()=>{document.querySelectorAll('.industry-tab').forEach(b=>{b.classList.remove('active');b.setAttribute('aria-selected','false')});btn.classList.add('active');btn.setAttribute('aria-selected','true');const d=content[btn.dataset.industry];document.getElementById('previewLabel').textContent=d.label;document.getElementById('previewTitle').textContent=d.title;document.getElementById('previewText').textContent=d.text;document.getElementById('previewChips').innerHTML=d.chips.map(x=>'<span>'+x+'</span>').join('')}));
 document.getElementById('briefForm').addEventListener('submit',async e=>{e.preventDefault();const f=new FormData(e.currentTarget);const brief=['MIRAH DIGITAL — PROJECT BRIEF','Name: '+f.get('name'),'Business: '+f.get('business'),'Need: '+f.get('need'),'Details: '+(f.get('details')||'Not provided')].join('\n');let copied=false;try{await navigator.clipboard.writeText(brief);copied=true}catch(err){const t=document.createElement('textarea');t.value=brief;document.body.appendChild(t);t.select();try{copied=document.execCommand('copy')}catch(e){}t.remove()}const status=document.getElementById('formStatus');status.style.display='block';status.textContent=copied?'Your project brief is ready and copied. You can paste it into an email or message to MIRAH.':'Your project brief is ready. Please copy the details from the fields before leaving this page.'});
+</script>
+
+<script>
+(()=> {
+ const panels={
+  design:{kicker:"THE FIRST IMPRESSION",title:"Make every visit feel effortless.",text:"A confident visual system, thoughtful spacing, and clear content help customers understand your business from the first scroll.",action:"Explore the experience ↗",one:"A clear message",subOne:"Know what you offer",two:"A confident look",subTwo:"Feel the difference",bubble:"Made for people ✦",bubbleText:"Beautiful and useful on every screen"},
+  growth:{kicker:"THE CUSTOMER JOURNEY",title:"Turn attention into a next step.",text:"Clear service information, useful proof, and focused calls to action guide visitors toward calling, booking, or requesting a quote.",action:"Make the next step clear ↗",one:"Useful information",subOne:"Answer real questions",two:"Easy actions",subTwo:"Call, book, enquire",bubble:"Clarity creates action ↗",bubbleText:"A smoother path from visit to enquiry"},
+  systems:{kicker:"THE SMARTER WORKFLOW",title:"Let technology take care of the repeatable.",text:"Practical automations can organize enquiries, support follow-ups, and reduce repetitive admin—with people in control of important decisions.",action:"Explore practical AI ↗",one:"Less repetition",subOne:"Organize everyday tasks",two:"Human oversight",subTwo:"Keep decisions thoughtful",bubble:"Human-led, AI-assisted ✦",bubbleText:"Technology with a clear purpose"},
+  care:{kicker:"THE LONG-TERM EXPERIENCE",title:"Launch is the beginning, not the finish.",text:"Review what works, keep information current, improve the details, and make your digital presence more useful as your business evolves.",action:"Keep moving forward ↗",one:"Ongoing care",subOne:"Keep things up to date",two:"Steady improvement",subTwo:"Learn and refine",bubble:"Always improving ↗",bubbleText:"A digital partner beyond launch"}
+ };
+ document.querySelectorAll(".experience-tab").forEach(btn=>btn.addEventListener("click",()=>{
+  document.querySelectorAll(".experience-tab").forEach(b=>{b.classList.toggle("active",b===btn);b.setAttribute("aria-selected",String(b===btn))});
+  const d=panels[btn.dataset.exp];if(!d)return;
+  for(const [id,key] of [["expKicker","kicker"],["expTitle","title"],["expText","text"],["expAction","action"],["expCardOne","one"],["expSubOne","subOne"],["expCardTwo","two"],["expSubTwo","subTwo"],["expBubble","bubble"],["expBubbleText","bubbleText"]]){const el=document.getElementById(id);if(el)el.textContent=d[key]}
+ }));
+})();
 </script>
 </body></html>
