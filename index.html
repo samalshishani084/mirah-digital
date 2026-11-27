@@ -149,6 +149,26 @@ h1{font:800 clamp(44px,5.6vw,72px)/1.03 Manrope,sans-serif;letter-spacing:-.06em
 .exp-bubble b{display:block;font:800 12px Manrope,sans-serif;color:#202743;margin-bottom:3px}
 .experience-caption{position:absolute;left:22px;bottom:18px;font-size:9px;letter-spacing:.15em;font-weight:800;color:#7c70a7}
 
+/* ---------- Business transformation ---------- */
+.transformation{padding-top:34px}
+.transformation-grid{display:grid;grid-template-columns:1fr 48px 1fr;gap:16px;align-items:center}
+.transform-card{border:1px solid var(--line);border-radius:22px;padding:28px;background:#fff;min-height:320px}
+.transform-card.old{background:linear-gradient(145deg,#fff,#f2f3f8)}
+.transform-card.new{background:linear-gradient(145deg,#f0f5ff,#f7efff 60%,#fff)}
+.transform-tag{display:inline-block;font-size:9px;letter-spacing:.17em;font-weight:900;color:#8b91a3}
+.transform-card.new .transform-tag{color:var(--violet)}
+.transform-card h3{font:800 22px/1.2 Manrope,sans-serif;letter-spacing:-.04em;margin:15px 0 18px;max-width:360px}
+.transform-card ul{list-style:none;padding:0;margin:0;display:grid;gap:12px}
+.transform-card li{font-size:13px;color:var(--muted);display:flex;gap:10px;align-items:flex-start}
+.transform-card li:before{content:"—";color:#a0a6b5;font-weight:900}
+.transform-card.new li:before{content:"✓";color:var(--mint)}
+.transform-arrow{width:42px;height:42px;display:grid;place-items:center;border-radius:50%;background:#fff;border:1px solid var(--line);color:var(--violet);font-size:22px;box-shadow:var(--shadow)}
+.transform-footnote{text-align:center;color:var(--muted);font-size:12px;line-height:1.7;max-width:760px;margin:22px auto}
+.transform-cta{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:20px 24px;border-radius:18px;background:#111831;color:#fff;margin-top:26px}
+.transform-cta b,.transform-cta span{display:block}
+.transform-cta b{font:750 15px Manrope,sans-serif;margin-bottom:4px}
+.transform-cta span{font-size:11px;color:#c4cadd}
+@media(max-width:700px){.transformation-grid{grid-template-columns:1fr;gap:10px}.transform-card{min-height:0;padding:23px}.transform-arrow{margin:auto;transform:rotate(90deg)}.transform-cta{align-items:flex-start;flex-direction:column;padding:20px}.transform-cta .btn{width:100%}}
 /* ---------- Services ---------- */
 .services{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
 .service{background:#fff;border:1px solid var(--line);border-radius:21px;padding:25px;min-height:230px;display:flex;flex-direction:column;transition:transform .25s,box-shadow .25s,border-color .25s}
@@ -321,10 +341,10 @@ footer{padding:34px 0 45px;color:#80889b;font-size:11px}
 <section class="container hero" id="home">
   <div>
     <div class="eyebrow"><span class="pulse" aria-hidden="true"></span> Independent digital studio · United States</div>
-    <h1>Make your next<br>digital move<br><span class="gradient">count.</span></h1>
-    <p class="hero-copy">We design, improve, and support digital experiences that help businesses across the United States earn trust, turn visits into enquiries, and make their next stage of growth easier.</p>
+    <h1>Your business<br>deserves more<br>than an <span class="gradient">old website.</span></h1>
+    <p class="hero-copy">We help established businesses rethink their digital presence — transforming outdated websites into modern, customer-focused experiences that communicate value, build confidence, and make it easier to choose you.</p>
     <div class="hero-actions">
-      <a class="btn" href="#contact">Tell us about your project <span aria-hidden="true">↗</span></a>
+      <a class="btn" href="#contact">Plan your website transformation <span aria-hidden="true">↗</span></a>
       <a class="btn secondary" href="#services">Explore services <span aria-hidden="true">↓</span></a>
     </div>
     <div class="proofline"><span>Human-led, AI-assisted</span><span>Built for real customers</span><span>Mobile-first</span></div>
@@ -332,11 +352,11 @@ footer{padding:34px 0 45px;color:#80889b;font-size:11px}
   <div class="hero-visual" aria-label="What a MIRAH project covers">
     <div class="hero-visual-bar" aria-hidden="true"><i></i><i></i><i></i><span>yourbusiness.com</span></div>
     <div class="hero-visual-body">
-      <h2>Your business,<br>clearly presented.</h2>
-      <p>A concept preview of what MIRAH shapes for a client: a clear message, an easy next step, and a look people remember.</p>
-      <div class="hero-visual-row"><span class="hero-visual-icon" aria-hidden="true">✳</span><div><b>Design that earns trust</b><span>Clear, polished, mobile-first experiences.</span></div></div>
-      <div class="hero-visual-row"><span class="hero-visual-icon" aria-hidden="true">↗</span><div><b>Journeys that convert</b><span>Make the next step obvious — call, book, enquire.</span></div></div>
-      <div class="hero-visual-row"><span class="hero-visual-icon" aria-hidden="true">◎</span><div><b>Built to keep improving</b><span>Support, review, and iteration after launch.</span></div></div>
+      <h2>A better digital<br>first impression.</h2>
+      <p>A modern website should do more than look current. It should explain your value, answer customer questions, and move people toward action.</p>
+      <div class="hero-visual-row"><span class="hero-visual-icon" aria-hidden="true">✳</span><div><b>Look current. Feel credible.</b><span>A visual identity that reflects the quality of your business.</span></div></div>
+      <div class="hero-visual-row"><span class="hero-visual-icon" aria-hidden="true">↗</span><div><b>Make choosing you easier.</b><span>Clear services, useful content, and focused calls to action.</span></div></div>
+      <div class="hero-visual-row"><span class="hero-visual-icon" aria-hidden="true">◎</span><div><b>Ready for what comes next.</b><span>A flexible foundation for your company’s next stage.</span></div></div>
     </div>
   </div>
 </section>
@@ -386,6 +406,17 @@ footer{padding:34px 0 45px;color:#80889b;font-size:11px}
       <div class="experience-caption">MIRAH DIGITAL / INTERACTIVE STUDIO</div>
     </div>
   </div>
+</section>
+
+<section class="section container transformation" id="transformation">
+  <div class="section-head reveal"><span class="kicker">The business transformation</span><h2>Your website is not just online presence.<br><span class="gradient">It is part of how your business works.</span></h2><p>Customers have changed. Expectations have changed. Your digital experience should keep pace — and make every interaction with your company clearer, easier, and more useful.</p></div>
+  <div class="transformation-grid">
+    <article class="transform-card old reveal"><span class="transform-tag">THE OUTDATED EXPERIENCE</span><h3>When your website holds the business back</h3><ul><li>Looks and feels behind the times</li><li>Hard to use on a phone</li><li>Services and value are unclear</li><li>Visitors do not know what to do next</li><li>Updates feel difficult or neglected</li></ul></article>
+    <div class="transform-arrow" aria-hidden="true">→</div>
+    <article class="transform-card new reveal"><span class="transform-tag">THE MODERN EXPERIENCE</span><h3>A digital presence built around your customers</h3><ul><li>Distinctive, contemporary design</li><li>Fast, responsive, mobile-first journeys</li><li>Clear services, expertise, and messaging</li><li>Obvious paths to call, book, or enquire</li><li>Structured to evolve with your business</li></ul></article>
+  </div>
+  <p class="transform-footnote">Not every business needs a complete rebuild. We assess what is working, identify what is holding it back, and recommend the right level of change.</p>
+  <div class="transform-cta"><div><b>Is your current website helping or holding you back?</b><span>Start with a practical review of your digital presence.</span></div><a class="btn" href="#contact">Review my website ↗</a></div>
 </section>
 
 <section class="section container" id="services">
