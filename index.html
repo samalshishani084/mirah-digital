@@ -2,10 +2,14 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="theme-color" content="#f7f8fc">
 <meta name="color-scheme" content="light">
 <meta name="description" content="MIRAH Digital is an independent digital studio serving businesses across the United States with website design, website improvement, SEO foundations, brand identity, and practical AI workflow solutions.">
+<meta name="theme-color" content="#F7F8FC">
+<meta property="og:type" content="website">
+<meta property="og:title" content="MIRAH Digital — Thoughtful websites and smarter workflows">
+<meta property="og:description" content="An independent digital studio building clear, thoughtful websites and practical digital systems for growing businesses.">
 <meta property="og:type" content="website">
 <meta property="og:title" content="MIRAH Digital — Websites, Digital Experiences & AI Workflows">
 <meta property="og:description" content="An independent digital studio helping American businesses earn trust, turn visits into enquiries, and grow with clearer digital experiences.">
@@ -113,6 +117,7 @@ h1{font:800 clamp(44px,5.6vw,72px)/1.03 Manrope,sans-serif;letter-spacing:-.06em
 .motion-track{display:flex;width:max-content;gap:30px;align-items:center;animation:mirahMarquee 34s linear infinite}
 .motion-track span{font:800 10px Manrope,sans-serif;letter-spacing:.2em;color:#7c849a;text-transform:uppercase;white-space:nowrap}
 .motion-track b{color:#9b7af0;font-size:15px}
+@media(max-width:650px){.motion-track{width:auto;justify-content:center;flex-wrap:wrap;animation:none;padding:0 16px;gap:8px 14px}.motion-track>:nth-child(n+13){display:none}.motion-ticker{padding:12px 0}}
 @keyframes mirahMarquee{to{transform:translateX(-50%)}}
 
 /* ---------- Experience ---------- */
@@ -343,7 +348,7 @@ footer{padding:34px 0 45px;color:#80889b;font-size:11px}
   <div class="strip-point"><span class="strip-icon" aria-hidden="true">◎</span><b>Meaningful motion</b><small>Details guide people toward useful action.</small></div>
 </section>
 
-<div class="motion-ticker" aria-label="MIRAH capabilities">
+<div class="motion-ticker" aria-hidden="true">
   <div class="motion-track">
     <span>Digital strategy</span><b aria-hidden="true">✳</b><span>Website experiences</span><b aria-hidden="true">✳</b><span>Local visibility</span><b aria-hidden="true">✳</b><span>AI workflows</span><b aria-hidden="true">✳</b><span>Brand identity</span><b aria-hidden="true">✳</b><span>Ongoing improvement</span><b aria-hidden="true">✳</b>
     <span aria-hidden="true">Digital strategy</span><b aria-hidden="true">✳</b><span aria-hidden="true">Website experiences</span><b aria-hidden="true">✳</b><span aria-hidden="true">Local visibility</span><b aria-hidden="true">✳</b><span aria-hidden="true">AI workflows</span><b aria-hidden="true">✳</b><span aria-hidden="true">Brand identity</span><b aria-hidden="true">✳</b><span aria-hidden="true">Ongoing improvement</span><b aria-hidden="true">✳</b>
@@ -356,14 +361,14 @@ footer{padding:34px 0 45px;color:#80889b;font-size:11px}
       <span class="kicker">A studio built around outcomes</span>
       <h2>Not just a website.<br><span class="gradient">A better way forward.</span></h2>
       <p>Every strong digital experience has a purpose. Explore how MIRAH brings design, customer journeys, and practical technology together — without adding complexity for its own sake.</p>
-      <div class="experience-tabs" role="tablist" aria-label="Explore MIRAH capabilities">
-        <button class="experience-tab active" data-exp="design" role="tab" aria-selected="true" aria-controls="experiencePanel"><span class="num">01</span><span><strong>Design that earns trust</strong><small>Clear, polished, mobile-first experiences</small></span></button>
-        <button class="experience-tab" data-exp="growth" role="tab" aria-selected="false" aria-controls="experiencePanel"><span class="num">02</span><span><strong>Journeys that convert</strong><small>Make the next step obvious</small></span></button>
-        <button class="experience-tab" data-exp="systems" role="tab" aria-selected="false" aria-controls="experiencePanel"><span class="num">03</span><span><strong>Smarter business systems</strong><small>Practical AI and workflow support</small></span></button>
-        <button class="experience-tab" data-exp="care" role="tab" aria-selected="false" aria-controls="experiencePanel"><span class="num">04</span><span><strong>Built to keep improving</strong><small>Support, review, and iteration</small></span></button>
+      <div class="experience-tabs" role="tablist" aria-label="Explore MIRAH capabilities" aria-orientation="vertical">
+        <button class="experience-tab active" data-exp="design" role="tab" tabindex="0" aria-selected="true" aria-controls="experiencePanel" id="experienceTab-design"><span class="num">01</span><span><strong>Design that earns trust</strong><small>Clear, polished, mobile-first experiences</small></span></button>
+        <button class="experience-tab" data-exp="growth" role="tab" tabindex="-1" aria-selected="false" aria-controls="experiencePanel" id="experienceTab-growth"><span class="num">02</span><span><strong>Journeys that convert</strong><small>Make the next step obvious</small></span></button>
+        <button class="experience-tab" data-exp="systems" role="tab" tabindex="-1" aria-selected="false" aria-controls="experiencePanel" id="experienceTab-systems"><span class="num">03</span><span><strong>Smarter business systems</strong><small>Practical AI and workflow support</small></span></button>
+        <button class="experience-tab" data-exp="care" role="tab" tabindex="-1" aria-selected="false" aria-controls="experiencePanel" id="experienceTab-care"><span class="num">04</span><span><strong>Built to keep improving</strong><small>Support, review, and iteration</small></span></button>
       </div>
     </div>
-    <div class="experience-visual reveal" role="tabpanel" id="experiencePanel" aria-label="Capability preview">
+    <div class="experience-visual reveal" role="tabpanel" id="experiencePanel" tabindex="0" aria-labelledby="experienceTab-design">
       <div class="experience-window">
         <div class="exp-bar" aria-hidden="true"><i></i><i></i><i></i><span class="exp-url">yourbusiness.com</span></div>
         <div class="exp-content">
@@ -405,13 +410,13 @@ footer{padding:34px 0 45px;color:#80889b;font-size:11px}
 <section class="section container" id="industries">
   <div class="section-head reveal"><span class="kicker">Made for real businesses</span><h2>Different industries.<br><span class="gradient">Different digital needs.</span></h2><p>Our design language adapts to the business — not every company should look like the same template.</p></div>
   <div class="industry-wrap reveal">
-    <div class="industry-tabs" role="tablist" aria-label="Industry examples">
-      <button class="industry-tab active" data-industry="auto" role="tab" aria-selected="true" aria-controls="industryPreview"><strong>Automotive</strong><span>Bookings, calls &amp; service clarity</span></button>
-      <button class="industry-tab" data-industry="home" role="tab" aria-selected="false" aria-controls="industryPreview"><strong>Home services</strong><span>Quotes, service areas &amp; trust</span></button>
-      <button class="industry-tab" data-industry="build" role="tab" aria-selected="false" aria-controls="industryPreview"><strong>Contractors</strong><span>Projects, expertise &amp; estimates</span></button>
-      <button class="industry-tab" data-industry="pro" role="tab" aria-selected="false" aria-controls="industryPreview"><strong>Professional services</strong><span>Credibility &amp; consultation requests</span></button>
+    <div class="industry-tabs" role="tablist" aria-label="Industry examples" aria-orientation="vertical">
+      <button class="industry-tab active" data-industry="auto" role="tab" tabindex="0" aria-selected="true" aria-controls="industryPreview" id="industryTab-auto"><strong>Automotive</strong><span>Bookings, calls &amp; service clarity</span></button>
+      <button class="industry-tab" data-industry="home" role="tab" tabindex="-1" aria-selected="false" aria-controls="industryPreview" id="industryTab-home"><strong>Home services</strong><span>Quotes, service areas &amp; trust</span></button>
+      <button class="industry-tab" data-industry="build" role="tab" tabindex="-1" aria-selected="false" aria-controls="industryPreview" id="industryTab-build"><strong>Contractors</strong><span>Projects, expertise &amp; estimates</span></button>
+      <button class="industry-tab" data-industry="pro" role="tab" tabindex="-1" aria-selected="false" aria-controls="industryPreview" id="industryTab-pro"><strong>Professional services</strong><span>Credibility &amp; consultation requests</span></button>
     </div>
-    <div class="industry-preview" id="industryPreview" role="tabpanel">
+    <div class="industry-preview" id="industryPreview" role="tabpanel" tabindex="0" aria-labelledby="industryTab-auto" aria-live="polite">
       <div><span class="preview-label" id="previewLabel">AUTOMOTIVE · CONCEPT DIRECTION</span><h3 id="previewTitle">Make it easy to book the next service.</h3><p id="previewText">A confident, high-contrast experience that puts key services, trust signals, hours, and appointment requests where customers expect them.</p></div>
       <div class="preview-chips" id="previewChips"><span>Service pages</span><span>Tap-to-call</span><span>Booking path</span></div>
     </div>
@@ -449,7 +454,8 @@ footer{padding:34px 0 45px;color:#80889b;font-size:11px}
     <div><span class="kicker">Start with a conversation</span><h2>What should your<br><span class="gradient">website do better?</span></h2><p>Tell us what your business does and what you need. This short project brief helps us understand the right next step — without pressure or a complicated sales process.</p><p style="font-size:12px">MIRAH DIGITAL · Serving businesses across the United States</p></div>
     <form class="brief-form" id="briefForm">
       <div class="field"><label for="name">Your name</label><input id="name" name="name" autocomplete="name" placeholder="Name" required></div>
-      <div class="field"><label for="business">Business name</label><input id="business" name="business" placeholder="Your company" required></div>
+      <div class="field"><label for="business">Business name</label><input id="business" name="business" autocomplete="organization" placeholder="Your company" required></div>
+      <div class="field"><label for="email">Email address <span class="optional">(optional)</span></label><input id="email" name="email" type="email" autocomplete="email" inputmode="email" placeholder="you@example.com"></div>
       <div class="field"><label for="need">What do you need?</label><select id="need" name="need"><option>New website</option><option>Improve an existing website</option><option>Local SEO</option><option>AI / workflow solution</option><option>Website care and support</option><option>Not sure yet</option></select></div>
       <div class="field"><label for="details">A little about your project</label><textarea id="details" name="details" placeholder="What would you like to improve?"></textarea></div>
       <button class="btn" type="submit" style="width:100%">Create my project brief ↗</button>
@@ -478,6 +484,7 @@ footer{padding:34px 0 45px;color:#80889b;font-size:11px}
   function setNav(open){
     nav.classList.toggle('open',open);
     menu.setAttribute('aria-expanded',String(open));
+    menu.setAttribute('aria-label',open?'Close navigation':'Open navigation');
     menu.textContent=open?'×':'☰';
   }
   menu.addEventListener('click',function(){setNav(!nav.classList.contains('open'));});
@@ -549,7 +556,8 @@ footer{padding:34px 0 45px;color:#80889b;font-size:11px}
   };
   document.querySelectorAll(".experience-tab").forEach(function(btn){
     btn.addEventListener("click",function(){
-      document.querySelectorAll(".experience-tab").forEach(function(b){b.classList.toggle("active",b===btn);b.setAttribute("aria-selected",String(b===btn));});
+      document.querySelectorAll(".experience-tab").forEach(function(b){var selected=b===btn;b.classList.toggle("active",selected);b.setAttribute("aria-selected",String(selected));b.tabIndex=selected?0:-1;});
+      document.getElementById("experiencePanel").setAttribute("aria-labelledby",btn.id);
       var d=expPanels[btn.dataset.exp]; if(!d)return;
       [["expKicker","kicker"],["expTitle","title"],["expText","text"],["expAction","action"],["expCardOne","one"],["expSubOne","subOne"],["expCardTwo","two"],["expSubTwo","subTwo"],["expBubble","bubble"],["expBubbleText","bubbleText"]].forEach(function(pair){
         var el=document.getElementById(pair[0]); if(el)el.textContent=d[pair[1]];
@@ -566,8 +574,8 @@ footer{padding:34px 0 45px;color:#80889b;font-size:11px}
   };
   document.querySelectorAll('.industry-tab').forEach(function(btn){
     btn.addEventListener('click',function(){
-      document.querySelectorAll('.industry-tab').forEach(function(b){b.classList.remove('active');b.setAttribute('aria-selected','false');});
-      btn.classList.add('active'); btn.setAttribute('aria-selected','true');
+      document.querySelectorAll('.industry-tab').forEach(function(b){var selected=b===btn;b.classList.toggle('active',selected);b.setAttribute('aria-selected',String(selected));b.tabIndex=selected?0:-1;});
+      document.getElementById('industryPreview').setAttribute('aria-labelledby',btn.id);
       var d=industries[btn.dataset.industry]; if(!d)return;
       document.getElementById('previewLabel').textContent=d.label;
       document.getElementById('previewTitle').textContent=d.title;
@@ -588,7 +596,7 @@ footer{padding:34px 0 45px;color:#80889b;font-size:11px}
   document.getElementById('briefForm').addEventListener('submit',async function(e){
     e.preventDefault();
     var f=new FormData(e.currentTarget);
-    var brief=['MIRAH DIGITAL — PROJECT BRIEF','Name: '+f.get('name'),'Business: '+f.get('business'),'Need: '+f.get('need'),'Details: '+(f.get('details')||'Not provided')].join('\n');
+    var brief=['MIRAH DIGITAL — PROJECT BRIEF','Name: '+f.get('name'),'Business: '+f.get('business'),'Email: '+(f.get('email')||'Not provided'),'Need: '+f.get('need'),'Details: '+(f.get('details')||'Not provided')].join('\n');
     var status=document.getElementById('formStatus'), fallback=document.getElementById('briefFallback'), output=document.getElementById('briefOutput');
     output.value=brief;
     fallback.hidden=false;
