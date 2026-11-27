@@ -42,6 +42,12 @@ Status: main site — PARTIAL (source + static checks DONE; live mobile visual +
 
 - **Re-test PASSED 06:52** on Preview dpl_FCi7c48PMNTB5ceRrCsSAekqt4FU (https://mirah-digital-p4my7ctdp-samalshishani084.vercel.app): hamburger visible, desktop links hidden, menu opens with all 4 items, tapping Services closes it and jumps to #services showing all 6 services. **Mobile QA is now complete at phone width** — main site, M5, and Precision all PASS.
 
+## AI image set for M5 (2026-11-27, ~07:03)
+
+Sam: the old photos did not fit the page, and he wants the cars to look like they are about to burst out of the picture from their power. Four AI-generated concept renders were created (all 1920×1280, same dark-grey F10 M5, same dark dramatic mood — motion blur, smoke, blazing lights): `images/m5-hero.jpg` (front three-quarter, lunging at the viewer), `images/m5-rear.jpg` (rear three-quarter, accelerating away), `images/m5-side.jpg` (side profile speeding past), `images/m5-detail.jpg` (front grille/headlight close-up). The page was rebuilt around this 4-image set: the thumbs row was removed (hero is now one full image), the gallery is two large figures (rear + detail), and the gallery heading is now "Power that breaks the frame." All Wikimedia photos and credits are gone; the page now discloses clearly that every vehicle visual is an AI-generated concept render, not a photograph of a real vehicle, with the BMW trademark disclaimer kept. The home portfolio card (Sample 01) now uses the AI hero image too. The image tool allows 4 generations per message — that limit is why the page was rebuilt around exactly 4 images instead of keeping 9 slots.
+
+- **Publishing constraint found 07:05:** the GitHub `push-files` connector refuses binary files ("snapshot file … is not UTF-8"), and the local `git push` has no credentials, so the four JPGs cannot be pushed into the repo through any route available here. Solution: the four renders were downscaled to 1400px and embedded in the pages as WebP data URIs (M5 page ~450 KB total, home page +124 KB) — the pages are fully self-contained and deploy through the normal text push. The source JPGs stay in the local workspace only (`samples/automotive/m5-unleashed/images/`, untracked). If a binary-capable push becomes available, the images should move back to files and the `src` attributes back to `images/m5-*.jpg`.
+
 Next: desktop QA at 768 / 1366 / 1440 (blocked — SSO Deployment Protection keeps the cloud browser out; needs the protection off or a signed-in desktop browser).
 
 
