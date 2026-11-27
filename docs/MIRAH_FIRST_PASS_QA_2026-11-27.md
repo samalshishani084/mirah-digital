@@ -38,7 +38,9 @@ Status: main site — PARTIAL (source + static checks DONE; live mobile visual +
 - Fixes applied (same commit): navigation collapses to a hamburger at **≤900px on all three pages**; hamburger + mobile nav added to M5; Precision header CTA hides ≤620px (the mobile menu carries the Enquire link); skip link added to Precision (main site and M5 already had one); Precision service icons marked `aria-hidden`; `touch-action:manipulation` on buttons on all pages; footer year falls back to 2026 without JS; `aria-controls` on all 8 main-site tab buttons plus Arrow/Home/End keyboard navigation for both tab groups.
 - Open: the Precision submit button did not respond to two synthetic mouse clicks in the probe (first "refused as covered", second unknown); the form submitted fine via Enter, so the handler works — re-test with a real finger tap before calling it a defect. Known gaps: no `og:image` (no owned brand image exists — do not fabricate one from stock); desktop widths 768/1366/1440 still untested (SSO wall blocks the cloud browser).
 
-Next: re-test Precision + M5 menus and the Precision form tap on the new Preview, then run desktop QA at 768 / 1366 / 1440.
+- **ROOT CAUSE FOUND 06:49 (Precision menu):** a literal `\n` (backslash + `n`, two characters) sat in the Precision stylesheet between the reduced-motion block and the 900px block. In CSS, `\n` outside a string is an escape that produces the identifier `n`, so the parser swallowed the entire 900px media block as the body of a bogus rule — the 900px rules never applied, while the 620px block after it parsed normally. The same stray sequence predated the rework and had silently killed the original 620px block too. Fix: removed the two stray characters. Verified after the fix: no stray backslash-n remains in any stylesheet (the only ones left are legitimate JS `'\n'` string escapes), all @media blocks start at brace-depth 0, braces balanced 96/96. Lesson recorded: static QA now includes a stray-backslash check on every stylesheet.
+
+Next: re-test the Precision menu on the new Preview, then run desktop QA at 768 / 1366 / 1440.
 
 
 Review date: 2026-11-27
