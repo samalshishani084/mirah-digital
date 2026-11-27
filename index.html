@@ -210,6 +210,31 @@ img,svg,video,canvas{max-width:100%}
 @media(max-width:370px){.experience-tabs{grid-template-columns:1fr}.experience-tab{padding:10px 12px}.experience-visual{min-height:310px}}
 @media(prefers-reduced-motion:reduce){.motion-track{animation:none}}
 
+/* Final viewport guardrails: prevent decorative layers from creating side-scroll */
+html,body{width:100%;max-width:100%;overflow-x:clip}
+body{position:relative}
+main,header,footer{max-width:100%;min-width:0}
+.container,.section{min-width:0}
+.hero{width:min(1160px,calc(100% - 48px));margin-inline:auto;min-width:0;overflow:clip}
+.hero:before,.hero:after{pointer-events:none}
+.hero-art,.device,.demo-site,.demo-main,.abstract-art,.experience-shell,.experience-visual{min-width:0;max-width:100%}
+.studio-strip{min-width:0;overflow:clip}
+.studio-strip:before{inset:0}
+.motion-ticker{width:100%;max-width:100%;overflow:hidden}
+.portfolio-grid,.portfolio-card,.portfolio-visual,.industry-wrap,.industry-preview,.contact,.brief-form{min-width:0;max-width:100%}
+img,svg,video,canvas{max-width:100%}
+@media(max-width:650px){
+ html,body{overflow-x:clip}
+ .hero,.studio-strip,.section{width:calc(100% - 28px);max-width:calc(100% - 28px)}
+ .hero{padding-inline:0}
+ .hero-art{width:100%;overflow:clip}
+ .float-card{max-width:min(46vw,170px);overflow-wrap:anywhere}
+ .fc1{right:5px}.fc2{left:5px}
+ .studio-strip{margin-inline:auto}
+ .industry-preview,.experience-visual{overflow:hidden}
+ .portfolio-grid{grid-template-columns:minmax(0,1fr)}
+ .contact{overflow:hidden}
+}
 </style>
 </head>
 <body>
