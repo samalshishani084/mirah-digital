@@ -6,858 +6,569 @@
 <meta name="theme-color" content="#f7f8fc">
 <meta name="color-scheme" content="light">
 <meta name="description" content="MIRAH Digital is an independent digital studio serving businesses across the United States with website design, website improvement, SEO foundations, brand identity, and practical AI workflow solutions.">
-<title>MIRAH Digital — Websites, Digital Experiences & AI Workflows</title>
+<meta property="og:type" content="website">
+<meta property="og:title" content="MIRAH Digital — Websites, Digital Experiences & AI Workflows">
+<meta property="og:description" content="An independent digital studio helping American businesses earn trust, turn visits into enquiries, and grow with clearer digital experiences.">
+<meta property="og:url" content="https://ishani084.vercel.app/">
+<title>MIRAH Digital — Websites, Digital Experiences &amp; AI Workflows</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
-:root{--ink:#10162d;--muted:#626b82;--muted2:#8790a5;--line:#e6e9f2;--paper:#f7f8fc;--white:#fff;--blue:#258eea;--violet:#7046ed;--magenta:#df39a7;--orange:#ff8a32;--mint:#49b99a;--grad:linear-gradient(112deg,#258eea 0%,#7046ed 43%,#df39a7 76%,#ff8a32 100%);--shadow:0 24px 70px rgba(35,42,83,.11);--radius:24px}
-*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:90px}body{margin:0;background:var(--paper);color:var(--ink);font-family:"DM Sans",sans-serif;overflow-x:hidden}a{color:inherit;text-decoration:none}button,input,select,textarea{font:inherit}button,a{-webkit-tap-highlight-color:transparent}.container{width:min(1160px,calc(100% - 48px));margin:auto}
-.topline{height:4px;background:var(--grad)}
-header{position:sticky;top:0;z-index:50;background:rgba(247,248,252,.82);backdrop-filter:blur(18px);border-bottom:1px solid rgba(225,229,240,.8)}
-.nav{height:78px;display:flex;align-items:center;justify-content:space-between;gap:24px}
-.brand{display:flex;align-items:center;gap:10px;min-width:180px}.brand svg{width:48px;height:36px;overflow:visible}.brandname{font:800 18px/1 Manrope;letter-spacing:.08em}.brandname small{display:block;font:700 8px/1.5 "DM Sans";letter-spacing:.38em;color:#788198;margin-top:5px}
-.navlinks{display:flex;align-items:center;gap:30px;color:#59627a;font-size:13px;font-weight:600}.navlinks a{transition:color .2s}.navlinks a:hover{color:var(--violet)}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;border:0;border-radius:999px;padding:14px 21px;background:var(--grad);color:white;font-size:13px;font-weight:700;box-shadow:0 12px 26px rgba(112,70,237,.2);transition:transform .22s,box-shadow .22s;cursor:pointer}.btn:hover{transform:translateY(-3px);box-shadow:0 17px 34px rgba(112,70,237,.28)}.btn.secondary{background:white;color:var(--ink);border:1px solid var(--line);box-shadow:0 6px 18px rgba(35,42,83,.05)}.btn.small{padding:11px 16px;font-size:12px}
-.menu{display:none;border:1px solid var(--line);background:white;border-radius:13px;width:44px;height:44px;font-size:20px;color:var(--ink)}
-.hero{position:relative;padding:76px 0 88px;display:grid;grid-template-columns:1.02fr .98fr;gap:42px;align-items:center;min-height:660px}
-.hero:before{content:"";position:absolute;z-index:-1;width:600px;height:600px;left:-330px;top:20px;background:radial-gradient(circle,#e6eaff 0%,rgba(230,234,255,0) 68%)}
-.hero:after{content:"";position:absolute;z-index:-1;width:600px;height:600px;right:-350px;bottom:-170px;background:radial-gradient(circle,#fbe4f3 0%,rgba(251,228,243,0) 68%)}
-.eyebrow{display:inline-flex;align-items:center;gap:9px;padding:8px 12px;border:1px solid #e4e5f4;background:#ffffffb8;border-radius:99px;color:#6b58b7;text-transform:uppercase;letter-spacing:.14em;font-size:10px;font-weight:800}
-.pulse{width:7px;height:7px;border-radius:50%;background:var(--mint);box-shadow:0 0 0 5px #49b99a20}
-h1,h2,h3,p{margin-top:0}h1{font:800 clamp(48px,6vw,76px)/1.02 Manrope;letter-spacing:-.065em;margin:23px 0 19px;max-width:650px} .gradient{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
-.hero-copy{font-size:17px;line-height:1.75;color:var(--muted);max-width:535px}.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin:28px 0 26px}.proofline{display:flex;gap:18px;flex-wrap:wrap;color:#737c91;font-size:11px}.proofline span:before{content:"✓";color:var(--mint);font-weight:900;margin-right:7px}
-.hero-art{position:relative;min-height:490px;display:grid;place-items:center}
-.glow{position:absolute;width:410px;height:410px;border-radius:50%;background:conic-gradient(from 25deg,#dceaff,#e9ddff,#fce0f2,#ffead9,#dceaff);filter:blur(24px);opacity:.8;animation:spin 28s linear infinite}
-@keyframes spin{to{transform:rotate(360deg)}}
-.device{position:relative;width:min(100%,510px);border:1px solid #fff;border-radius:25px;background:rgba(255,255,255,.78);box-shadow:0 35px 95px rgba(38,44,91,.18);backdrop-filter:blur(20px);overflow:hidden;transform:rotate(-1.5deg)}
-.devicebar{height:42px;border-bottom:1px solid #edf0f7;display:flex;align-items:center;gap:6px;padding:0 15px}.devicebar i{width:7px;height:7px;background:#d8dce8;border-radius:50%}.deviceurl{margin:auto;background:#f3f4f9;border-radius:30px;padding:5px 50px;color:#9aa1b2;font-size:9px}
-.demo-site{padding:21px 22px 23px;background:linear-gradient(145deg,#fff,#f7f5ff)}
-.demo-nav{display:flex;align-items:center;justify-content:space-between;font-size:9px;color:#727a91}.demo-brand{font:800 11px Manrope;letter-spacing:.1em;color:#161c38}.demo-nav span:last-child{letter-spacing:.12em}
-.demo-main{display:grid;grid-template-columns:1fr .9fr;gap:12px;align-items:center;padding:35px 0 23px}.demo-main small{font-size:8px;color:#7762ca;font-weight:800;letter-spacing:.16em}.demo-main h3{font:800 28px/1.06 Manrope;letter-spacing:-.06em;margin:11px 0}.demo-main p{font-size:9px;line-height:1.6;color:#7c8498}.demo-link{display:inline-block;padding:8px 12px;border-radius:30px;color:#fff;background:var(--grad);font-size:8px;font-weight:800}
-.abstract-art{height:180px;position:relative;overflow:hidden;border-radius:20px;background:linear-gradient(145deg,#e6eaff,#f4e5fb 58%,#ffe9ed)}
-.abstract-art:before{content:"";position:absolute;width:170px;height:170px;border:22px solid rgba(255,255,255,.9);border-radius:44% 56% 60% 40%;left:10px;top:20px;transform:rotate(38deg)}
-.abstract-art:after{content:"";position:absolute;width:120px;height:120px;border:17px solid rgba(112,70,237,.23);border-radius:50%;right:0;bottom:-20px}
-.art-orbit{position:absolute;width:180px;height:75px;border:10px solid transparent;border-top-color:#fff;border-bottom-color:#fff;border-radius:50%;transform:rotate(-35deg);left:5px;top:57px}
-.demo-foot{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.demo-foot div{background:#fff;border:1px solid #edf0f7;border-radius:12px;padding:12px 9px;font-size:8px;color:#81889b}.demo-foot b{display:block;color:#202743;font:700 10px Manrope;margin-bottom:4px}
-.float-card{position:absolute;background:#ffffffeb;backdrop-filter:blur(15px);border:1px solid white;border-radius:16px;padding:13px 16px;box-shadow:var(--shadow);font-size:10px;color:#707991}.float-card b{display:block;color:var(--ink);font:800 14px Manrope;margin-bottom:4px}.fc1{right:-4px;top:40px}.fc2{left:-5px;bottom:38px}
-.section{padding:90px 0}.section-head{max-width:690px;margin:0 auto 42px;text-align:center}.kicker{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--violet);font-weight:800}.section-head h2{font:800 clamp(34px,4.2vw,49px)/1.08 Manrope;letter-spacing:-.06em;margin:13px 0}.section-head p{color:var(--muted);line-height:1.75;font-size:15px}
-.services{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.service{background:white;border:1px solid var(--line);border-radius:21px;padding:25px;min-height:230px;transition:transform .25s,box-shadow .25s,border-color .25s;position:relative;overflow:hidden}.service:after{content:"";position:absolute;width:170px;height:170px;border-radius:50%;background:radial-gradient(circle,#eeeaff,transparent 70%);right:-90px;top:-90px;opacity:0;transition:opacity .25s}.service:hover{transform:translateY(-6px);box-shadow:var(--shadow);border-color:#d9d0ff}.service:hover:after{opacity:1}.service-icon{width:45px;height:45px;border-radius:14px;background:linear-gradient(145deg,#edf4ff,#f5eaff);display:grid;place-items:center;color:var(--violet);font-size:21px;margin-bottom:20px;position:relative;z-index:1}.service h3{font:750 17px Manrope;margin-bottom:9px}.service p{font-size:13px;line-height:1.7;color:var(--muted);margin-bottom:15px}.service a{font-size:11px;color:var(--violet);font-weight:800}
-.focus{background:#111831;color:#fff;border-radius:28px;padding:46px;display:grid;grid-template-columns:1fr .9fr;gap:36px;align-items:center;position:relative;overflow:hidden}.focus:after{content:"";position:absolute;width:450px;height:450px;right:-210px;top:-270px;border-radius:50%;background:radial-gradient(circle,#7952ef88,transparent 70%)}.focus h2{font:800 clamp(32px,4vw,45px)/1.1 Manrope;letter-spacing:-.055em;margin:12px 0}.focus p{color:#c0c7da;line-height:1.75;font-size:14px;max-width:520px}.focus .kicker{color:#b6a4ff}.focus-grid{display:grid;grid-template-columns:1fr 1fr;gap:11px;position:relative;z-index:1}.focus-grid div{border:1px solid #ffffff24;background:#ffffff0c;border-radius:15px;padding:18px}.focus-grid b{display:block;font:800 23px Manrope;color:#fff;margin-bottom:6px}.focus-grid span{font-size:11px;color:#c0c7da;line-height:1.5}
-industries{display:block}.industry-wrap{display:grid;grid-template-columns:.85fr 1.15fr;gap:28px;align-items:stretch}.industry-tabs{display:grid;gap:9px}.industry-tab{border:1px solid var(--line);background:#fff;border-radius:15px;padding:16px 18px;text-align:left;cursor:pointer;color:#59627a;transition:.2s}.industry-tab strong{display:block;color:var(--ink);font:750 14px Manrope;margin-bottom:4px}.industry-tab span{font-size:11px}.industry-tab.active{border-color:#bfb0ff;background:linear-gradient(110deg,#f1efff,#fff);box-shadow:0 10px 28px #5d48b21a}.industry-preview{border-radius:24px;padding:28px;background:linear-gradient(140deg,#e5edff,#f4e7ff 58%,#ffe8ee);min-height:360px;display:flex;flex-direction:column;justify-content:space-between;overflow:hidden;position:relative}.industry-preview:before{content:"";position:absolute;width:290px;height:290px;border:34px solid #ffffffa8;border-radius:48% 52% 40% 60%;right:-80px;top:20px;transform:rotate(32deg)}.industry-preview>*{position:relative;z-index:1}.preview-label{font-size:10px;font-weight:800;letter-spacing:.16em;color:#6952bd}.industry-preview h3{font:800 clamp(29px,4vw,43px)/1.05 Manrope;letter-spacing:-.06em;max-width:380px;margin:15px 0}.industry-preview p{color:#616a83;line-height:1.7;font-size:14px;max-width:410px}.preview-chips{display:flex;gap:8px;flex-wrap:wrap}.preview-chips span{background:#ffffffb8;border:1px solid #fff;border-radius:30px;padding:8px 11px;font-size:10px;color:#4e5872;font-weight:700}
-.process{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.step{padding:22px 18px;border-top:2px solid #d9d0ff}.step em{font:800 11px Manrope;color:var(--violet);font-style:normal;letter-spacing:.08em}.step h3{font:750 16px Manrope;margin:13px 0 8px}.step p{font-size:12px;line-height:1.7;color:var(--muted)}
-.contact{background:linear-gradient(120deg,#eeedff,#eef7ff 52%,#fff0f7);border:1px solid white;border-radius:28px;padding:48px;display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:center}.contact h2{font:800 clamp(32px,4vw,46px)/1.08 Manrope;letter-spacing:-.06em;margin:12px 0}.contact p{color:var(--muted);line-height:1.75;font-size:14px}.brief-form{background:#ffffffd9;border:1px solid white;border-radius:20px;padding:20px;box-shadow:0 15px 40px #34315d10}.field{display:grid;gap:6px;margin-bottom:12px}.field label{font-size:11px;font-weight:800;color:#525c76}.field input,.field select,.field textarea{width:100%;border:1px solid #e3e6f0;border-radius:11px;padding:12px 13px;background:white;color:var(--ink);font-size:13px;outline:none}.field input:focus,.field select:focus,.field textarea:focus{border-color:#9b86f4;box-shadow:0 0 0 3px #8a70ef18}.field textarea{min-height:84px;resize:vertical}.form-note{font-size:10px;color:#82899b;line-height:1.5;margin:10px 0 0}.form-status{display:none;padding:10px;border-radius:10px;background:#eaf8f2;color:#247b5e;font-size:12px;margin-top:10px}
-footer{padding:34px 0 45px;color:#80889b;font-size:11px}.footer-row{display:flex;justify-content:space-between;align-items:center;gap:18px;border-top:1px solid var(--line);padding-top:25px}.footer-brand{font:800 15px Manrope;color:var(--ink);letter-spacing:.08em}.footer-brand span{display:block;font:600 9px "DM Sans";letter-spacing:.18em;color:#81899b;margin-top:4px}
-.reveal{opacity:0;transform:translateY(18px);transition:opacity .65s ease,transform .65s ease}.reveal.visible{opacity:1;transform:translateY(0)}
-@media(max-width:900px){.navlinks{gap:16px}.hero{grid-template-columns:1fr;gap:8px;padding-top:62px}.hero-art{min-height:440px}.services{grid-template-columns:repeat(2,1fr)}.industry-wrap{grid-template-columns:1fr}.industry-tabs{grid-template-columns:repeat(2,1fr)}.contact{grid-template-columns:1fr}.focus{grid-template-columns:1fr}}
-@media(max-width:650px){.container{width:calc(100% - 34px)}.nav{height:68px}.brand{min-width:0}.brand svg{width:42px}.brandname{font-size:16px}.navlinks{display:none;position:absolute;top:68px;left:0;right:0;background:#fbfbfff5;padding:18px 22px 22px;border-bottom:1px solid var(--line);box-shadow:0 18px 28px #11152f10;flex-direction:column;align-items:stretch;gap:0}.navlinks.open{display:flex}.navlinks a{padding:13px 0;border-bottom:1px solid #eef0f5}.nav>.btn{display:none}.menu{display:block}.hero{padding:42px 0 52px;min-height:0}.hero h1{font-size:clamp(43px,12vw,58px);line-height:1.02}.hero-copy{font-size:15px}.hero-art{min-height:350px}.glow{width:280px;height:280px}.device{transform:none}.demo-site{padding:15px}.demo-main{padding:25px 0 18px;grid-template-columns:1fr .78fr}.demo-main h3{font-size:21px}.abstract-art{height:135px}.demo-foot div{padding:9px 7px}.demo-foot b{font-size:9px}.float-card{padding:10px 12px}.fc1{right:0;top:8px}.fc2{left:0;bottom:4px}.section{padding:66px 0}.section-head{margin-bottom:30px}.section-head h2{font-size:35px}.section-head p{font-size:14px}.services{grid-template-columns:1fr;gap:12px}.service{min-height:0;padding:22px}.focus{padding:27px 22px;border-radius:22px}.focus-grid div{padding:13px}.focus-grid b{font-size:19px}.industry-tabs{grid-template-columns:1fr 1fr}.industry-tab{padding:13px}.industry-preview{min-height:330px;padding:23px}.process{grid-template-columns:1fr 1fr}.step{padding:17px 12px}.contact{padding:27px 19px;gap:20px}.brief-form{padding:15px}.footer-row{flex-direction:column;align-items:flex-start}.proofline{gap:10px 16px}}
-@media(max-width:380px){.hero h1{font-size:41px}.hero-art{min-height:315px}.float-card{font-size:9px}.float-card b{font-size:12px}.industry-tabs{grid-template-columns:1fr}.process{grid-template-columns:1fr}}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
+/* ============================================================
+   MIRAH Digital — Foundation v1 (2026-11-27)
+   One stylesheet, one source of truth. No layered overrides.
+   Rules: content is visible without JavaScript. No element
+   is ever hidden by a reveal/blur state. Motion is subtle
+   and fully disabled under prefers-reduced-motion.
+   ============================================================ */
+:root{
+  --ink:#10162d; --muted:#626b82; --muted2:#8790a5; --line:#e6e9f2;
+  --paper:#f7f8fc; --white:#fff;
+  --blue:#258eea; --violet:#7046ed; --magenta:#df39a7; --orange:#ff8a32; --mint:#49b99a;
+  --grad:linear-gradient(112deg,#258eea 0%,#7046ed 43%,#df39a7 76%,#ff8a32 100%);
+  --shadow:0 16px 42px rgba(35,42,83,.08);
+  --radius:24px; --radius-sm:16px;
+  --max:1160px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:92px}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:"DM Sans",sans-serif;line-height:1.6;overflow-x:hidden}
+img,svg{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+button,input,select,textarea{font:inherit;color:inherit}
+button,a{-webkit-tap-highlight-color:transparent}
+h1,h2,h3,p{margin-top:0}
+:focus-visible{outline:3px solid #9b83f4;outline-offset:3px;border-radius:4px}
+.container{width:min(var(--max),calc(100% - 48px));margin-inline:auto}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.skip{position:absolute;left:16px;top:-60px;z-index:200;background:#fff;color:var(--ink);padding:12px 16px;border-radius:10px;font-weight:700}
+.skip:focus{top:12px}
 
-/* MIRAH v3 refinement: fuller mobile canvas + expressive, purposeful motion */
-:root{--shadow:0 26px 75px rgba(35,42,83,.13)}
-body{overflow-x:clip}
-.container{min-width:0}
-.hero>div:first-child,.hero-art,.device,.demo-site,.demo-main,.abstract-art{min-width:0;max-width:100%}
-.hero{isolation:isolate}
-.hero-art{padding:12px 8px}
-.device{width:100%;max-width:520px}
-.abstract-art{height:190px;border-radius:18px;background:linear-gradient(135deg,#d9eaff 0%,#e7dcff 42%,#ffe0ee 72%,#ffe8d3 100%);overflow:hidden;position:relative;isolation:isolate}
-.art-sun{position:absolute;width:125px;height:125px;border-radius:50%;background:linear-gradient(135deg,#fff8,#fff1);left:22px;top:25px;filter:blur(1px)}
-.art-ribbon{position:absolute;width:230px;height:95px;left:0;top:48px;border:15px solid transparent;border-top-color:#fff;border-bottom-color:#fff;border-radius:50%;transform:rotate(-34deg);filter:drop-shadow(0 9px 15px #7759d833);animation:ribbonFloat 7s ease-in-out infinite}
-@keyframes ribbonFloat{0%,100%{transform:translateY(0) rotate(-34deg)}50%{transform:translateY(-8px) rotate(-28deg)}}
-.art-tile{position:absolute;z-index:2;background:#ffffffdf;backdrop-filter:blur(10px);border:1px solid #ffffff;border-radius:12px;padding:10px 12px;box-shadow:0 10px 28px #5b4d8c20;display:grid;gap:3px;min-width:116px}
-.art-tile span{font-size:8px;font-weight:800;color:#8c76dd;letter-spacing:.12em}
-.art-tile b{font:800 11px Manrope;color:#18203b}
-.art-tile small{font-size:7px;color:#7d8498}
-.tile-one{right:13px;top:16px;transform:rotate(3deg)}
-.tile-two{left:12px;bottom:12px;transform:rotate(-3deg)}
-.art-cursor{position:absolute;right:28px;bottom:27px;z-index:3;width:29px;height:29px;display:grid;place-items:center;border-radius:50%;background:var(--grad);color:white;font-size:16px;box-shadow:0 7px 18px #7046ed55;animation:cursorDrift 4s ease-in-out infinite}
-@keyframes cursorDrift{0%,100%{transform:translate(0,0)}50%{transform:translate(-8px,-7px)}}
-.studio-strip{display:grid;grid-template-columns:1.25fr repeat(3,1fr);gap:12px;align-items:center;padding:22px 0 68px}
-.strip-intro h2{font:800 25px/1.05 Manrope;letter-spacing:-.06em;margin:8px 0 0}
-.strip-point{min-height:100px;border:1px solid var(--line);background:#ffffffb8;border-radius:17px;padding:15px;display:flex;flex-direction:column;justify-content:center;gap:5px}
+/* ---------- Top progress + header ---------- */
+.topline{position:fixed;top:0;left:0;right:0;z-index:100;height:3px;background:var(--grad);transform-origin:left;transform:scaleX(0)}
+header{position:sticky;top:0;z-index:50;background:rgba(247,248,252,.88);backdrop-filter:blur(16px);border-bottom:1px solid rgba(225,229,240,.8);transition:box-shadow .3s}
+header.scrolled{box-shadow:0 8px 30px rgba(35,42,83,.07)}
+.nav{min-height:72px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand{display:flex;align-items:center;gap:10px;flex:none}
+.brand svg{width:46px;height:34px;overflow:visible}
+.brandname{font:800 18px/1 Manrope,sans-serif;letter-spacing:.08em}
+.brandname small{display:block;font:700 8px/1.5 "DM Sans",sans-serif;letter-spacing:.38em;color:#788198;margin-top:5px}
+.navlinks{display:flex;align-items:center;gap:28px;color:#59627a;font-size:13px;font-weight:600}
+.navlinks a{position:relative;padding:6px 0}
+.navlinks a:hover{color:var(--violet)}
+.navlinks a.active{color:var(--violet)}
+.navlinks a.active::after{content:"";position:absolute;left:0;right:0;bottom:-2px;height:2px;border-radius:4px;background:var(--grad)}
+.menu{display:none;border:1px solid var(--line);background:#fff;border-radius:13px;width:44px;height:44px;font-size:20px;cursor:pointer;flex:none}
+
+/* ---------- Buttons ---------- */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;border:0;border-radius:999px;padding:14px 22px;background:var(--grad);color:#fff;font-size:13px;font-weight:700;box-shadow:0 12px 26px rgba(112,70,237,.2);cursor:pointer;transition:transform .25s,box-shadow .25s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 17px 34px rgba(112,70,237,.28)}
+.btn.secondary{background:#fff;color:var(--ink);border:1px solid var(--line);box-shadow:0 6px 18px rgba(35,42,83,.05)}
+.btn.small{padding:11px 16px;font-size:12px}
+
+/* ---------- Hero ---------- */
+.hero{padding:64px 0 56px;display:grid;grid-template-columns:1.02fr .98fr;gap:44px;align-items:center}
+.eyebrow{display:inline-flex;align-items:center;gap:9px;padding:8px 12px;border:1px solid #e4e5f4;background:rgba(255,255,255,.72);border-radius:99px;color:#6b58b7;text-transform:uppercase;letter-spacing:.14em;font-size:10px;font-weight:800}
+.pulse{width:7px;height:7px;border-radius:50%;background:var(--mint);box-shadow:0 0 0 5px rgba(73,185,154,.13)}
+h1{font:800 clamp(44px,5.6vw,72px)/1.03 Manrope,sans-serif;letter-spacing:-.06em;margin:22px 0 18px}
+.gradient{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero-copy{font-size:17px;line-height:1.75;color:var(--muted);max-width:540px}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin:28px 0 22px}
+.proofline{display:flex;gap:18px;flex-wrap:wrap;color:#737c91;font-size:12px}
+.proofline span::before{content:"✓";color:var(--mint);font-weight:900;margin-right:7px}
+/* Hero visual: a truthful, CSS-only concept preview — no fake device, no fake AI chat. */
+.hero-visual{border:1px solid #fff;border-radius:var(--radius);background:linear-gradient(145deg,#fff,#f6f2ff 60%,#fff0f7);box-shadow:0 28px 70px rgba(38,44,91,.13);overflow:hidden}
+.hero-visual-bar{display:flex;align-items:center;gap:6px;padding:13px 16px;border-bottom:1px solid #edf0f7;font-size:11px;color:#9aa1b2}
+.hero-visual-bar i{width:8px;height:8px;background:#d8dce8;border-radius:50%}
+.hero-visual-bar span{margin:auto;background:#f3f4f9;border-radius:30px;padding:4px 14px}
+.hero-visual-body{padding:26px 24px 24px}
+.hero-visual-body h2{font:800 28px/1.1 Manrope,sans-serif;letter-spacing:-.05em;margin:0 0 8px}
+.hero-visual-body>p{font-size:13px;line-height:1.65;color:var(--muted);margin-bottom:18px}
+.hero-visual-row{display:flex;gap:12px;align-items:flex-start;padding:13px 14px;border:1px solid #edf0f7;border-radius:14px;background:#fff;margin-bottom:9px}
+.hero-visual-row:last-child{margin-bottom:0}
+.hero-visual-row b{display:block;font:700 13px Manrope,sans-serif}
+.hero-visual-row span{font-size:11px;color:var(--muted);line-height:1.5}
+.hero-visual-icon{flex:none;width:34px;height:34px;border-radius:10px;background:linear-gradient(145deg,#edf4ff,#f5eaff);display:grid;place-items:center;color:var(--violet);font-size:16px}
+
+/* ---------- Sections (one consistent rhythm) ---------- */
+.section{padding:64px 0}
+.section-head{max-width:690px;margin:0 auto 36px;text-align:center}
+.kicker{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--violet);font-weight:800}
+.section-head h2{font:800 clamp(32px,4.2vw,48px)/1.08 Manrope,sans-serif;letter-spacing:-.06em;margin:13px 0}
+.section-head p{color:var(--muted);line-height:1.75;font-size:15px;margin-bottom:0}
+
+/* ---------- Studio strip ---------- */
+.studio-strip{display:grid;grid-template-columns:1.25fr repeat(3,1fr);gap:12px;align-items:stretch;padding:8px 0 56px}
+.strip-intro h2{font:800 25px/1.05 Manrope,sans-serif;letter-spacing:-.06em;margin:8px 0 0}
+.strip-point{min-height:100px;border:1px solid var(--line);background:rgba(255,255,255,.72);border-radius:17px;padding:15px;display:flex;flex-direction:column;justify-content:center;gap:5px}
 .strip-icon{font-size:19px;color:var(--violet)}
-.strip-point b{font:750 12px Manrope}
+.strip-point b{font:750 12px Manrope,sans-serif}
 .strip-point small{font-size:10px;line-height:1.45;color:var(--muted)}
-.service,.industry-tab,.btn{touch-action:manipulation}
-@media(max-width:650px){
- .container{width:calc(100% - 28px);max-width:100%}
- .nav{width:calc(100% - 28px)}
- .hero{width:calc(100% - 28px);padding:38px 0 42px;gap:4px}
- .hero>div:first-child{width:100%}
- .hero h1{font-size:clamp(42px,11.6vw,56px);max-width:100%;overflow-wrap:normal}
- .hero-copy{max-width:100%;font-size:14px;line-height:1.7}
- .hero-actions{gap:9px}
- .hero-actions .btn{padding:13px 15px;font-size:11px}
- .proofline{font-size:10px;gap:9px 13px}
- .hero-art{width:100%;padding:10px 0 4px;min-height:0;margin:0 auto}
- .glow{width:min(78vw,290px);height:min(78vw,290px);right:4%;left:auto}
- .device{width:100%;max-width:100%;border-radius:19px;transform:none}
- .devicebar{height:34px;padding:0 11px}
- .deviceurl{padding:4px 28px}
- .demo-site{padding:13px}
- .demo-main{grid-template-columns:1fr .78fr;gap:8px;padding:22px 0 15px}
- .demo-main h3{font-size:clamp(18px,5.4vw,23px)}
- .demo-main p{font-size:8px}
- .abstract-art{height:142px;width:100%}
- .art-ribbon{width:170px;height:72px;border-width:11px;top:39px}
- .art-tile{min-width:94px;padding:8px}
- .art-tile b{font-size:9px}
- .art-tile small{font-size:6px}
- .tile-one{right:6px;top:9px}
- .tile-two{left:6px;bottom:7px}
- .art-cursor{right:13px;bottom:18px}
- .demo-foot{gap:5px}
- .demo-foot div{font-size:7px;padding:8px 6px}
- .demo-foot b{font-size:8px}
- .float-card{font-size:8px;padding:8px 10px}
- .float-card b{font-size:10px}
- .fc1{right:3px;top:-4px}
- .fc2{left:3px;bottom:-5px}
- .studio-strip{width:calc(100% - 28px);grid-template-columns:1fr 1fr;padding:24px 0 48px;gap:9px}
- .strip-intro{grid-column:1/-1;margin-bottom:4px}
- .strip-intro h2{font-size:24px}
- .strip-point{min-height:104px;padding:12px}
- .section{width:calc(100% - 28px);padding:58px 0}
- .section-head{width:100%;max-width:100%}
- .section-head h2{font-size:clamp(31px,8.4vw,36px)}
- .service{width:100%;min-width:0}
- .focus{width:100%;padding:24px 18px}
- .industry-wrap{width:100%;min-width:0}
- .industry-preview{width:100%;min-width:0}
- .contact{width:100%;padding:23px 15px}
- .brief-form{width:100%;min-width:0}
-}
-@media(max-width:360px){
- .container,.nav,.hero,.studio-strip,.section{width:calc(100% - 22px)}
- .hero h1{font-size:40px}
- .hero-actions .btn{font-size:10px;padding:12px}
- .demo-main{grid-template-columns:1fr .7fr}
- .abstract-art{height:128px}
- .float-card{max-width:132px}
-}
-@media(prefers-reduced-motion:reduce){.art-ribbon,.art-cursor{animation:none}}
 
-
-/* MIRAH experience upgrade — richer canvas, responsive guardrails, interactive studio */
-html,body{width:100%;max-width:100%;overflow-x:hidden}
-img,svg,video,canvas{max-width:100%}
-.hero{width:100%;max-width:1160px;min-width:0;overflow:visible}
-.hero-art{min-width:0}
-.hero h1{overflow-wrap:normal;word-break:normal}
-.studio-strip{position:relative}
-.studio-strip:before{content:"";position:absolute;inset:0 -5vw;background:linear-gradient(90deg,#eef3ff 0%,#f6edff 48%,#fff0f5 100%);border-block:1px solid #e9e9f5;z-index:-1}
-.motion-ticker{overflow:hidden;border-block:1px solid #e8eaf3;background:#fff;padding:14px 0;white-space:nowrap}
+/* ---------- Ticker (no clipping: duplicated track, overflow hidden) ---------- */
+.motion-ticker{overflow:hidden;border-block:1px solid #e8eaf3;background:#fff;padding:14px 0}
 .motion-track{display:flex;width:max-content;gap:30px;align-items:center;animation:mirahMarquee 34s linear infinite}
-.motion-track span{font:800 10px Manrope;letter-spacing:.2em;color:#7c849a;text-transform:uppercase}
+.motion-track span{font:800 10px Manrope,sans-serif;letter-spacing:.2em;color:#7c849a;text-transform:uppercase;white-space:nowrap}
 .motion-track b{color:#9b7af0;font-size:15px}
 @keyframes mirahMarquee{to{transform:translateX(-50%)}}
-.experience{padding-top:78px;padding-bottom:82px}
+
+/* ---------- Experience ---------- */
 .experience-shell{display:grid;grid-template-columns:.86fr 1.14fr;gap:28px;align-items:stretch}
-.experience-copy{padding:32px 0}
-.experience-copy h2{font:800 clamp(34px,4.3vw,50px)/1.05 Manrope;letter-spacing:-.065em;margin:14px 0}
+.experience-copy h2{font:800 clamp(32px,4.3vw,48px)/1.05 Manrope,sans-serif;letter-spacing:-.06em;margin:14px 0}
 .experience-copy>p{font-size:14px;line-height:1.8;color:var(--muted);max-width:430px}
-.experience-tabs{display:grid;gap:9px;margin-top:25px}
-.experience-tab{display:flex;gap:13px;align-items:center;text-align:left;border:1px solid var(--line);border-radius:15px;padding:13px 15px;background:#ffffffb8;cursor:pointer;transition:.2s}
-.experience-tab:hover,.experience-tab.active{border-color:#b7a5ff;background:#fff;box-shadow:0 10px 25px #5c47a817;transform:translateX(3px)}
-.experience-tab .num{font:800 11px Manrope;color:#8d74e9}
-.experience-tab strong{display:block;font:750 13px Manrope;color:var(--ink);margin-bottom:3px}
+.experience-tabs{display:grid;gap:9px;margin-top:24px}
+.experience-tab{display:flex;gap:13px;align-items:center;text-align:left;border:1px solid var(--line);border-radius:15px;padding:13px 15px;background:rgba(255,255,255,.72);cursor:pointer;transition:border-color .2s,box-shadow .2s,background .2s}
+.experience-tab:hover,.experience-tab.active{border-color:#b7a5ff;background:#fff;box-shadow:0 10px 25px rgba(92,71,168,.09)}
+.experience-tab .num{font:800 11px Manrope,sans-serif;color:#8d74e9;flex:none}
+.experience-tab strong{display:block;font:750 13px Manrope,sans-serif;margin-bottom:3px}
 .experience-tab small{font-size:10px;color:var(--muted)}
-.experience-visual{min-height:440px;border-radius:25px;padding:22px;background:radial-gradient(circle at 85% 12%,#edddff 0,transparent 36%),linear-gradient(145deg,#e8f1ff,#f5efff 55%,#ffeaf0);position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center}
-.experience-visual:before{content:"";position:absolute;width:390px;height:390px;border-radius:50%;border:1px solid #ffffffc9;box-shadow:0 0 0 25px #ffffff3d,0 0 0 55px #ffffff26;right:-120px;bottom:-180px}
-.experience-window{position:relative;z-index:1;width:100%;max-width:490px;border:1px solid #ffffff;background:#ffffffd9;backdrop-filter:blur(15px);border-radius:18px;box-shadow:0 25px 70px #3c397b24;overflow:hidden;transform:rotate(-1deg);transition:transform .35s}
-.experience-window:hover{transform:rotate(0) translateY(-4px)}
+.experience-visual{min-height:420px;border-radius:25px;padding:22px;background:radial-gradient(circle at 85% 12%,#edddff 0,transparent 36%),linear-gradient(145deg,#e8f1ff,#f5efff 55%,#ffeaf0);position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center}
+.experience-window{position:relative;z-index:1;width:100%;max-width:490px;border:1px solid #fff;background:rgba(255,255,255,.85);border-radius:18px;box-shadow:0 25px 70px rgba(60,57,123,.14);overflow:hidden}
 .exp-bar{height:37px;display:flex;align-items:center;gap:5px;padding:0 13px;border-bottom:1px solid #eceef5}
 .exp-bar i{width:7px;height:7px;border-radius:50%;background:#d9dce8}
-.exp-url{margin:auto;border-radius:20px;background:#f0f1f7;color:#9aa1b2;padding:5px 42px;font-size:8px}
+.exp-url{margin:auto;border-radius:20px;background:#f0f1f7;color:#9aa1b2;padding:5px 16px;font-size:9px;max-width:55%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .exp-content{padding:22px}
-.exp-kicker{font-size:8px;font-weight:900;letter-spacing:.18em;color:#7c65cb}
-.exp-content h3{font:800 26px/1.06 Manrope;letter-spacing:-.055em;margin:10px 0}
-.exp-content p{font-size:10px;line-height:1.6;color:#727c91;max-width:280px}
-.exp-action{display:inline-block;margin-top:6px;padding:9px 13px;border-radius:30px;color:#fff;background:var(--grad);font-size:8px;font-weight:800}
+.exp-kicker{font-size:9px;font-weight:900;letter-spacing:.18em;color:#7c65cb}
+.exp-content h3{font:800 26px/1.06 Manrope,sans-serif;letter-spacing:-.05em;margin:10px 0}
+.exp-content p{font-size:11px;line-height:1.6;color:#727c91;max-width:300px}
+.exp-action{display:inline-block;margin-top:6px;padding:9px 13px;border-radius:30px;color:#fff;background:var(--grad);font-size:9px;font-weight:800}
 .exp-cards{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:17px}
 .exp-card{min-height:96px;border-radius:13px;padding:13px;background:linear-gradient(140deg,#e7edff,#f6eaff);display:flex;flex-direction:column;justify-content:space-between}
 .exp-card:nth-child(2){background:linear-gradient(140deg,#ffe8ed,#fff0dc)}
-.exp-card b{font:800 12px Manrope;color:#232945}
-.exp-card span{font-size:8px;color:#727b91}
-.exp-orbit{position:absolute;width:130px;height:130px;border:18px solid #ffffff9c;border-radius:44% 56% 61% 39%;right:14px;top:23px;transform:rotate(35deg);pointer-events:none}
-.exp-bubble{position:absolute;z-index:2;right:7px;bottom:34px;padding:12px 15px;border:1px solid #fff;border-radius:14px;background:#ffffffed;box-shadow:0 12px 30px #37335a1a;font-size:9px;color:#737d91}
-.exp-bubble b{display:block;font:800 12px Manrope;color:#202743;margin-bottom:3px}
+.exp-card b{font:800 12px Manrope,sans-serif;color:#232945}
+.exp-card span{font-size:9px;color:#727b91}
+.exp-bubble{position:absolute;z-index:2;right:14px;bottom:34px;padding:12px 15px;border:1px solid #fff;border-radius:14px;background:rgba(255,255,255,.93);box-shadow:0 12px 30px rgba(55,51,90,.1);font-size:9px;color:#737d91}
+.exp-bubble b{display:block;font:800 12px Manrope,sans-serif;color:#202743;margin-bottom:3px}
 .experience-caption{position:absolute;left:22px;bottom:18px;font-size:9px;letter-spacing:.15em;font-weight:800;color:#7c70a7}
-@media(max-width:900px){.experience-shell{grid-template-columns:1fr}.experience-copy{padding:0}.experience-visual{min-height:390px}}
-@media(max-width:650px){
- .motion-ticker{padding:12px 0}
- .motion-track{gap:19px;animation-duration:26s}
- .motion-track span{font-size:8px}
- .experience{padding-top:55px;padding-bottom:58px}
- .experience-shell{gap:18px}
- .experience-copy h2{font-size:35px}
- .experience-copy>p{font-size:13px}
- .experience-tabs{grid-template-columns:1fr 1fr;gap:7px}
- .experience-tab{padding:11px 9px;gap:7px;min-width:0}
- .experience-tab strong{font-size:11px}
- .experience-tab small{font-size:9px;line-height:1.35}
- .experience-tab .num{font-size:9px}
- .experience-visual{min-height:330px;padding:13px;border-radius:19px}
- .experience-window{border-radius:14px}
- .exp-content{padding:16px}
- .exp-content h3{font-size:22px}
- .exp-orbit{width:95px;height:95px;border-width:13px;right:8px;top:17px}
- .exp-bubble{right:3px;bottom:19px;padding:9px 11px}
- .experience-caption{left:14px;bottom:11px;font-size:7px}
-}
-@media(max-width:370px){.experience-tabs{grid-template-columns:1fr}.experience-tab{padding:10px 12px}.experience-visual{min-height:310px}}
-@media(prefers-reduced-motion:reduce){.motion-track{animation:none}}
 
-/* Final viewport guardrails: prevent decorative layers from creating side-scroll */
-html,body{width:100%;max-width:100%;overflow-x:clip}
-body{position:relative}
-main,header,footer{max-width:100%;min-width:0}
-.container,.section{min-width:0}
-.hero{width:min(1160px,calc(100% - 48px));margin-inline:auto;min-width:0;overflow:clip}
-.hero:before,.hero:after{pointer-events:none}
-.hero-art,.device,.demo-site,.demo-main,.abstract-art,.experience-shell,.experience-visual{min-width:0;max-width:100%}
-.studio-strip{min-width:0;overflow:clip}
-.studio-strip:before{inset:0}
-.motion-ticker{width:100%;max-width:100%;overflow:hidden}
-.portfolio-grid,.portfolio-card,.portfolio-visual,.industry-wrap,.industry-preview,.contact,.brief-form{min-width:0;max-width:100%}
-img,svg,video,canvas{max-width:100%}
-@media(max-width:650px){
- html,body{overflow-x:clip}
- .hero,.studio-strip,.section{width:calc(100% - 28px);max-width:calc(100% - 28px)}
- .hero{padding-inline:0}
- .hero-art{width:100%;overflow:clip}
- .float-card{max-width:min(46vw,170px);overflow-wrap:anywhere}
- .fc1{right:5px}.fc2{left:5px}
- .studio-strip{margin-inline:auto}
- .industry-preview,.experience-visual{overflow:hidden}
- .portfolio-grid{grid-template-columns:minmax(0,1fr)}
- .contact{overflow:hidden}
-}
+/* ---------- Services ---------- */
+.services{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.service{background:#fff;border:1px solid var(--line);border-radius:21px;padding:25px;min-height:230px;display:flex;flex-direction:column;transition:transform .25s,box-shadow .25s,border-color .25s}
+.service:hover{transform:translateY(-5px);box-shadow:var(--shadow);border-color:#d9d0ff}
+.service-icon{width:45px;height:45px;border-radius:14px;background:linear-gradient(145deg,#edf4ff,#f5eaff);display:grid;place-items:center;color:var(--violet);font-size:21px;margin-bottom:20px}
+.service h3{font:750 17px Manrope,sans-serif;margin-bottom:9px}
+.service p{font-size:13px;line-height:1.7;color:var(--muted);margin-bottom:15px;flex:1}
+.service a{font-size:11px;color:var(--violet);font-weight:800}
 
-/* MIRAH HYBRID v2 — cohesive visual language and phone-first layout */
-:root{--hybrid-glow:linear-gradient(120deg,rgba(37,142,234,.13),rgba(112,70,237,.12) 42%,rgba(223,57,167,.10) 76%,rgba(255,138,50,.10))}
-body{background:radial-gradient(ellipse at 12% 12%,rgba(225,235,255,.42),transparent 34%),radial-gradient(ellipse at 88% 46%,rgba(251,226,243,.34),transparent 31%),var(--paper)}
-.hero{grid-template-columns:minmax(0,1.02fr) minmax(0,.98fr);gap:clamp(22px,4vw,48px)}
-.hero>div,.hero-art,.device,.demo-site,.demo-main,.experience-shell,.experience-copy,.experience-visual{min-width:0}
-.hero-art{isolation:isolate}
-.device{box-shadow:0 34px 90px rgba(48,45,104,.17),0 4px 18px rgba(48,45,104,.06)}
-.studio-strip{isolation:isolate}
-.strip-point{transition:transform .24s ease,border-color .24s ease,box-shadow .24s ease}
-.strip-point:hover{transform:translateY(-4px);border-color:#d6c9ff;box-shadow:0 14px 30px rgba(67,54,128,.08)}
-.motion-ticker{position:relative}
-.motion-ticker:before,.motion-ticker:after{content:"";position:absolute;z-index:2;top:0;bottom:0;width:8vw;pointer-events:none}
-.motion-ticker:before{left:0;background:linear-gradient(90deg,#fff,transparent)}
-.motion-ticker:after{right:0;background:linear-gradient(270deg,#fff,transparent)}
-.experience-visual{box-shadow:inset 0 1px 0 #fff,0 20px 60px rgba(62,55,112,.07)}
-.experience-window{transform:rotate(-.6deg)}
-.navlinks a:focus-visible,.experience-tab:focus-visible,.industry-tab:focus-visible,.btn:focus-visible,.menu:focus-visible{outline:3px solid #9b83f4;outline-offset:3px}
-@media(max-width:900px){
- .hero{grid-template-columns:minmax(0,1fr);width:min(100% - 40px,680px);margin-inline:auto;gap:18px}
- .hero-art{width:100%;max-width:620px;margin-inline:auto}
- .device{max-width:100%}
-}
-@media(max-width:650px){
- html,body{width:100%;max-width:100%;overflow-x:clip}
- body{position:relative}
- main,header,footer{width:100%;max-width:100%;min-width:0}
- .container,.section.container{width:calc(100% - 32px)!important;max-width:560px!important;margin-left:auto!important;margin-right:auto!important;padding-left:0;padding-right:0}
- header .container.nav{width:calc(100% - 32px)!important;max-width:560px!important}
- .nav{height:70px;gap:10px}
- .brand{gap:8px;min-width:0}
- .brand svg{width:40px;height:32px;flex:0 0 auto}
- .brandname{font-size:15px;white-space:nowrap}
- .menu{flex:0 0 44px}
- .navlinks{top:70px;left:0;right:0;width:100%;padding:12px 22px 18px}
- .hero{display:grid;grid-template-columns:minmax(0,1fr);width:calc(100% - 32px)!important;max-width:560px!important;min-height:0;padding:40px 0 36px;gap:22px;overflow:clip}
- .hero>div:first-child{width:100%;min-width:0}
- .eyebrow{max-width:100%;white-space:normal;font-size:9px;letter-spacing:.12em}
- .hero h1{font-size:clamp(40px,10.7vw,54px);line-height:1.02;letter-spacing:-.065em;max-width:100%;overflow-wrap:break-word}
- .hero-copy{font-size:14px;line-height:1.72;max-width:100%;margin-top:16px}
- .hero-actions{display:grid;grid-template-columns:minmax(0,1fr);gap:10px;margin-top:22px}
- .hero-actions .btn{width:100%;min-height:48px;padding:13px 16px;font-size:12px}
- .proofline{display:flex;flex-wrap:wrap;gap:9px 14px;margin-top:18px;font-size:10px;line-height:1.45}
- .hero-art{width:100%;max-width:100%;min-width:0;min-height:0;padding:8px 0 18px;margin:0;overflow:visible}
- .glow{width:min(76vw,290px);height:min(76vw,290px);right:0;left:auto}
- .device{width:100%;max-width:100%;min-width:0;transform:none;border-radius:18px}
- .devicebar{height:32px;padding:0 10px}
- .deviceurl{max-width:48%;padding:4px 10px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
- .demo-site{width:100%;min-width:0;padding:12px}
- .demo-nav{gap:8px;min-width:0}
- .demo-nav span:last-child{font-size:7px;letter-spacing:.06em;white-space:nowrap}
- .demo-main{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.78fr);gap:8px;padding:19px 0 13px;min-width:0}
- .demo-main>div{min-width:0}
- .demo-main h3{font-size:clamp(17px,5.2vw,22px);overflow-wrap:break-word}
- .demo-main p{font-size:8px;line-height:1.5}
- .abstract-art{width:100%;height:132px;min-width:0;overflow:hidden}
- .art-ribbon{width:160px;height:68px;border-width:10px;top:36px}
- .art-tile{min-width:0;max-width:calc(100% - 12px);padding:7px 8px}
- .art-tile b{font-size:8px}.art-tile small{font-size:6px}
- .tile-one{right:6px;top:8px}.tile-two{left:6px;bottom:6px}
- .art-cursor{right:10px;bottom:12px;width:25px;height:25px}
- .demo-foot{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:5px}
- .demo-foot div{min-width:0;padding:8px 5px;font-size:7px;overflow-wrap:anywhere}
- .demo-foot b{font-size:8px}
- .float-card{font-size:8px;padding:8px 10px;max-width:44%;overflow-wrap:anywhere}
- .float-card b{font-size:10px}
- .fc1{right:2px;top:-7px}.fc2{left:2px;bottom:0}
- .studio-strip{width:calc(100% - 32px)!important;max-width:560px!important;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px;padding:24px 0 42px;overflow:clip}
- .strip-intro{grid-column:1/-1}
- .strip-intro h2{font-size:25px}
- .strip-point{min-width:0;min-height:108px;padding:12px;border-radius:15px}
- .strip-point b{font-size:11px}
- .strip-point small{font-size:9px;line-height:1.45}
- .motion-ticker{width:100%;max-width:100%;padding:12px 0}
- .motion-track{gap:18px;animation-duration:30s}
- .motion-track span{font-size:8px}
- .experience{padding-top:52px;padding-bottom:54px}
- .experience-shell{grid-template-columns:minmax(0,1fr);gap:17px}
- .experience-copy{padding:0;min-width:0}
- .experience-copy h2{font-size:clamp(32px,8.5vw,39px);line-height:1.04}
- .experience-copy>p{font-size:13px;line-height:1.7}
- .experience-tabs{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin-top:18px}
- .experience-tab{min-width:0;padding:11px 9px;gap:7px;transform:none!important}
- .experience-tab>span:last-child{min-width:0}
- .experience-tab strong{font-size:10px;line-height:1.3}
- .experience-tab small{font-size:9px;line-height:1.35}
- .experience-visual{width:100%;min-width:0;min-height:310px;padding:12px;border-radius:18px;overflow:hidden}
- .experience-window{width:100%;min-width:0;transform:none}
- .exp-content{padding:14px}
- .exp-content h3{font-size:21px}
- .exp-url{max-width:55%;padding:5px 12px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
- .exp-orbit{width:86px;height:86px;border-width:11px;right:8px;top:14px}
- .exp-bubble{right:5px;bottom:17px;max-width:48%;padding:8px 9px}
- .exp-bubble b{font-size:10px}
- .experience-caption{left:12px;bottom:9px;font-size:7px}
- .section{padding-top:54px;padding-bottom:54px}
- .section-head h2{font-size:clamp(30px,8.2vw,36px);line-height:1.08}
- .services{grid-template-columns:minmax(0,1fr);gap:10px}
- .service{width:100%;min-width:0;padding:20px}
- .focus{width:100%;min-width:0;padding:23px 17px}
- .focus-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
- .industry-wrap{grid-template-columns:minmax(0,1fr);min-width:0;gap:10px}
- .industry-tabs{grid-template-columns:repeat(2,minmax(0,1fr));gap:7px}
- .industry-tab{min-width:0;padding:11px 9px}
- .industry-tab strong{font-size:11px}
- .industry-tab span{font-size:9px;line-height:1.35}
- .industry-preview{min-width:0;min-height:0;padding:19px}
- .industry-preview h3{font-size:23px}
- .process{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
- .step{min-width:0;padding:14px 10px}
- .contact{grid-template-columns:minmax(0,1fr);width:100%;min-width:0;padding:22px 15px;gap:16px}
- .contact h2{font-size:clamp(30px,8vw,36px)}
- .brief-form{width:100%;min-width:0;padding:13px}
- .field input,.field select,.field textarea{min-width:0;width:100%}
- .portfolio-grid{grid-template-columns:minmax(0,1fr);gap:13px}
- .portfolio-card,.portfolio-visual,.portfolio-copy{min-width:0;width:100%}
- .footer-row{gap:14px;align-items:flex-start}
-}
-@media(max-width:380px){
- .container,.section.container,.hero,.studio-strip{width:calc(100% - 24px)!important}
- .hero h1{font-size:39px}
- .hero-actions .btn{font-size:11px}
- .experience-tabs,.industry-tabs,.process{grid-template-columns:minmax(0,1fr)}
- .demo-main{grid-template-columns:minmax(0,1fr) minmax(0,.72fr)}
- .float-card{max-width:46%}
-}
-@media(prefers-reduced-motion:reduce){
- .motion-track,.art-ribbon,.art-cursor{animation:none!important}
- .strip-point,.experience-window{transition:none!important}
-}
+/* ---------- Approach / focus ---------- */
+.focus{background:#111831;color:#fff;border-radius:28px;padding:46px;display:grid;grid-template-columns:1fr .9fr;gap:36px;align-items:center;position:relative;overflow:hidden}
+.focus h2{font:800 clamp(30px,4vw,44px)/1.1 Manrope,sans-serif;letter-spacing:-.05em;margin:12px 0}
+.focus p{color:#c0c7da;line-height:1.75;font-size:14px;max-width:520px}
+.focus .kicker{color:#b6a4ff}
+.focus-grid{display:grid;grid-template-columns:1fr 1fr;gap:11px}
+.focus-grid div{border:1px solid rgba(255,255,255,.14);background:rgba(255,255,255,.05);border-radius:15px;padding:18px}
+.focus-grid b{display:block;font:800 23px Manrope,sans-serif;color:#fff;margin-bottom:6px}
+.focus-grid span{font-size:11px;color:#c0c7da;line-height:1.5}
 
-/* MIRAH Intelligence — a living, interactive AI-first first impression */
-.ai-hero{display:flex;flex-direction:column;justify-content:center;gap:15px;min-height:0;padding:12px 0;isolation:isolate}
-.ai-stage{height:310px;position:relative;overflow:hidden;border:1px solid #ffffffd9;border-radius:28px;background:radial-gradient(circle at 50% 46%,#fff 0,#f4f0ff 26%,#e9efff 60%,#fcecf4 100%);box-shadow:0 28px 75px rgba(64,54,126,.13),inset 0 1px 0 #fff}
-.ai-grid{position:absolute;inset:0;opacity:.32;background-image:linear-gradient(#8f8ac31a 1px,transparent 1px),linear-gradient(90deg,#8f8ac31a 1px,transparent 1px);background-size:28px 28px;mask-image:radial-gradient(ellipse at center,#000 10%,transparent 78%)}
-.ai-orbit{position:absolute;left:50%;top:48%;border:1px solid #9a85ef65;border-radius:50%;transform:translate(-50%,-50%) rotate(-24deg)}
-.ai-orbit-one{width:250px;height:115px;box-shadow:0 0 24px #8c70ed18;animation:aiOrbit 13s linear infinite}
-.ai-orbit-two{width:185px;height:250px;border-color:#df73bd66;transform:translate(-50%,-50%) rotate(48deg);animation:aiOrbit 17s linear infinite reverse}
-@keyframes aiOrbit{to{transform:translate(-50%,-50%) rotate(336deg)}}
-.ai-core{position:absolute;left:50%;top:48%;width:106px;height:106px;transform:translate(-50%,-50%);border-radius:34px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;background:linear-gradient(145deg,#ffffffed,#e9e4ffed 56%,#ffe6f0);border:1px solid #fff;box-shadow:0 0 0 9px #ffffff70,0 18px 48px #6d5acb30,inset 0 1px 0 #fff;animation:aiCoreFloat 5s ease-in-out infinite}
-@keyframes aiCoreFloat{0%,100%{margin-top:0}50%{margin-top:-7px}}
-.ai-core-mark{font:900 48px/1 Manrope;background:linear-gradient(120deg,#258eea,#7046ed 45%,#df39a7 78%,#ff8a32);color:transparent;background-clip:text}
-.ai-core-label{font:800 8px Manrope;letter-spacing:.34em;color:#717b96}
-.ai-node{position:absolute;z-index:2;display:flex;align-items:center;gap:7px;padding:8px 11px;border-radius:13px;background:#ffffffdf;border:1px solid #fff;box-shadow:0 10px 24px #45406b17;backdrop-filter:blur(10px);font:800 8px Manrope;letter-spacing:.13em;color:#66708a}
-.ai-node i{font-style:normal;font-size:14px;color:#805ce2}
-.ai-node-one{left:9%;top:22%}.ai-node-two{right:8%;top:29%}.ai-node-three{left:18%;bottom:17%}
-.ai-signal{position:absolute;width:7px;height:7px;border-radius:50%;background:#a77be9;box-shadow:0 0 0 6px #a77be91a,0 0 18px #a77be9;animation:aiSignal 3s ease-in-out infinite}
-.ai-signal-one{top:23%;right:28%}.ai-signal-two{bottom:22%;right:22%;background:#e58abf;animation-delay:1.2s}
-@keyframes aiSignal{50%{opacity:.3;transform:scale(.7)}}
-.ai-stage-tag{position:absolute;left:18px;top:17px;display:flex;align-items:center;gap:7px;font:800 8px Manrope;letter-spacing:.16em;color:#7b6bb1}
-.ai-live-dot{width:6px;height:6px;border-radius:50%;background:#50b99a;box-shadow:0 0 0 4px #50b99a20}
-.ai-stage-caption{position:absolute;right:17px;bottom:15px;text-align:right;font-size:9px;line-height:1.6;color:#7c8498}
-.ai-stage-caption b{font:800 11px Manrope;color:#202743}
-.ai-console{position:relative;z-index:3;margin:-3px 13px 0;padding:15px;border:1px solid #ffffff;background:#ffffffed;backdrop-filter:blur(18px);border-radius:19px;box-shadow:0 17px 48px rgba(55,48,104,.12)}
-.ai-console-head{display:flex;align-items:center;gap:9px}
-.ai-avatar{width:31px;height:31px;display:grid;place-items:center;border-radius:11px;background:var(--grad);color:white;font:900 16px Manrope;box-shadow:0 5px 14px #7046ed35}
-.ai-console-head b{display:block;font:850 9px Manrope;letter-spacing:.13em;color:#222943}
-.ai-console-head small{display:block;margin-top:3px;font-size:9px;color:#8a91a3}
-.ai-console-status{margin-left:auto;padding:5px 8px;border-radius:20px;background:#f1edff;color:#8067d0;font:800 7px Manrope;letter-spacing:.12em}
-.ai-console-prompt{margin:13px 0 8px;font:800 13px Manrope;letter-spacing:-.02em;color:#202743}
-.ai-prompt-list{display:flex;flex-wrap:wrap;gap:6px}
-.ai-prompt{border:1px solid #e8e8f2;background:#fff;border-radius:30px;padding:8px 10px;color:#646d83;font-size:9px;font-weight:700;cursor:pointer;transition:.2s}
-.ai-prompt:hover,.ai-prompt.active{border-color:#bba9ff;background:#f5f1ff;color:#654ac7}
-.ai-response{margin-top:10px;padding:11px 12px;border-radius:13px;background:linear-gradient(110deg,#f1f5ff,#f8f1ff 62%,#fff1f5);display:grid;gap:4px}
-.ai-response-label{font:850 7px Manrope;letter-spacing:.16em;color:#8a75cc}
-.ai-response b{font:800 11px Manrope;color:#202743}
-.ai-response>span:last-child{font-size:9px;line-height:1.5;color:#727c91}
-.ai-console-foot{display:flex;gap:12px;flex-wrap:wrap;margin-top:10px;color:#8b93a4;font-size:8px}
-.ai-console-foot span:before{content:"✓";color:#4cb69a;margin-right:4px;font-weight:900}
-@media(max-width:900px){.ai-hero{width:100%;max-width:620px;margin-inline:auto}}
-@media(max-width:650px){
- .ai-hero{width:100%;max-width:100%;padding:6px 0 12px;gap:12px;overflow:visible}
- .ai-stage{height:260px;border-radius:21px}
- .ai-orbit-one{width:210px;height:96px}.ai-orbit-two{width:155px;height:205px}
- .ai-core{width:88px;height:88px;border-radius:28px}.ai-core-mark{font-size:40px}
- .ai-node{padding:7px 9px;font-size:7px;gap:5px}.ai-node-one{left:5%;top:23%}.ai-node-two{right:4%;top:30%}.ai-node-three{left:9%;bottom:15%}
- .ai-stage-tag{left:12px;top:13px;font-size:7px}
- .ai-stage-caption{right:11px;bottom:11px;font-size:8px}
- .ai-console{margin:-2px 5px 0;padding:13px;border-radius:16px}
- .ai-prompt-list{display:grid;grid-template-columns:1fr;gap:6px}
- .ai-prompt{text-align:left;padding:9px 11px;font-size:9px}
- .ai-console-prompt{font-size:12px}
-}
-@media(max-width:380px){.ai-stage{height:235px}.ai-node-three{left:5%}.ai-stage-caption{max-width:120px}}
-@media(prefers-reduced-motion:reduce){.ai-orbit,.ai-core,.ai-signal{animation:none!important}}
-/* Hard viewport containment: no section may push the phone canvas sideways */
-html,body{max-width:100%;overflow-x:clip}
-body,main,header,footer{min-width:0}
-main>*{max-width:100vw}
-@media(max-width:650px){
- .hero,.hero-art,.ai-hero{min-width:0;max-width:calc(100vw - 32px)}
- .hero-art{overflow:visible}
- .ai-stage,.ai-console{max-width:100%;min-width:0}
-}
+/* ---------- Industries ---------- */
+.industry-wrap{display:grid;grid-template-columns:.85fr 1.15fr;gap:28px;align-items:stretch}
+.industry-tabs{display:grid;gap:9px;align-content:start}
+.industry-tab{border:1px solid var(--line);background:#fff;border-radius:15px;padding:16px 18px;text-align:left;cursor:pointer;color:#59627a;transition:border-color .2s,box-shadow .2s,background .2s}
+.industry-tab strong{display:block;color:var(--ink);font:750 14px Manrope,sans-serif;margin-bottom:4px}
+.industry-tab span{font-size:11px}
+.industry-tab.active{border-color:#bfb0ff;background:linear-gradient(110deg,#f1efff,#fff);box-shadow:0 10px 28px rgba(93,72,178,.1)}
+.industry-preview{border-radius:24px;padding:28px;background:linear-gradient(140deg,#e5edff,#f4e7ff 58%,#ffe8ee);min-height:360px;display:flex;flex-direction:column;justify-content:space-between;overflow:hidden;position:relative}
+.industry-preview h3{font:800 clamp(28px,4vw,42px)/1.05 Manrope,sans-serif;letter-spacing:-.06em;max-width:380px;margin:15px 0}
+.industry-preview p{color:#616a83;line-height:1.7;font-size:14px;max-width:410px}
+.preview-label{font-size:10px;font-weight:800;letter-spacing:.16em;color:#6952bd}
+.preview-chips{display:flex;gap:8px;flex-wrap:wrap}
+.preview-chips span{background:rgba(255,255,255,.72);border:1px solid #fff;border-radius:30px;padding:8px 11px;font-size:10px;color:#4e5872;font-weight:700}
+.industry-note{text-align:center;color:#8991a4;font-size:11px;margin:18px 0 0}
 
-/* === MIRAH MOTION SYSTEM / immersive studio pass === */
-:root{--ease-out:cubic-bezier(.16,1,.3,1);--motion-glow:rgba(115,91,239,.14)}
-html{scroll-behavior:smooth}
-body{background:#f5f6fc}
-.topline{position:fixed;top:0;left:0;right:0;z-index:100;height:3px;transform-origin:left;box-shadow:0 0 15px #a87bff80}
-header{transition:background .35s,box-shadow .35s,transform .35s}
-header.scrolled{background:rgba(248,249,255,.91);box-shadow:0 8px 35px #20264a0d}
-.hero{isolation:isolate;min-height:740px;padding-top:88px;padding-bottom:100px}
-.hero>div:first-child{position:relative;z-index:2}
-.hero h1{font-size:clamp(54px,6.5vw,88px);line-height:.98;letter-spacing:-.075em}
-.hero h1 .gradient{background-size:220% 220%;animation:mirahGradient 7s ease infinite}
-@keyframes mirahGradient{0%,100%{background-position:0% 50%}50%{background-position:100% 50%}}
-.hero-copy{max-width:500px}
-.hero-art.ai-hero{min-height:590px;perspective:1100px}
-.ai-stage{height:420px;overflow:hidden;border-radius:32px;background:radial-gradient(ellipse at 50% 45%,#27204c 0%,#17172f 42%,#10172d 100%);border:1px solid #b5a6ff55;box-shadow:0 35px 100px #1714323d,inset 0 0 65px #8b65ff18;transform-style:preserve-3d;transition:transform .35s var(--ease-out),box-shadow .4s}
-.ai-stage:before{content:"";position:absolute;inset:-40%;z-index:0;background:conic-gradient(from 0deg,transparent,#6c5be72c,transparent,#d74caa25,transparent);filter:blur(35px);animation:mirahAurora 22s linear infinite}
-@keyframes mirahAurora{to{transform:rotate(360deg)}}
-.ai-particles{position:absolute;inset:0;width:100%;height:100%;z-index:1;opacity:.92}
-.ai-grid{z-index:1;opacity:.22;background-image:linear-gradient(#c6b9ff16 1px,transparent 1px),linear-gradient(90deg,#c6b9ff16 1px,transparent 1px);mask-image:radial-gradient(ellipse at center,#000 0%,transparent 83%)}
-.ai-orbit{z-index:2;border-color:#a99bff75;box-shadow:0 0 30px #8b71ff26,inset 0 0 25px #8b71ff10}
-.ai-orbit-one{width:320px;height:145px;animation:aiOrbit 17s linear infinite}
-.ai-orbit-two{width:220px;height:300px;border-color:#f18bc36b;animation:aiOrbit 22s linear infinite reverse}
-.ai-core{z-index:3;width:142px;height:142px;border-radius:48px;background:radial-gradient(circle at 35% 25%,#fff 0%,#e3d9ff 17%,#9073ef 45%,#34255f 78%,#1a1a39 100%);border:1px solid #ffffffb0;box-shadow:0 0 0 10px #ffffff0c,0 0 35px #9e7bff9c,0 0 90px #8257f26b,inset 0 0 30px #fff7;animation:aiCoreFloat 4.5s ease-in-out infinite,aiCorePulse 4s ease-in-out infinite}
-@keyframes aiCorePulse{0%,100%{box-shadow:0 0 0 10px #ffffff0c,0 0 35px #9e7bff9c,0 0 90px #8257f26b,inset 0 0 30px #fff7}50%{box-shadow:0 0 0 18px #ffffff08,0 0 55px #b29affd9,0 0 125px #8257f299,inset 0 0 38px #fff9}}
-.ai-core-mark{font-size:60px;color:#fff;background:none;text-shadow:0 3px 18px #5a3aab}
-.ai-core-label{color:#fff;letter-spacing:.42em}
-.ai-node{z-index:4;background:#ffffff12;border:1px solid #ffffff3d;color:#f0edff;box-shadow:0 12px 35px #080a1d65,inset 0 1px 0 #ffffff2b;backdrop-filter:blur(18px);transition:transform .4s var(--ease-out),background .3s}
-.ai-node i{color:#d8c8ff}
-.ai-node-one{left:8%;top:24%;animation:nodeFloat 6s ease-in-out infinite}
-.ai-node-two{right:7%;top:29%;animation:nodeFloat 7s ease-in-out -2s infinite}
-.ai-node-three{left:18%;bottom:16%;animation:nodeFloat 6.5s ease-in-out -3s infinite}
-@keyframes nodeFloat{0%,100%{translate:0 0}50%{translate:0 -10px}}
-.ai-stage-tag{color:#c7baff;z-index:4}
-.ai-live-dot{box-shadow:0 0 0 5px #50b99a24,0 0 16px #50b99a}
-.ai-stage-caption{z-index:4;color:#b9b7d3}
-.ai-stage-caption b{color:#fff}
-.ai-signal{z-index:3}
-.ai-console{margin:-54px 18px 0;padding:18px;z-index:5;background:rgba(255,255,255,.91);border:1px solid #fff;box-shadow:0 24px 65px #24204425;backdrop-filter:blur(26px);transition:transform .4s var(--ease-out)}
-.ai-console:hover{transform:translateY(-4px)}
-.ai-prompt{font-size:10px;padding:9px 12px;transition:all .25s var(--ease-out)}
-.ai-prompt:hover{transform:translateY(-2px);box-shadow:0 7px 16px #7046ed16}
-.ai-response{min-height:75px;transition:background .3s}
-.ai-response.thinking{animation:responsePulse 1.1s ease-in-out infinite}
-@keyframes responsePulse{50%{opacity:.65;transform:scale(.995)}}
-.ai-chat-form{display:flex;align-items:center;gap:8px;margin-top:11px;padding:5px 6px 5px 13px;background:#fff;border:1px solid #e3e3f1;border-radius:999px;box-shadow:0 5px 20px #3a315d0a;transition:border .2s,box-shadow .2s}
-.ai-chat-form:focus-within{border-color:#a38af5;box-shadow:0 0 0 4px #8d70ed17}
-.ai-chat-form input{flex:1;min-width:0;border:0;outline:0;background:transparent;font-size:11px;color:#202743;padding:8px 0}
-.ai-chat-form input::placeholder{color:#9aa0b2}
-.ai-chat-form button{width:34px;height:34px;flex:none;border:0;border-radius:50%;background:var(--grad);color:#fff;font-size:18px;cursor:pointer;box-shadow:0 5px 15px #7046ed35;transition:transform .2s}
-.ai-chat-form button:hover{transform:rotate(45deg) scale(1.07)}
-.ai-chat-note{font:700 7px Manrope;letter-spacing:.12em;color:#9a9fb0;margin-top:7px;text-align:center}
-.ai-console-foot{justify-content:center}
-.studio-strip{position:relative;overflow:hidden}
-.studio-strip:before{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse at 20% 20%,#d9e6ff66,transparent 50%),radial-gradient(ellipse at 90% 70%,#f8dff366,transparent 45%)}
-.section{position:relative}
-.section-head h2{letter-spacing:-.07em}
-.service,.portfolio-card,.industry-tab,.step,.focus,.contact{transform-style:preserve-3d}
-.service{transition:transform .45s var(--ease-out),box-shadow .45s,border-color .3s}
-.service:hover{transform:translateY(-9px) scale(1.012);box-shadow:0 30px 70px #31305c1c}
-.service-icon{transition:transform .45s var(--ease-out),box-shadow .3s}
-.service:hover .service-icon{transform:translateY(-4px) rotate(-7deg) scale(1.08);box-shadow:0 12px 25px #7046ed24}
-.btn{position:relative;overflow:hidden;isolation:isolate;transition:transform .3s var(--ease-out),box-shadow .3s}
-.btn:before{content:"";position:absolute;inset:0;z-index:-1;transform:translateX(-120%) skewX(-20deg);background:linear-gradient(100deg,transparent,#ffffff55,transparent);transition:transform .7s var(--ease-out)}
-.btn:hover:before{transform:translateX(120%) skewX(-20deg)}
-.reveal{opacity:0;transform:translateY(32px) scale(.985);filter:blur(4px);transition:opacity .8s var(--ease-out),transform .8s var(--ease-out),filter .8s var(--ease-out)}
-.reveal.visible{opacity:1;transform:translateY(0) scale(1);filter:blur(0)}
-.reveal.visible .service{animation:cardArrive .65s var(--ease-out) both}
-.reveal.visible .service:nth-child(2){animation-delay:.09s}
-.reveal.visible .service:nth-child(3){animation-delay:.18s}
-@keyframes cardArrive{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
-#mirahCursorGlow{position:fixed;z-index:1;pointer-events:none;width:340px;height:340px;border-radius:50%;background:radial-gradient(circle,#8e78f31c 0%,#8e78f30a 35%,transparent 70%);transform:translate(-50%,-50%);opacity:0;transition:opacity .3s;mix-blend-mode:multiply}
-body.pointer-live #mirahCursorGlow{opacity:1}
-@media(hover:hover) and (pointer:fine){.service,.portfolio-card{will-change:transform}}
-@media(max-width:900px){.hero{min-height:0;gap:25px}.hero-art.ai-hero{min-height:520px}.ai-stage{height:365px}}
-@media(max-width:650px){
- .hero{padding-top:42px;padding-bottom:52px;min-height:0;gap:12px}
- .hero h1{font-size:clamp(43px,12vw,61px);line-height:1.01}
- .hero-copy{font-size:15px;line-height:1.65}
- .hero-art.ai-hero{min-height:0;padding:12px 0 30px;max-width:100%;width:100%}
- .ai-stage{height:300px;border-radius:24px}
- .ai-orbit-one{width:245px;height:110px}.ai-orbit-two{width:175px;height:235px}
- .ai-core{width:110px;height:110px;border-radius:37px}.ai-core-mark{font-size:48px}
- .ai-console{margin:-42px 8px 0;padding:14px}
- .ai-prompt-list{display:grid;grid-template-columns:1fr}
- .ai-chat-form input{font-size:10px}
- .proofline{gap:9px 13px}
- .reveal{transform:translateY(18px)}
-}
-@media(max-width:380px){.ai-stage{height:270px}.ai-node{font-size:6px;padding:6px 8px}}
-@media(prefers-reduced-motion:reduce){
- *,*:before,*:after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
- .reveal{opacity:1;transform:none;filter:none}
- #mirahCursorGlow{display:none}
-}
-.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
-
-
-/* MIRAH mobile repair — restore the missing intelligence scene and remove dead space */
-@media(max-width:900px){
- .hero{grid-template-columns:minmax(0,1fr);align-items:start}
- .hero-art.ai-hero{display:flex;flex-direction:column;justify-content:flex-start;align-items:stretch;gap:0;height:auto;min-height:0}
-}
-@media(max-width:650px){
- .hero{display:grid;grid-template-columns:minmax(0,1fr);align-content:start;gap:14px;padding-top:30px;padding-bottom:32px;min-height:0;height:auto}
- .hero>div:first-child{grid-row:1}
- .hero-art.ai-hero{grid-row:2;display:flex!important;width:100%;height:auto!important;min-height:0!important;max-height:none;overflow:visible!important;padding:4px 0 0;margin:0;gap:0}
- .ai-stage{position:relative!important;display:block!important;flex:0 0 238px!important;width:100%!important;height:238px!important;min-height:238px!important;max-height:238px!important;opacity:1!important;visibility:visible!important;overflow:hidden!important;background:radial-gradient(ellipse at 50% 46%,#40356e 0%,#211d43 43%,#11182f 100%)!important;border:1px solid #a99bff70!important;border-radius:22px!important;box-shadow:0 18px 48px #2520442b,inset 0 0 50px #8b65ff22!important}
- .ai-stage:before{inset:-35%;opacity:.85}
- .ai-grid{opacity:.32!important}
- .ai-particles{position:absolute!important;inset:0!important;display:block!important;width:100%!important;height:100%!important;z-index:1!important}
- .ai-orbit-one{width:205px!important;height:92px!important}
- .ai-orbit-two{width:145px!important;height:192px!important}
- .ai-core{display:flex!important;left:50%!important;top:51%!important;width:91px!important;height:91px!important;opacity:1!important;visibility:visible!important;border-radius:31px!important}
- .ai-core-mark{font-size:43px!important}
- .ai-node{display:flex!important;opacity:1!important;visibility:visible!important;font-size:7px!important;padding:6px 8px!important}
- .ai-node-one{left:5%!important;top:27%!important}
- .ai-node-two{right:5%!important;top:30%!important}
- .ai-node-three{left:9%!important;bottom:13%!important}
- .ai-stage-tag{left:12px!important;top:12px!important;color:#d2c9ff!important;font-size:7px!important}
- .ai-stage-caption{right:10px!important;bottom:10px!important;color:#d2c9ff!important;font-size:8px!important}
- .ai-stage-caption b{color:#fff!important}
- .ai-signal{display:block!important}
- .ai-console{position:relative!important;z-index:5!important;display:block!important;width:calc(100% - 16px)!important;max-width:calc(100% - 16px)!important;margin:-20px auto 0!important;padding:13px!important;border-radius:17px!important;background:rgba(255,255,255,.97)!important;box-shadow:0 17px 42px #25204420!important}
- .ai-console-head{gap:8px}
- .ai-console-prompt{margin:10px 0 7px;font-size:12px}
- .ai-prompt-list{display:grid!important;grid-template-columns:1fr!important;gap:6px}
- .ai-prompt{padding:8px 10px!important;text-align:left;font-size:9px}
- .ai-response{margin-top:8px;padding:9px 10px;min-height:0}
- .ai-response b{font-size:10px}
- .ai-response>span:last-child{font-size:8px}
- .ai-chat-form{margin-top:8px}
- .ai-chat-note{font-size:6px}
- .ai-console-foot{gap:8px;justify-content:center;font-size:7px}
- .proofline{margin-bottom:0}
-}
-@media(max-width:380px){
- .hero{gap:11px;padding-top:24px}
- .ai-stage{height:218px!important;min-height:218px!important;max-height:218px!important;flex-basis:218px!important}
- .ai-core{width:82px!important;height:82px!important}
- .ai-node-three{left:5%!important}
- .ai-console{padding:11px!important}
-}
-
-
-/* Refined motion layer — keep MIRAH's original identity, add movement with restraint */
-header{transition:background .3s ease,box-shadow .3s ease,border-color .3s ease}
-header.scrolled{box-shadow:0 8px 30px rgba(35,42,83,.07);border-bottom-color:#e6e9f2}
-.navlinks a{position:relative}
-.navlinks a:after{content:"";position:absolute;left:0;right:100%;bottom:-8px;height:2px;border-radius:4px;background:var(--grad);transition:right .35s cubic-bezier(.2,.8,.2,1)}
-.navlinks a:hover:after,.navlinks a.active:after{right:0}
-.btn,.service,.portfolio-card,.industry-tab,.step{will-change:transform}
-.btn{transition:transform .35s cubic-bezier(.2,.8,.2,1),box-shadow .35s cubic-bezier(.2,.8,.2,1),filter .3s}
-.btn:active{filter:saturate(1.15)}
-.portfolio-card{overflow:hidden}
-.portfolio-card img,.portfolio-card .portfolio-image,.portfolio-card .portfolio-visual{transition:transform .8s cubic-bezier(.2,.8,.2,1),filter .6s}
-.portfolio-card:hover img,.portfolio-card:hover .portfolio-image,.portfolio-card:hover .portfolio-visual{transform:scale(1.045);filter:saturate(1.08)}
-.section-head,.kicker,.eyebrow{transition:letter-spacing .4s ease}
-.reveal.visible .section-head,.reveal.visible .kicker{animation:mirahSettle .7s both}
-@keyframes mirahSettle{from{opacity:.65;letter-spacing:-.035em;transform:translateY(7px)}to{opacity:1;transform:translateY(0)}}
-@media(prefers-reduced-motion:reduce){.navlinks a:after{transition:none}.portfolio-card img,.portfolio-card .portfolio-image,.portfolio-card .portfolio-visual{transition:none}}
-
-
-@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
-/* MIRAH — refined static visual direction */
-:root{--paper:#f8f9fd;--ink:#171d35;--muted:#687188;--line:#e9ebf3;--shadow:0 16px 42px rgba(35,42,83,.075)}
-.glow,.art-ribbon,.art-cursor,.pulse{animation:none!important}
-.glow{filter:blur(30px);opacity:.42}
-.device{transform:none;box-shadow:0 22px 60px rgba(38,44,91,.10)}
-.float-card{box-shadow:0 12px 30px rgba(35,42,83,.08)}
-.service,.portfolio-card,.industry-tab,.btn,.navlinks a{transition:background-color .2s ease,border-color .2s ease,color .2s ease,box-shadow .2s ease!important}
-.service:hover{transform:none;box-shadow:0 14px 34px rgba(35,42,83,.08)}
-.service:after{display:none}
-.reveal{opacity:1;transform:none;transition:none}
-.portfolio-visual img{transition:filter .25s ease}
-.portfolio-card:hover .portfolio-visual img{transform:none;filter:saturate(1.04)}
-.btn:hover{transform:none}
-header{background:rgba(248,249,253,.94)}
-.section{scroll-margin-top:88px}
-@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
-
-/* Hero without the oversized intelligence illustration */
-.hero{grid-template-columns:minmax(0,1fr);min-height:0;padding-top:86px;padding-bottom:86px}
-.hero>div:first-child{max-width:760px}
-.hero h1{max-width:720px}
-.hero-copy{max-width:650px}
-@media(max-width:650px){.hero{padding-top:52px;padding-bottom:54px}.hero>div:first-child{max-width:100%}}
-</style>
-</head>
-<body>
-<div class="topline"></div>
-<header>
- <div class="container nav">
-  <a class="brand" href="#home" aria-label="MIRAH Digital home">
-   <svg viewBox="0 0 110 62" role="img" aria-label="MIRAH fluid M symbol"><defs><linearGradient id="fluid" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#258eea"/><stop offset=".42" stop-color="#7046ed"/><stop offset=".76" stop-color="#df39a7"/><stop offset="1" stop-color="#ff8a32"/></linearGradient></defs><path d="M7 50 C18 18 26 5 37 13 C45 19 49 42 59 42 C69 42 76 7 88 10 C98 12 100 26 101 34" fill="none" stroke="url(#fluid)" stroke-width="10" stroke-linecap="round"/><circle cx="102" cy="49" r="5" fill="#ff8a32"/></svg>
-   <span class="brandname">MIRAH<small>D I G I T A L</small></span>
-  </a>
-  <nav class="navlinks" id="navlinks" aria-label="Main navigation"><a href="#services">Services</a><a href="#industries">Industries</a><a href="#portfolio">Portfolio</a><a href="#approach">Our process</a><a href="#contact">Contact</a></nav>
-  <a class="btn small" href="#contact">Start a project <span>↗</span></a>
-  <button class="menu" id="menu" type="button" aria-label="Toggle navigation" aria-controls="navlinks" aria-expanded="false">☰</button>
- </div>
-</header>
-<main id="home">
-<section class="container hero">
- <div>
-  <div class="eyebrow"><span class="pulse"></span> Independent digital studio · United States</div>
-  <h1>Make your next<br>digital move<br><span class="gradient">count.</span></h1>
-  <p class="hero-copy">We design, improve, and support digital experiences that help businesses across the United States earn trust, turn visits into enquiries, and make their next stage of growth easier.</p>
-  <div class="hero-actions"><a class="btn" href="#contact">Tell us about your project <span>↗</span></a><a class="btn secondary" href="#services">Explore services <span>↓</span></a></div>
-  <div class="proofline"><span>Human-led, AI-assisted</span><span>Built for real customers</span><span>Mobile-first</span></div>
- </div>
-
-</section>
-
-<section class="studio-strip container reveal" aria-label="MIRAH design principles">
- <div class="strip-intro"><span class="kicker">The MIRAH signature</span><h2>Human insight.<br><span class="gradient">Intelligent craft.</span></h2></div>
- <div class="strip-point"><span class="strip-icon">✳</span><b>Human direction</b><small>Every decision starts with a real need.</small></div>
- <div class="strip-point"><span class="strip-icon">↗</span><b>Intelligent tools</b><small>Technology supports the idea, not the other way around.</small></div>
- <div class="strip-point"><span class="strip-icon">◎</span><b>Meaningful motion</b><small>Details guide people toward useful action.</small></div>
-</section>
-
-
-<div class="motion-ticker" aria-label="MIRAH capabilities">
- <div class="motion-track"><span>Digital strategy</span><b>✳</b><span>Website experiences</span><b>✳</b><span>Local visibility</span><b>✳</b><span>AI workflows</span><b>✳</b><span>Brand identity</span><b>✳</b><span>Ongoing improvement</span><b>✳</b><span>Digital strategy</span><b>✳</b><span>Website experiences</span><b>✳</b><span>Local visibility</span><b>✳</b><span>AI workflows</span><b>✳</b><span>Brand identity</span><b>✳</b><span>Ongoing improvement</span><b>✳</b></div>
-</div>
-<section class="container section experience" id="studio">
- <div class="experience-shell">
-  <div class="experience-copy reveal">
-   <span class="kicker">A studio built around outcomes</span>
-   <h2>Not just a website.<br><span class="gradient">A better way forward.</span></h2>
-   <p>Every strong digital experience has a purpose. Explore how MIRAH brings design, customer journeys, and practical technology together—without adding complexity for its own sake.</p>
-   <div class="experience-tabs" role="tablist" aria-label="Explore MIRAH capabilities">
-    <button class="experience-tab active" data-exp="design" role="tab" aria-selected="true"><span class="num">01</span><span><strong>Design that earns trust</strong><small>Clear, polished, mobile-first experiences</small></span></button>
-    <button class="experience-tab" data-exp="growth" role="tab" aria-selected="false"><span class="num">02</span><span><strong>Journeys that convert</strong><small>Make the next step obvious</small></span></button>
-    <button class="experience-tab" data-exp="systems" role="tab" aria-selected="false"><span class="num">03</span><span><strong>Smarter business systems</strong><small>Practical AI and workflow support</small></span></button>
-    <button class="experience-tab" data-exp="care" role="tab" aria-selected="false"><span class="num">04</span><span><strong>Built to keep improving</strong><small>Support, review, and iteration</small></span></button>
-   </div>
-  </div>
-  <div class="experience-visual reveal" role="tabpanel" id="experiencePanel">
-   <div class="exp-orbit"></div>
-   <div class="experience-window">
-    <div class="exp-bar"><i></i><i></i><i></i><span class="exp-url">yourbusiness.com</span></div>
-    <div class="exp-content"><span class="exp-kicker" id="expKicker">THE FIRST IMPRESSION</span><h3 id="expTitle">Make every visit feel effortless.</h3><p id="expText">A confident visual system, thoughtful spacing, and clear content help customers understand your business from the first scroll.</p><span class="exp-action" id="expAction">Explore the experience ↗</span><div class="exp-cards"><div class="exp-card"><b id="expCardOne">A clear message</b><span id="expSubOne">Know what you offer</span></div><div class="exp-card"><b id="expCardTwo">A confident look</b><span id="expSubTwo">Feel the difference</span></div></div></div>
-   </div>
-   <div class="exp-bubble"><b id="expBubble">Made for people ✦</b><span id="expBubbleText">Beautiful and useful on every screen</span></div>
-   <div class="experience-caption">MIRAH DIGITAL / INTERACTIVE STUDIO</div>
-  </div>
- </div>
-</section>
-
-<section class="section container" id="services">
- <div class="section-head reveal"><span class="kicker">What we do</span><h2>Digital foundations<br><span class="gradient">built to do more.</span></h2><p>Practical services for businesses that want a stronger online presence—not more technology for technology’s sake.</p></div>
- <div class="services">
-  <article class="service reveal"><div class="service-icon">✳</div><h3>Website Design & Development</h3><p>Responsive, easy-to-use websites that explain what you do and guide customers toward calling, booking, or requesting a quote.</p><a href="#contact">Plan a new website ↗</a></article>
-  <article class="service reveal"><div class="service-icon">↗</div><h3>Website Improvement</h3><p>Make an existing site clearer, easier to navigate, more mobile-friendly, and more useful without rebuilding everything.</p><a href="#contact">Improve my website ↗</a></article>
-  <article class="service reveal"><div class="service-icon">⌕</div><h3>Local SEO Foundations</h3><p>Strengthen site structure, service information, page titles, and local relevance so nearby customers can find and understand your business.</p><a href="#contact">Improve local visibility ↗</a></article>
-  <article class="service reveal"><div class="service-icon">✣</div><h3>AI & Workflow Solutions</h3><p>Explore practical ways to organize enquiries, reduce repetitive admin, and connect tools—with human review at important steps.</p><a href="#contact">Explore an AI workflow ↗</a></article>
-  <article class="service reveal"><div class="service-icon">◇</div><h3>Brand & Digital Identity</h3><p>Bring consistency to your website and digital touchpoints with clear messaging, thoughtful layouts, and a recognizable visual system.</p><a href="#contact">Shape my digital identity ↗</a></article>
-  <article class="service reveal"><div class="service-icon">⌁</div><h3>Website Care & Support</h3><p>Keep your website current with agreed updates, maintenance, content changes, and ongoing improvement recommendations.</p><a href="#contact">Discuss ongoing support ↗</a></article>
- </div>
-</section>
-
-<section class="container section" id="approach">
- <div class="focus reveal">
-  <div><span class="kicker">The MIRAH approach</span><h2>Technology moves fast.<br><span class="gradient">Good judgement matters.</span></h2><p>We use modern tools and AI to work more efficiently, but every project starts with your business and your customers. People set the direction. Technology helps us deliver it.</p><a class="btn" href="#contact">Let’s talk about your goals ↗</a></div>
-  <div class="focus-grid"><div><b>01</b><span>Understand your business before choosing tools.</span></div><div><b>02</b><span>Design around real customer needs.</span></div><div><b>03</b><span>Build, test, and review carefully.</span></div><div><b>04</b><span>Measure what matters and improve.</span></div></div>
- </div>
-</section>
-
-<section class="section container" id="industries">
- <div class="section-head reveal"><span class="kicker">Made for real businesses</span><h2>Different industries.<br><span class="gradient">Different digital needs.</span></h2><p>Our design language adapts to the business—not every company should look like the same template.</p></div>
- <div class="industry-wrap reveal">
-  <div class="industry-tabs" role="tablist" aria-label="Industry examples">
-   <button class="industry-tab active" data-industry="auto" role="tab" aria-selected="true"><strong>Automotive</strong><span>Bookings, calls & service clarity</span></button>
-   <button class="industry-tab" data-industry="home" role="tab" aria-selected="false"><strong>Home services</strong><span>Quotes, service areas & trust</span></button>
-   <button class="industry-tab" data-industry="build" role="tab" aria-selected="false"><strong>Contractors</strong><span>Projects, expertise & estimates</span></button>
-   <button class="industry-tab" data-industry="pro" role="tab" aria-selected="false"><strong>Professional services</strong><span>Credibility & consultation requests</span></button>
-  </div>
-  <div class="industry-preview" id="industryPreview" role="tabpanel">
-   <div><span class="preview-label" id="previewLabel">AUTOMOTIVE · CONCEPT DIRECTION</span><h3 id="previewTitle">Make it easy to book the next service.</h3><p id="previewText">A confident, high-contrast experience that puts key services, trust signals, hours, and appointment requests where customers expect them.</p></div>
-   <div class="preview-chips" id="previewChips"><span>Service pages</span><span>Tap-to-call</span><span>Booking path</span></div>
-  </div>
- </div>
- <p style="text-align:center;color:#8991a4;font-size:10px;margin:18px 0 0">Industry panels are illustrative directions, not completed client work or performance claims.</p>
-</section>
-
-
-<style>
+/* ---------- Portfolio ---------- */
 .portfolio-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
 .portfolio-card{background:#fff;border:1px solid var(--line);border-radius:22px;overflow:hidden;box-shadow:0 16px 45px rgba(35,42,83,.07);transition:transform .22s,box-shadow .22s}
 .portfolio-card:hover{transform:translateY(-5px);box-shadow:0 24px 60px rgba(35,42,83,.13)}
 .portfolio-visual{height:245px;position:relative;overflow:hidden;background:#111831}
 .portfolio-visual img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s}
 .portfolio-card:hover .portfolio-visual img{transform:scale(1.04)}
-.portfolio-visual:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(8,11,18,.55),transparent 62%)}
+.portfolio-visual::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(8,11,18,.55),transparent 62%)}
 .portfolio-label{position:absolute;z-index:1;left:18px;bottom:16px;color:#fff;font-size:10px;font-weight:800;letter-spacing:.16em;text-transform:uppercase}
 .portfolio-copy{padding:22px}
-.portfolio-copy h3{font:800 23px Manrope;letter-spacing:-.04em;margin:7px 0}
+.portfolio-copy h3{font:800 23px Manrope,sans-serif;letter-spacing:-.04em;margin:7px 0}
 .portfolio-copy p{font-size:13px;line-height:1.7;color:var(--muted);margin:0 0 14px}
 .portfolio-link{display:inline-flex;align-items:center;gap:8px;color:var(--violet);font-size:12px;font-weight:800}
 .portfolio-note{margin-top:17px;padding:16px 18px;border:1px solid #e7e2ff;border-radius:16px;background:linear-gradient(110deg,#f0efff,#fff 65%,#fff2f8);font-size:11px;line-height:1.6;color:var(--muted)}
-@media(max-width:650px){.portfolio-grid{grid-template-columns:1fr}.portfolio-visual{height:205px}.portfolio-copy{padding:19px}}
+
+/* ---------- Process ---------- */
+.process{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.step{padding:22px 18px;border-top:2px solid #d9d0ff}
+.step em{font:800 11px Manrope,sans-serif;color:var(--violet);font-style:normal;letter-spacing:.08em}
+.step h3{font:750 16px Manrope,sans-serif;margin:13px 0 8px}
+.step p{font-size:12px;line-height:1.7;color:var(--muted)}
+
+/* ---------- Contact ---------- */
+.contact{background:linear-gradient(120deg,#eeedff,#eef7ff 52%,#fff0f7);border:1px solid #fff;border-radius:28px;padding:48px;display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:center}
+.contact h2{font:800 clamp(30px,4vw,44px)/1.08 Manrope,sans-serif;letter-spacing:-.06em;margin:12px 0}
+.contact p{color:var(--muted);line-height:1.75;font-size:14px}
+.brief-form{background:rgba(255,255,255,.85);border:1px solid #fff;border-radius:20px;padding:20px;box-shadow:0 15px 40px rgba(52,49,93,.06)}
+.field{display:grid;gap:6px;margin-bottom:12px}
+.field label{font-size:11px;font-weight:800;color:#525c76}
+.field input,.field select,.field textarea{width:100%;border:1px solid #e3e6f0;border-radius:11px;padding:12px 13px;background:#fff;font-size:13px;outline:none}
+.field input:focus,.field select:focus,.field textarea:focus{border-color:#9b86f4;box-shadow:0 0 0 3px rgba(138,112,239,.09)}
+.field textarea{min-height:84px;resize:vertical}
+.form-note{font-size:10px;color:#82899b;line-height:1.5;margin:10px 0 0}
+.form-status{display:none;padding:10px;border-radius:10px;background:#eaf8f2;color:#247b5e;font-size:12px;margin-top:10px}
+
+/* ---------- Footer ---------- */
+footer{padding:34px 0 45px;color:#80889b;font-size:11px}
+.footer-row{display:flex;justify-content:space-between;align-items:center;gap:18px;border-top:1px solid var(--line);padding-top:25px}
+.footer-brand{font:800 15px Manrope,sans-serif;color:var(--ink);letter-spacing:.08em}
+.footer-brand span{display:block;font:600 9px "DM Sans",sans-serif;letter-spacing:.18em;color:#81899b;margin-top:4px}
+
+/* ---------- Reveal: visible by default. JS only adds a gentle
+   entrance animation; without JS, or with reduced motion, the
+   content is simply there. Never hidden by opacity or blur in CSS. ---------- */
+.reveal{opacity:1;transform:none}
+@media (prefers-reduced-motion:no-preference){
+  .reveal.in-view{animation:rise .6s cubic-bezier(.16,1,.3,1) both}
+}
+@keyframes rise{from{opacity:.01;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
+
+/* ---------- Responsive ---------- */
+@media(max-width:900px){
+  .hero{grid-template-columns:1fr;gap:28px;padding-top:52px}
+  .hero-visual{max-width:620px}
+  .services{grid-template-columns:repeat(2,1fr)}
+  .industry-wrap{grid-template-columns:1fr}
+  .industry-tabs{grid-template-columns:repeat(2,1fr)}
+  .contact{grid-template-columns:1fr}
+  .focus{grid-template-columns:1fr}
+  .experience-shell{grid-template-columns:1fr}
+}
+@media(max-width:650px){
+  .container{width:calc(100% - 32px)}
+  .nav{min-height:68px}
+  .navlinks{display:none;position:absolute;top:68px;left:0;right:0;background:rgba(251,251,255,.97);padding:14px 22px 18px;border-bottom:1px solid var(--line);box-shadow:0 18px 28px rgba(17,21,47,.06);flex-direction:column;align-items:stretch;gap:0}
+  .navlinks.open{display:flex}
+  .navlinks a{padding:13px 0;border-bottom:1px solid #eef0f5}
+  .navlinks a.active::after{display:none}
+  .nav>.btn{display:none}
+  .menu{display:block}
+  .hero{padding:40px 0 44px;gap:24px}
+  h1{font-size:clamp(40px,11vw,54px)}
+  .hero-copy{font-size:15px}
+  .hero-actions{display:grid;grid-template-columns:1fr;gap:10px}
+  .hero-actions .btn{width:100%;min-height:48px}
+  .hero-visual-body{padding:20px 18px}
+  .hero-visual-body h2{font-size:24px}
+  .section{padding:48px 0}
+  .section-head{margin-bottom:28px}
+  .studio-strip{grid-template-columns:1fr 1fr;gap:9px;padding-bottom:40px}
+  .strip-intro{grid-column:1/-1}
+  .motion-track{gap:19px;animation-duration:28s}
+  .motion-track span{font-size:9px}
+  .services{grid-template-columns:1fr;gap:10px}
+  .service{min-height:0;padding:20px}
+  .experience-visual{min-height:330px;padding:13px;border-radius:19px}
+  .exp-content{padding:16px}
+  .exp-content h3{font-size:22px}
+  .exp-bubble{right:8px;bottom:16px}
+  .experience-tabs{grid-template-columns:1fr 1fr;gap:7px}
+  .experience-tab{padding:11px 9px;gap:7px}
+  .focus{padding:26px 20px;border-radius:22px}
+  .focus-grid{grid-template-columns:1fr 1fr;gap:8px}
+  .industry-tabs{grid-template-columns:1fr 1fr}
+  .industry-preview{min-height:300px;padding:22px}
+  .portfolio-grid{grid-template-columns:1fr}
+  .portfolio-visual{height:205px}
+  .process{grid-template-columns:1fr 1fr;gap:8px}
+  .step{padding:16px 12px}
+  .contact{padding:24px 16px;gap:18px}
+  .brief-form{padding:15px}
+  .footer-row{flex-direction:column;align-items:flex-start}
+}
+@media(max-width:380px){
+  .hero h1{font-size:39px}
+  .experience-tabs,.industry-tabs,.process{grid-template-columns:1fr}
+  .focus-grid{grid-template-columns:1fr}
+}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .reveal{opacity:1;transform:none}
+  .motion-track{animation:none}
+}
 </style>
-<section class="section container" id="portfolio">
- <div class="section-head reveal"><span class="kicker">Selected concepts · Automotive</span><h2>Ideas made <span class="gradient">real to explore.</span></h2><p>Two focused experiences for two different automotive audiences: a personal digital identity for a performance car, and a practical customer journey for an independent service center.</p></div>
- <div class="portfolio-grid">
-  <article class="portfolio-card reveal">
-   <div class="portfolio-visual"><img src="https://images.unsplash.com/photo-1555215695-3004980ad54e?auto=format&fit=crop&w=1400&q=85" alt="Performance BMW vehicle concept" loading="lazy"><span class="portfolio-label">Sample 01 · Luxury & personal cars</span></div>
-   <div class="portfolio-copy"><span class="kicker">MIRAH SIGNATURE SERIES</span><h3>M5 UNLEASHED</h3><p>A personal digital world for a performance car, bringing together its story, specification, visual identity, and owner-focused experience.</p><a class="portfolio-link" href="/samples/automotive/m5-unleashed/">Explore M5 Unleashed ↗</a></div>
-  </article>
-  <article class="portfolio-card reveal">
-   <div class="portfolio-visual"><img src="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&w=1400&q=85" alt="Automotive workshop and maintenance concept" loading="lazy"><span class="portfolio-label">Sample 02 · Repair & maintenance</span></div>
-   <div class="portfolio-copy"><span class="kicker">AUTOMOTIVE SERVICE</span><h3>PRECISION AUTO CARE</h3><p>A modern service-center experience focused on service clarity, customer confidence, mobile-first enquiries, and appointment requests.</p><a class="portfolio-link" href="/samples/automotive/precision-auto-care/">Explore maintenance sample ↗</a></div>
-  </article>
- </div>
- <div class="portfolio-note">These are MIRAH demonstration concepts, not real customer businesses or official manufacturer partnerships. Final client versions use verified business information and licensed or client-owned photography.</div>
+</head>
+<body>
+<a class="skip" href="#main">Skip to main content</a>
+<div class="topline" aria-hidden="true"></div>
+<header>
+  <div class="container nav">
+    <a class="brand" href="#home" aria-label="MIRAH Digital home">
+      <svg viewBox="0 0 110 62" role="img" aria-label="MIRAH fluid M symbol"><defs><linearGradient id="fluid" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#258eea"/><stop offset=".42" stop-color="#7046ed"/><stop offset=".76" stop-color="#df39a7"/><stop offset="1" stop-color="#ff8a32"/></linearGradient></defs><path d="M7 50 C18 18 26 5 37 13 C45 19 49 42 59 42 C69 42 76 7 88 10 C98 12 100 26 101 34" fill="none" stroke="url(#fluid)" stroke-width="10" stroke-linecap="round"/><circle cx="102" cy="49" r="5" fill="#ff8a32"/></svg>
+      <span class="brandname">MIRAH<small>D I G I T A L</small></span>
+    </a>
+    <nav class="navlinks" id="navlinks" aria-label="Main navigation">
+      <a href="#services">Services</a><a href="#industries">Industries</a><a href="#portfolio">Portfolio</a><a href="#approach">Our process</a><a href="#contact">Contact</a>
+    </nav>
+    <a class="btn small" href="#contact">Start a project <span aria-hidden="true">↗</span></a>
+    <button class="menu" id="menu" type="button" aria-label="Toggle navigation" aria-controls="navlinks" aria-expanded="false">☰</button>
+  </div>
+</header>
+
+<main id="main">
+<section class="container hero" id="home">
+  <div>
+    <div class="eyebrow"><span class="pulse" aria-hidden="true"></span> Independent digital studio · United States</div>
+    <h1>Make your next<br>digital move<br><span class="gradient">count.</span></h1>
+    <p class="hero-copy">We design, improve, and support digital experiences that help businesses across the United States earn trust, turn visits into enquiries, and make their next stage of growth easier.</p>
+    <div class="hero-actions">
+      <a class="btn" href="#contact">Tell us about your project <span aria-hidden="true">↗</span></a>
+      <a class="btn secondary" href="#services">Explore services <span aria-hidden="true">↓</span></a>
+    </div>
+    <div class="proofline"><span>Human-led, AI-assisted</span><span>Built for real customers</span><span>Mobile-first</span></div>
+  </div>
+  <div class="hero-visual" aria-label="What a MIRAH project covers">
+    <div class="hero-visual-bar" aria-hidden="true"><i></i><i></i><i></i><span>yourbusiness.com</span></div>
+    <div class="hero-visual-body">
+      <h2>Your business,<br>clearly presented.</h2>
+      <p>A concept preview of what MIRAH shapes for a client: a clear message, an easy next step, and a look people remember.</p>
+      <div class="hero-visual-row"><span class="hero-visual-icon" aria-hidden="true">✳</span><div><b>Design that earns trust</b><span>Clear, polished, mobile-first experiences.</span></div></div>
+      <div class="hero-visual-row"><span class="hero-visual-icon" aria-hidden="true">↗</span><div><b>Journeys that convert</b><span>Make the next step obvious — call, book, enquire.</span></div></div>
+      <div class="hero-visual-row"><span class="hero-visual-icon" aria-hidden="true">◎</span><div><b>Built to keep improving</b><span>Support, review, and iteration after launch.</span></div></div>
+    </div>
+  </div>
 </section>
 
+<section class="studio-strip container" aria-label="MIRAH design principles">
+  <div class="strip-intro"><span class="kicker">The MIRAH signature</span><h2>Human insight.<br><span class="gradient">Intelligent craft.</span></h2></div>
+  <div class="strip-point"><span class="strip-icon" aria-hidden="true">✳</span><b>Human direction</b><small>Every decision starts with a real need.</small></div>
+  <div class="strip-point"><span class="strip-icon" aria-hidden="true">↗</span><b>Intelligent tools</b><small>Technology supports the idea, not the other way around.</small></div>
+  <div class="strip-point"><span class="strip-icon" aria-hidden="true">◎</span><b>Meaningful motion</b><small>Details guide people toward useful action.</small></div>
+</section>
+
+<div class="motion-ticker" aria-label="MIRAH capabilities">
+  <div class="motion-track">
+    <span>Digital strategy</span><b aria-hidden="true">✳</b><span>Website experiences</span><b aria-hidden="true">✳</b><span>Local visibility</span><b aria-hidden="true">✳</b><span>AI workflows</span><b aria-hidden="true">✳</b><span>Brand identity</span><b aria-hidden="true">✳</b><span>Ongoing improvement</span><b aria-hidden="true">✳</b>
+    <span aria-hidden="true">Digital strategy</span><b aria-hidden="true">✳</b><span aria-hidden="true">Website experiences</span><b aria-hidden="true">✳</b><span aria-hidden="true">Local visibility</span><b aria-hidden="true">✳</b><span aria-hidden="true">AI workflows</span><b aria-hidden="true">✳</b><span aria-hidden="true">Brand identity</span><b aria-hidden="true">✳</b><span aria-hidden="true">Ongoing improvement</span><b aria-hidden="true">✳</b>
+  </div>
+</div>
+
+<section class="container section" id="studio">
+  <div class="experience-shell">
+    <div class="experience-copy reveal">
+      <span class="kicker">A studio built around outcomes</span>
+      <h2>Not just a website.<br><span class="gradient">A better way forward.</span></h2>
+      <p>Every strong digital experience has a purpose. Explore how MIRAH brings design, customer journeys, and practical technology together — without adding complexity for its own sake.</p>
+      <div class="experience-tabs" role="tablist" aria-label="Explore MIRAH capabilities">
+        <button class="experience-tab active" data-exp="design" role="tab" aria-selected="true"><span class="num">01</span><span><strong>Design that earns trust</strong><small>Clear, polished, mobile-first experiences</small></span></button>
+        <button class="experience-tab" data-exp="growth" role="tab" aria-selected="false"><span class="num">02</span><span><strong>Journeys that convert</strong><small>Make the next step obvious</small></span></button>
+        <button class="experience-tab" data-exp="systems" role="tab" aria-selected="false"><span class="num">03</span><span><strong>Smarter business systems</strong><small>Practical AI and workflow support</small></span></button>
+        <button class="experience-tab" data-exp="care" role="tab" aria-selected="false"><span class="num">04</span><span><strong>Built to keep improving</strong><small>Support, review, and iteration</small></span></button>
+      </div>
+    </div>
+    <div class="experience-visual reveal" role="tabpanel" id="experiencePanel" aria-label="Capability preview">
+      <div class="experience-window">
+        <div class="exp-bar" aria-hidden="true"><i></i><i></i><i></i><span class="exp-url">yourbusiness.com</span></div>
+        <div class="exp-content">
+          <span class="exp-kicker" id="expKicker">THE FIRST IMPRESSION</span>
+          <h3 id="expTitle">Make every visit feel effortless.</h3>
+          <p id="expText">A confident visual system, thoughtful spacing, and clear content help customers understand your business from the first scroll.</p>
+          <span class="exp-action" id="expAction">Explore the experience ↗</span>
+          <div class="exp-cards">
+            <div class="exp-card"><b id="expCardOne">A clear message</b><span id="expSubOne">Know what you offer</span></div>
+            <div class="exp-card"><b id="expCardTwo">A confident look</b><span id="expSubTwo">Feel the difference</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="exp-bubble"><b id="expBubble">Made for people ✦</b><span id="expBubbleText">Beautiful and useful on every screen</span></div>
+      <div class="experience-caption">MIRAH DIGITAL / INTERACTIVE STUDIO</div>
+    </div>
+  </div>
+</section>
+
+<section class="section container" id="services">
+  <div class="section-head reveal"><span class="kicker">What we do</span><h2>Digital foundations<br><span class="gradient">built to do more.</span></h2><p>Practical services for businesses that want a stronger online presence — not more technology for technology’s sake.</p></div>
+  <div class="services">
+    <article class="service reveal"><div class="service-icon" aria-hidden="true">✳</div><h3>Website Design &amp; Development</h3><p>Responsive, easy-to-use websites that explain what you do and guide customers toward calling, booking, or requesting a quote.</p><a href="#contact">Plan a new website ↗</a></article>
+    <article class="service reveal"><div class="service-icon" aria-hidden="true">↗</div><h3>Website Improvement</h3><p>Make an existing site clearer, easier to navigate, more mobile-friendly, and more useful without rebuilding everything.</p><a href="#contact">Improve my website ↗</a></article>
+    <article class="service reveal"><div class="service-icon" aria-hidden="true">⌕</div><h3>Local SEO Foundations</h3><p>Strengthen site structure, service information, page titles, and local relevance so nearby customers can find and understand your business.</p><a href="#contact">Improve local visibility ↗</a></article>
+    <article class="service reveal"><div class="service-icon" aria-hidden="true">✣</div><h3>AI &amp; Workflow Solutions</h3><p>Explore practical ways to organize enquiries, reduce repetitive admin, and connect tools — with human review at important steps.</p><a href="#contact">Explore an AI workflow ↗</a></article>
+    <article class="service reveal"><div class="service-icon" aria-hidden="true">◇</div><h3>Brand &amp; Digital Identity</h3><p>Bring consistency to your website and digital touchpoints with clear messaging, thoughtful layouts, and a recognizable visual system.</p><a href="#contact">Shape my digital identity ↗</a></article>
+    <article class="service reveal"><div class="service-icon" aria-hidden="true">⌁</div><h3>Website Care &amp; Support</h3><p>Keep your website current with agreed updates, maintenance, content changes, and ongoing improvement recommendations.</p><a href="#contact">Discuss ongoing support ↗</a></article>
+  </div>
+</section>
+
+<section class="container section" id="approach">
+  <div class="focus reveal">
+    <div><span class="kicker">The MIRAH approach</span><h2>Technology moves fast.<br><span class="gradient">Good judgement matters.</span></h2><p>We use modern tools and AI to work more efficiently, but every project starts with your business and your customers. People set the direction. Technology helps us deliver it.</p><a class="btn" href="#contact">Let’s talk about your goals ↗</a></div>
+    <div class="focus-grid"><div><b>01</b><span>Understand your business before choosing tools.</span></div><div><b>02</b><span>Design around real customer needs.</span></div><div><b>03</b><span>Build, test, and review carefully.</span></div><div><b>04</b><span>Measure what matters and improve.</span></div></div>
+  </div>
+</section>
+
+<section class="section container" id="industries">
+  <div class="section-head reveal"><span class="kicker">Made for real businesses</span><h2>Different industries.<br><span class="gradient">Different digital needs.</span></h2><p>Our design language adapts to the business — not every company should look like the same template.</p></div>
+  <div class="industry-wrap reveal">
+    <div class="industry-tabs" role="tablist" aria-label="Industry examples">
+      <button class="industry-tab active" data-industry="auto" role="tab" aria-selected="true"><strong>Automotive</strong><span>Bookings, calls &amp; service clarity</span></button>
+      <button class="industry-tab" data-industry="home" role="tab" aria-selected="false"><strong>Home services</strong><span>Quotes, service areas &amp; trust</span></button>
+      <button class="industry-tab" data-industry="build" role="tab" aria-selected="false"><strong>Contractors</strong><span>Projects, expertise &amp; estimates</span></button>
+      <button class="industry-tab" data-industry="pro" role="tab" aria-selected="false"><strong>Professional services</strong><span>Credibility &amp; consultation requests</span></button>
+    </div>
+    <div class="industry-preview" id="industryPreview" role="tabpanel">
+      <div><span class="preview-label" id="previewLabel">AUTOMOTIVE · CONCEPT DIRECTION</span><h3 id="previewTitle">Make it easy to book the next service.</h3><p id="previewText">A confident, high-contrast experience that puts key services, trust signals, hours, and appointment requests where customers expect them.</p></div>
+      <div class="preview-chips" id="previewChips"><span>Service pages</span><span>Tap-to-call</span><span>Booking path</span></div>
+    </div>
+  </div>
+  <p class="industry-note">Industry panels are illustrative directions, not completed client work or performance claims.</p>
+</section>
+
+<section class="section container" id="portfolio">
+  <div class="section-head reveal"><span class="kicker">Selected concepts · Automotive</span><h2>Ideas made <span class="gradient">real to explore.</span></h2><p>Two focused experiences for two different automotive audiences: a personal digital identity for a performance car, and a practical customer journey for an independent service center.</p></div>
+  <div class="portfolio-grid">
+    <article class="portfolio-card reveal">
+      <div class="portfolio-visual"><img src="https://images.unsplash.com/photo-1555215695-3004980ad54e?auto=format&amp;fit=crop&amp;w=1400&amp;q=85" alt="Performance BMW vehicle concept" loading="lazy"><span class="portfolio-label">Sample 01 · Luxury &amp; personal cars</span></div>
+      <div class="portfolio-copy"><span class="kicker">MIRAH SIGNATURE SERIES</span><h3>M5 UNLEASHED</h3><p>A personal digital world for a performance car, bringing together its story, specification, visual identity, and owner-focused experience.</p><a class="portfolio-link" href="/samples/automotive/m5-unleashed/">Explore M5 Unleashed ↗</a></div>
+    </article>
+    <article class="portfolio-card reveal">
+      <div class="portfolio-visual"><img src="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&amp;fit=crop&amp;w=1400&amp;q=85" alt="Automotive workshop and maintenance concept" loading="lazy"><span class="portfolio-label">Sample 02 · Repair &amp; maintenance</span></div>
+      <div class="portfolio-copy"><span class="kicker">AUTOMOTIVE SERVICE</span><h3>PRECISION AUTO CARE</h3><p>A modern service-center experience focused on service clarity, customer confidence, mobile-first enquiries, and appointment requests.</p><a class="portfolio-link" href="/samples/automotive/precision-auto-care/">Explore maintenance sample ↗</a></div>
+    </article>
+  </div>
+  <div class="portfolio-note">These are MIRAH demonstration concepts, not real customer businesses or official manufacturer partnerships. Final client versions use verified business information and licensed or client-owned photography.</div>
+</section>
 
 <section class="section container">
- <div class="section-head reveal"><span class="kicker">A clear process</span><h2>From first conversation<br>to <span class="gradient">a better experience.</span></h2><p>Simple checkpoints, clear expectations, and no unnecessary complexity.</p></div>
- <div class="process">
-  <div class="step reveal"><em>01 / DISCOVER</em><h3>Understand the business.</h3><p>We learn about your services, customers, current website, and what you want to improve.</p></div>
-  <div class="step reveal"><em>02 / PLAN</em><h3>Agree on the right scope.</h3><p>We outline priorities, deliverables, timing, and what success should look like.</p></div>
-  <div class="step reveal"><em>03 / CREATE</em><h3>Design, build, and review.</h3><p>We develop the experience, test it across devices, and review the details with you.</p></div>
-  <div class="step reveal"><em>04 / IMPROVE</em><h3>Launch and keep learning.</h3><p>After approval, we launch and can support the next round of improvements.</p></div>
- </div>
+  <div class="section-head reveal"><span class="kicker">A clear process</span><h2>From first conversation<br>to <span class="gradient">a better experience.</span></h2><p>Simple checkpoints, clear expectations, and no unnecessary complexity.</p></div>
+  <div class="process">
+    <div class="step reveal"><em>01 / DISCOVER</em><h3>Understand the business.</h3><p>We learn about your services, customers, current website, and what you want to improve.</p></div>
+    <div class="step reveal"><em>02 / PLAN</em><h3>Agree on the right scope.</h3><p>We outline priorities, deliverables, timing, and what success should look like.</p></div>
+    <div class="step reveal"><em>03 / CREATE</em><h3>Design, build, and review.</h3><p>We develop the experience, test it across devices, and review the details with you.</p></div>
+    <div class="step reveal"><em>04 / IMPROVE</em><h3>Launch and keep learning.</h3><p>After approval, we launch and can support the next round of improvements.</p></div>
+  </div>
 </section>
 
 <section class="container section" id="contact">
- <div class="contact reveal">
-  <div><span class="kicker">Start with a conversation</span><h2>What should your<br><span class="gradient">website do better?</span></h2><p>Tell us what your business does and what you need. This short project brief helps us understand the right next step—without pressure or a complicated sales process.</p><p style="font-size:12px">MIRAH DIGITAL · Serving businesses across the United States</p></div>
-  <form class="brief-form" id="briefForm">
-   <div class="field"><label for="name">Your name</label><input id="name" name="name" autocomplete="name" placeholder="Name" required></div>
-   <div class="field"><label for="business">Business name</label><input id="business" name="business" placeholder="Your company" required></div>
-   <div class="field"><label for="need">What do you need?</label><select id="need" name="need"><option>New website</option><option>Improve an existing website</option><option>Local SEO</option><option>AI / workflow solution</option><option>Website care and support</option><option>Not sure yet</option></select></div>
-   <div class="field"><label for="details">A little about your project</label><textarea id="details" name="details" placeholder="What would you like to improve?"></textarea></div>
-   <button class="btn" type="submit" style="width:100%">Create my project brief ↗</button>
-   <div class="form-status" id="formStatus" role="status" aria-live="polite"></div>
-   <div class="field" id="briefFallback" hidden><label for="briefOutput">Your project brief — copy it below</label><textarea id="briefOutput" readonly rows="7"></textarea></div>
-   <p class="form-note">Prototype form: your brief is prepared in this browser and copied only when clipboard access is available. It is not submitted to MIRAH. Do not enter sensitive or confidential information.</p>
-  </form>
- </div>
+  <div class="contact reveal">
+    <div><span class="kicker">Start with a conversation</span><h2>What should your<br><span class="gradient">website do better?</span></h2><p>Tell us what your business does and what you need. This short project brief helps us understand the right next step — without pressure or a complicated sales process.</p><p style="font-size:12px">MIRAH DIGITAL · Serving businesses across the United States</p></div>
+    <form class="brief-form" id="briefForm">
+      <div class="field"><label for="name">Your name</label><input id="name" name="name" autocomplete="name" placeholder="Name" required></div>
+      <div class="field"><label for="business">Business name</label><input id="business" name="business" placeholder="Your company" required></div>
+      <div class="field"><label for="need">What do you need?</label><select id="need" name="need"><option>New website</option><option>Improve an existing website</option><option>Local SEO</option><option>AI / workflow solution</option><option>Website care and support</option><option>Not sure yet</option></select></div>
+      <div class="field"><label for="details">A little about your project</label><textarea id="details" name="details" placeholder="What would you like to improve?"></textarea></div>
+      <button class="btn" type="submit" style="width:100%">Create my project brief ↗</button>
+      <div class="form-status" id="formStatus" role="status" aria-live="polite"></div>
+      <div class="field" id="briefFallback" hidden><label for="briefOutput">Your project brief — copy it below</label><textarea id="briefOutput" readonly rows="7"></textarea></div>
+      <p class="form-note">Prototype form: your brief is prepared in this browser and copied only when clipboard access is available. It is not submitted to MIRAH. Do not enter sensitive or confidential information.</p>
+    </form>
+  </div>
 </section>
 </main>
-<footer class="container"><div class="footer-row"><div><div class="footer-brand">MIRAH DIGITAL<span>INTELLIGENCE WITH A HUMAN TOUCH</span></div></div><div>Website design · Optimization · AI workflows · Local growth</div><a href="#home">Back to top ↑</a></div><p style="margin:18px 0 0">© <span id="year"></span> MIRAH Digital. Independent digital studio.</p></footer>
-<script>
-const menu=document.getElementById('menu'),nav=document.getElementById('navlinks');
-menu.addEventListener('click',()=>{const open=nav.classList.toggle('open');menu.setAttribute('aria-expanded',String(open));menu.textContent=open?'×':'☰'});
-nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('open');menu.setAttribute('aria-expanded','false');menu.textContent='☰'}));\ndocument.addEventListener('keydown',e=>{if(e.key==='Escape'&&nav.classList.contains('open')){nav.classList.remove('open');menu.setAttribute('aria-expanded','false');menu.textContent='☰';menu.focus()}});
-document.getElementById('year').textContent=new Date().getFullYear();
-const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target)}}),{threshold:.1});
-document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
-const content={
- auto:{label:'AUTOMOTIVE · CONCEPT DIRECTION',title:'Make it easy to book the next service.',text:'A confident, high-contrast experience that puts key services, trust signals, hours, and appointment requests where customers expect them.',chips:['Service pages','Tap-to-call','Booking path']},
- home:{label:'HOME SERVICES · CONCEPT DIRECTION',title:'Turn local searches into quote requests.',text:'Clear service areas, project photography, reviews, and simple estimate requests help homeowners understand who you serve and how to get started.',chips:['Service areas','Project gallery','Quote request']},
- build:{label:'CONTRACTORS · CONCEPT DIRECTION',title:'Show the quality behind your work.',text:'A structured portfolio, clear capabilities, project details, and direct enquiry paths help prospective clients evaluate your experience.',chips:['Project portfolio','Capabilities','Estimate form']},
- pro:{label:'PROFESSIONAL SERVICES · CONCEPT DIRECTION',title:'Make expertise easier to trust.',text:'A calm, credible experience explains your services, introduces your approach, answers common questions, and makes consultation requests straightforward.',chips:['Service overview','About & expertise','Consultation']}
-};
-document.querySelectorAll('.industry-tab').forEach(btn=>btn.addEventListener('click',()=>{document.querySelectorAll('.industry-tab').forEach(b=>{b.classList.remove('active');b.setAttribute('aria-selected','false')});btn.classList.add('active');btn.setAttribute('aria-selected','true');const d=content[btn.dataset.industry];document.getElementById('previewLabel').textContent=d.label;document.getElementById('previewTitle').textContent=d.title;document.getElementById('previewText').textContent=d.text;document.getElementById('previewChips').innerHTML=d.chips.map(x=>'<span>'+x+'</span>').join('')}));
-document.getElementById('briefForm').addEventListener('submit',async e=>{e.preventDefault();const f=new FormData(e.currentTarget);const brief=['MIRAH DIGITAL — PROJECT BRIEF','Name: '+f.get('name'),'Business: '+f.get('business'),'Need: '+f.get('need'),'Details: '+(f.get('details')||'Not provided')].join('\n');const status=document.getElementById('formStatus'),fallback=document.getElementById('briefFallback'),output=document.getElementById('briefOutput');let copied=false;try{if(navigator.clipboard&&window.isSecureContext){await navigator.clipboard.writeText(brief);copied=true}}catch(err){}status.style.display='block';if(copied){status.textContent='Your project brief was copied to your clipboard. It has not been sent to MIRAH.';fallback.hidden=true}else{status.textContent='Clipboard access is unavailable. Your brief is shown below so you can select and copy it manually. It has not been sent.';output.value=brief;fallback.hidden=false;output.focus();output.select()}});
-</script>
+
+<footer class="container">
+  <div class="footer-row">
+    <div><div class="footer-brand">MIRAH DIGITAL<span>INTELLIGENCE WITH A HUMAN TOUCH</span></div></div>
+    <div>Website design · Optimization · AI workflows · Local growth</div>
+    <a href="#home">Back to top ↑</a>
+  </div>
+  <p style="margin:18px 0 0">© <span id="year"></span> MIRAH Digital. Independent digital studio.</p>
+</footer>
 
 <script>
-(()=> {
- const panels={
-  design:{kicker:"THE FIRST IMPRESSION",title:"Make every visit feel effortless.",text:"A confident visual system, thoughtful spacing, and clear content help customers understand your business from the first scroll.",action:"Explore the experience ↗",one:"A clear message",subOne:"Know what you offer",two:"A confident look",subTwo:"Feel the difference",bubble:"Made for people ✦",bubbleText:"Beautiful and useful on every screen"},
-  growth:{kicker:"THE CUSTOMER JOURNEY",title:"Turn attention into a next step.",text:"Clear service information, useful proof, and focused calls to action guide visitors toward calling, booking, or requesting a quote.",action:"Make the next step clear ↗",one:"Useful information",subOne:"Answer real questions",two:"Easy actions",subTwo:"Call, book, enquire",bubble:"Clarity creates action ↗",bubbleText:"A smoother path from visit to enquiry"},
-  systems:{kicker:"THE SMARTER WORKFLOW",title:"Let technology take care of the repeatable.",text:"Practical automations can organize enquiries, support follow-ups, and reduce repetitive admin—with people in control of important decisions.",action:"Explore practical AI ↗",one:"Less repetition",subOne:"Organize everyday tasks",two:"Human oversight",subTwo:"Keep decisions thoughtful",bubble:"Human-led, AI-assisted ✦",bubbleText:"Technology with a clear purpose"},
-  care:{kicker:"THE LONG-TERM EXPERIENCE",title:"Launch is the beginning, not the finish.",text:"Review what works, keep information current, improve the details, and make your digital presence more useful as your business evolves.",action:"Keep moving forward ↗",one:"Ongoing care",subOne:"Keep things up to date",two:"Steady improvement",subTwo:"Learn and refine",bubble:"Always improving ↗",bubbleText:"A digital partner beyond launch"}
- };
- document.querySelectorAll(".experience-tab").forEach(btn=>btn.addEventListener("click",()=>{
-  document.querySelectorAll(".experience-tab").forEach(b=>{b.classList.toggle("active",b===btn);b.setAttribute("aria-selected",String(b===btn))});
-  const d=panels[btn.dataset.exp];if(!d)return;
-  for(const [id,key] of [["expKicker","kicker"],["expTitle","title"],["expText","text"],["expAction","action"],["expCardOne","one"],["expSubOne","subOne"],["expCardTwo","two"],["expSubTwo","subTwo"],["expBubble","bubble"],["expBubbleText","bubbleText"]]){const el=document.getElementById(id);if(el)el.textContent=d[key]}
- }));
+(function(){
+  "use strict";
+  /* Mobile navigation: toggle, close on link click, close on Escape. */
+  var menu=document.getElementById('menu'), nav=document.getElementById('navlinks');
+  function setNav(open){
+    nav.classList.toggle('open',open);
+    menu.setAttribute('aria-expanded',String(open));
+    menu.textContent=open?'×':'☰';
+  }
+  menu.addEventListener('click',function(){setNav(!nav.classList.contains('open'));});
+  nav.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){setNav(false);});});
+  document.addEventListener('keydown',function(e){
+    if(e.key==='Escape'&&nav.classList.contains('open')){setNav(false);menu.focus();}
+  });
 
- // Keep the active navigation item in sync with the section currently in view.
- const navLinks=[...document.querySelectorAll('.navlinks a[href^="#"]')];
- const navTargets=navLinks.map(a=>document.querySelector(a.getAttribute('href'))).filter(Boolean);
- if('IntersectionObserver'in window&&navTargets.length){
-  const activeObserver=new IntersectionObserver(entries=>{
-   entries.forEach(entry=>{
-    if(entry.isIntersecting){navLinks.forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+entry.target.id))}
-   });
-  },{rootMargin:'-28% 0px -58% 0px',threshold:0});
-  navTargets.forEach(section=>activeObserver.observe(section));
- }
+  document.getElementById('year').textContent=new Date().getFullYear();
 
+  /* Scroll progress + header state. */
+  var progress=document.querySelector('.topline'), header=document.querySelector('header');
+  function onScroll(){
+    var max=document.documentElement.scrollHeight-window.innerHeight;
+    if(progress)progress.style.transform='scaleX('+(max>0?window.scrollY/max:0)+')';
+    if(header)header.classList.toggle('scrolled',window.scrollY>18);
+  }
+  window.addEventListener('scroll',onScroll,{passive:true}); onScroll();
+
+  /* Reveal: content is visible in CSS by default. This only starts a
+     gentle entrance animation; if JS or the observer fails, nothing hides. */
+  var revealEls=document.querySelectorAll('.reveal');
+  if('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+    var io=new IntersectionObserver(function(entries){
+      entries.forEach(function(en){if(en.isIntersecting){en.target.classList.add('in-view');io.unobserve(en.target);}});
+    },{threshold:.08});
+    revealEls.forEach(function(el){io.observe(el);});
+  } else {
+    revealEls.forEach(function(el){el.classList.add('in-view');});
+  }
+
+  /* Active nav link. */
+  var navLinks=Array.prototype.slice.call(document.querySelectorAll('.navlinks a[href^="#"]'));
+  var navTargets=navLinks.map(function(a){return document.querySelector(a.getAttribute('href'));}).filter(Boolean);
+  if('IntersectionObserver' in window && navTargets.length){
+    var activeIo=new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){
+          navLinks.forEach(function(a){a.classList.toggle('active',a.getAttribute('href')==='#'+entry.target.id);});
+        }
+      });
+    },{rootMargin:'-28% 0px -58% 0px',threshold:0});
+    navTargets.forEach(function(s){activeIo.observe(s);});
+  }
+
+  /* Experience tabs. */
+  var expPanels={
+    design:{kicker:"THE FIRST IMPRESSION",title:"Make every visit feel effortless.",text:"A confident visual system, thoughtful spacing, and clear content help customers understand your business from the first scroll.",action:"Explore the experience ↗",one:"A clear message",subOne:"Know what you offer",two:"A confident look",subTwo:"Feel the difference",bubble:"Made for people ✦",bubbleText:"Beautiful and useful on every screen"},
+    growth:{kicker:"THE CUSTOMER JOURNEY",title:"Turn attention into a next step.",text:"Clear service information, useful proof, and focused calls to action guide visitors toward calling, booking, or requesting a quote.",action:"Make the next step clear ↗",one:"Useful information",subOne:"Answer real questions",two:"Easy actions",subTwo:"Call, book, enquire",bubble:"Clarity creates action ↗",bubbleText:"A smoother path from visit to enquiry"},
+    systems:{kicker:"THE SMARTER WORKFLOW",title:"Let technology take care of the repeatable.",text:"Practical automations can organize enquiries, support follow-ups, and reduce repetitive admin — with people in control of important decisions.",action:"Explore practical AI ↗",one:"Less repetition",subOne:"Organize everyday tasks",two:"Human oversight",subTwo:"Keep decisions thoughtful",bubble:"Human-led, AI-assisted ✦",bubbleText:"Technology with a clear purpose"},
+    care:{kicker:"THE LONG-TERM EXPERIENCE",title:"Launch is the beginning, not the finish.",text:"Review what works, keep information current, improve the details, and make your digital presence more useful as your business evolves.",action:"Keep moving forward ↗",one:"Ongoing care",subOne:"Keep things up to date",two:"Steady improvement",subTwo:"Learn and refine",bubble:"Always improving ↗",bubbleText:"A digital partner beyond launch"}
+  };
+  document.querySelectorAll(".experience-tab").forEach(function(btn){
+    btn.addEventListener("click",function(){
+      document.querySelectorAll(".experience-tab").forEach(function(b){b.classList.toggle("active",b===btn);b.setAttribute("aria-selected",String(b===btn));});
+      var d=expPanels[btn.dataset.exp]; if(!d)return;
+      [["expKicker","kicker"],["expTitle","title"],["expText","text"],["expAction","action"],["expCardOne","one"],["expSubOne","subOne"],["expCardTwo","two"],["expSubTwo","subTwo"],["expBubble","bubble"],["expBubbleText","bubbleText"]].forEach(function(pair){
+        var el=document.getElementById(pair[0]); if(el)el.textContent=d[pair[1]];
+      });
+    });
+  });
+
+  /* Industry tabs. */
+  var industries={
+    auto:{label:'AUTOMOTIVE · CONCEPT DIRECTION',title:'Make it easy to book the next service.',text:'A confident, high-contrast experience that puts key services, trust signals, hours, and appointment requests where customers expect them.',chips:['Service pages','Tap-to-call','Booking path']},
+    home:{label:'HOME SERVICES · CONCEPT DIRECTION',title:'Turn local searches into quote requests.',text:'Clear service areas, project photography, reviews, and simple estimate requests help homeowners understand who you serve and how to get started.',chips:['Service areas','Project gallery','Quote request']},
+    build:{label:'CONTRACTORS · CONCEPT DIRECTION',title:'Show the quality behind your work.',text:'A structured portfolio, clear capabilities, project details, and direct enquiry paths help prospective clients evaluate your experience.',chips:['Project portfolio','Capabilities','Estimate form']},
+    pro:{label:'PROFESSIONAL SERVICES · CONCEPT DIRECTION',title:'Make expertise easier to trust.',text:'A calm, credible experience explains your services, introduces your approach, answers common questions, and makes consultation requests straightforward.',chips:['Service overview','About & expertise','Consultation']}
+  };
+  document.querySelectorAll('.industry-tab').forEach(function(btn){
+    btn.addEventListener('click',function(){
+      document.querySelectorAll('.industry-tab').forEach(function(b){b.classList.remove('active');b.setAttribute('aria-selected','false');});
+      btn.classList.add('active'); btn.setAttribute('aria-selected','true');
+      var d=industries[btn.dataset.industry]; if(!d)return;
+      document.getElementById('previewLabel').textContent=d.label;
+      document.getElementById('previewTitle').textContent=d.title;
+      document.getElementById('previewText').textContent=d.text;
+      document.getElementById('previewChips').innerHTML=d.chips.map(function(x){return '<span>'+x+'</span>';}).join('');
+    });
+  });
+
+  /* Project brief form: local only. Never claims submission. */
+  document.getElementById('briefForm').addEventListener('submit',async function(e){
+    e.preventDefault();
+    var f=new FormData(e.currentTarget);
+    var brief=['MIRAH DIGITAL — PROJECT BRIEF','Name: '+f.get('name'),'Business: '+f.get('business'),'Need: '+f.get('need'),'Details: '+(f.get('details')||'Not provided')].join('\n');
+    var status=document.getElementById('formStatus'), fallback=document.getElementById('briefFallback'), output=document.getElementById('briefOutput');
+    var copied=false;
+    try{if(navigator.clipboard&&window.isSecureContext){await navigator.clipboard.writeText(brief);copied=true;}}catch(err){}
+    status.style.display='block';
+    if(copied){status.textContent='Your project brief was copied to your clipboard. It has not been sent to MIRAH.';fallback.hidden=true;}
+    else{status.textContent='Clipboard access is unavailable. Your brief is shown below so you can select and copy it manually. It has not been sent.';output.value=brief;fallback.hidden=false;output.focus();output.select();}
+  });
 })();
 </script>
-
-<script>
-(()=> {
- const directions={
-  premium:{title:"Make your brand feel unmistakable.",text:"A distinctive digital world, shaped around your audience and the experience you want them to remember."},
-  assistant:{title:"Give your business a smarter first response.",text:"Imagine an assistant that can welcome enquiries, understand intent, and guide customers to the right next step—with your team in control."},
-  growth:{title:"Turn every digital touchpoint into momentum.",text:"Connect clear messaging, useful customer journeys, and practical automation around the goals that matter to your business."}
- };
- document.querySelectorAll(".ai-prompt").forEach(button=>button.addEventListener("click",()=>{
-  document.querySelectorAll(".ai-prompt").forEach(item=>item.classList.toggle("active",item===button));
-  const d=directions[button.dataset.ai];if(!d)return;
-  const title=document.getElementById("aiResponseTitle"),body=document.getElementById("aiResponseText");
-  if(title&&body){title.textContent=d.title;body.textContent=d.text}
- }));
-})();
-</script>
-
-<script>
-(()=> {
- const reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
- const progress=document.querySelector('.topline'),header=document.querySelector('header');
- const onScroll=()=>{const max=document.documentElement.scrollHeight-innerHeight; if(progress)progress.style.transform='scaleX('+(max>0?scrollY/max:0)+')';if(header)header.classList.toggle('scrolled',scrollY>18)};
- window.addEventListener('scroll',onScroll,{passive:true});onScroll();
- const form=document.getElementById('aiChatForm'),input=document.getElementById('aiChatInput'),title=document.getElementById('aiResponseTitle'),body=document.getElementById('aiResponseText'),response=document.querySelector('.ai-response');
- const replies=[
-  {keys:['car','auto','bmw','vehicle','garage','repair','mechanic'],title:'Build a digital showroom for your automotive brand.',text:'We would shape a bold experience around your vehicles or services, with rich visuals, clear trust signals, and a frictionless enquiry or booking journey.'},
-  {keys:['shop','store','sell','product','brand','fashion'],title:'Turn your brand into an experience people remember.',text:'Start with a distinctive visual world, then connect product storytelling, customer confidence, and a clear path to purchase.'},
-  {keys:['ai','assistant','chat','automation','smart'],title:'Give your business a more intelligent front door.',text:'Explore an assistant-led journey that welcomes visitors, understands what they need, and routes the right enquiries to your team.'},
-  {keys:['website','site','web','design','portfolio'],title:'Create a digital presence with a point of view.',text:'We can define the audience, visual direction, essential pages, and interactions before shaping a polished responsive website.'}
- ];
- if(form&&input&&title&&body)form.addEventListener('submit',e=>{e.preventDefault();const q=input.value.trim();if(!q){input.focus();return}const words=q.toLowerCase();const hit=replies.find(r=>r.keys.some(k=>words.includes(k)))||{title:'Let’s turn that idea into a clear direction.',text:'The next step is to understand who it is for, what you want people to feel, and what action the experience should make effortless. This is a concept response; MIRAH’s live AI connection comes in a later build.'};response.classList.add('thinking');title.textContent='Exploring your idea…';body.textContent='Finding a useful direction for your brief.';setTimeout(()=>{title.textContent=hit.title;body.textContent=hit.text;response.classList.remove('thinking')},650);input.value=''});
- 
-})();
-</script>
-<script>
-/* Keep the interface still: no cursor-following graphics or animated canvas. */
-document.querySelectorAll('.ai-particles').forEach(el=>{el.getContext?.('2d')?.clearRect(0,0,el.width,el.height)});
-document.getElementById('mirahCursorGlow')?.remove();
-document.body.classList.remove('pointer-live');
-</script>
-</body></html>
+</body>
+</html>

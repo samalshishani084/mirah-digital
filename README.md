@@ -26,6 +26,11 @@ The project remains a simple static HTML site. Vercel serves the root `index.htm
 - Replace remote demo photography with licensed or client-owned images before commercial deployment.
 - M5 Unleashed is an independent concept and is not affiliated with BMW.
 
+## Foundation v1 — main-site rebuild (2026-11-27)
+- Rebuilt `index.html` as a clean foundation: one stylesheet, one script, 575 lines / 48 KB. Removed 7+ layered CSS overrides, conflicting reveal/blur rules, and all dead AI-hero / device-mockup / particles / cursor-glow code for elements that did not exist in the HTML.
+- Content is visible without JavaScript; the reveal effect can never hide or blur a section. Ticker, spacing, and mobile navigation fixed at the source level. No black floating controls exist in the site source — the controls in the Android screenshot are Android system/accessibility UI, not website elements.
+- Brand, copy, services, tabs, portfolio links, process, and the local-only contact brief are preserved. M5 and Precision Auto Care samples are unchanged in this pass and remain NOT READY / PARTIAL (see QA report).
+
 ## Phase 03 — M5 implementation and static QA (2026-11-27)
 - Rebuilt the M5 sample as an independent 2014 BMW M5 F10 concept page.
 - Added keyboard skip navigation, visible keyboard focus, a named main landmark, responsive mobile section navigation, a caption for the technical table, and social-sharing metadata.
