@@ -40,3 +40,10 @@ The project remains a simple static HTML site. Vercel serves the root `index.htm
 - Manual visual testing across real mobile/desktop browsers, screen-reader testing, Core Web Vitals measurement, and live remote-image availability checks have not been performed in this environment; do not represent them as passed.
 - Gallery and hero photography: UPDATED 2026-11-27 — all 9 images are now verified Wikimedia Commons photographs of BMW M5 F10 models, each used once, with licences verified via the Commons API and per-photo credits in the page footer (CC0, CC BY 2.0, CC BY-SA 3.0 / 4.0). The earlier mixed stock sources (bmwcoop / cstatic / ibsrv / encontracarros) were removed.
 - The sample remains a concept, not an official BMW property. No Production deployment was made.
+
+## Phase 04 — Racing Machine Service concept (2026-11-27)
+- Added `samples/automotive/racing-machine-service/index.html` as an unofficial, independent concept redesign.
+- Positioning focuses on engine machining and rebuilding; public directory evidence supports the engine-rebuilding category, while individual service capabilities are explicitly marked for owner confirmation.
+- Includes responsive navigation, service-capability cards, a suggested customer journey, click-to-call, map link, and a local-only enquiry text generator (no network submission or storage).
+- Third-party industry photographs are labeled illustrative and not representative of Racing Machine Service premises, staff, or work. Replace with licensed, owner-approved assets before commercial use.
+- No client relationship, endorsement, approval, or production deployment is implied.
